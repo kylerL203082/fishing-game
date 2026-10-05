@@ -25,26 +25,20 @@
   --shadow:0 12px 30px rgba(0,0,0,.3);
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
   margin:0;
   background:
-    radial-gradient(circle at top left, rgba(51,110,101,.15), transparent 30%),
-    radial-gradient(circle at top right, rgba(27,83,113,.12), transparent 30%),
+    radial-gradient(circle at top left,rgba(51,110,101,.15),transparent 30%),
+    radial-gradient(circle at top right,rgba(27,83,113,.12),transparent 30%),
     var(--bg);
   color:var(--text);
   font-family:Inter,Segoe UI,Arial,sans-serif;
   min-height:100vh;
 }
 
-button,
-select,
-input{
-  font:inherit;
-}
+button,select,input{font:inherit;}
 
 button{
   border:1px solid var(--line);
@@ -62,33 +56,13 @@ button:hover:not(:disabled){
   background:#1c3a45;
 }
 
-button:disabled{
-  opacity:.4;
-  cursor:not-allowed;
-}
+button:disabled{opacity:.4;cursor:not-allowed;}
+button.primary{background:linear-gradient(135deg,#2c8e57,#3fac68);border-color:#56c97d;}
+button.danger{background:#632e34;border-color:#94464e;}
+button.gold{background:#70571c;border-color:#9b7d31;}
+button.blue{background:#174e69;border-color:#2e779a;}
 
-button.primary{
-  background:linear-gradient(135deg,#2c8e57,#3fac68);
-  border-color:#56c97d;
-}
-
-button.danger{
-  background:#632e34;
-  border-color:#94464e;
-}
-
-button.gold{
-  background:#70571c;
-  border-color:#9b7d31;
-}
-
-button.blue{
-  background:#174e69;
-  border-color:#2e779a;
-}
-
-select,
-input{
+select,input{
   width:100%;
   background:#09161a;
   border:1px solid var(--line);
@@ -116,11 +90,7 @@ header{
   justify-content:space-between;
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
+.brand{display:flex;align-items:center;gap:12px;}
 
 .brand-logo{
   width:44px;
@@ -133,17 +103,8 @@ header{
   border:1px solid #3e7480;
 }
 
-.brand-title{
-  font-size:22px;
-  font-weight:900;
-  letter-spacing:.5px;
-}
-
-.tagline{
-  font-size:12px;
-  color:var(--muted);
-  margin-top:2px;
-}
+.brand-title{font-size:22px;font-weight:900;letter-spacing:.5px;}
+.tagline{font-size:12px;color:var(--muted);margin-top:2px;}
 
 .top-stats{
   display:flex;
@@ -168,9 +129,7 @@ header{
   letter-spacing:.7px;
 }
 
-.top-stat strong{
-  font-size:15px;
-}
+.top-stat strong{font-size:15px;}
 
 .app{
   max-width:1600px;
@@ -204,18 +163,9 @@ nav{
   color:white;
 }
 
-main{
-  min-width:0;
-  padding:18px;
-}
-
-.page{
-  display:none;
-}
-
-.page.active{
-  display:block;
-}
+main{min-width:0;padding:18px;}
+.page{display:none;}
+.page.active{display:block;}
 
 .page-title{
   display:flex;
@@ -225,32 +175,13 @@ main{
   margin-bottom:17px;
 }
 
-.page-title h1{
-  margin:0;
-  font-size:27px;
-}
+.page-title h1{margin:0;font-size:27px;}
+.page-title p{margin:5px 0 0;color:var(--muted);}
 
-.page-title p{
-  margin:5px 0 0;
-  color:var(--muted);
-}
-
-.grid{
-  display:grid;
-  gap:14px;
-}
-
-.grid-2{
-  grid-template-columns:repeat(2,minmax(0,1fr));
-}
-
-.grid-3{
-  grid-template-columns:repeat(3,minmax(0,1fr));
-}
-
-.grid-4{
-  grid-template-columns:repeat(4,minmax(0,1fr));
-}
+.grid{display:grid;gap:14px;}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.grid-4{grid-template-columns:repeat(4,minmax(0,1fr));}
 
 .card{
   background:linear-gradient(145deg,rgba(17,38,44,.95),rgba(10,25,29,.96));
@@ -260,67 +191,23 @@ main{
   box-shadow:var(--shadow);
 }
 
-.card h2,
-.card h3,
-.card h4{
-  margin-top:0;
-}
+.card h2,.card h3,.card h4{margin-top:0;}
+.card h2{font-size:18px;}
+.card h3{font-size:15px;}
 
-.card h2{
-  font-size:18px;
-}
+.muted{color:var(--muted);}
+.small{font-size:12px;}
+.tiny{font-size:10px;}
+.good{color:#70db96;}
+.bad{color:#f07a7a;}
+.gold-text{color:var(--gold);}
 
-.card h3{
-  font-size:15px;
-}
+.row{display:flex;align-items:center;gap:10px;}
+.row.wrap{flex-wrap:wrap;}
+.spread{justify-content:space-between;}
 
-.muted{
-  color:var(--muted);
-}
-
-.small{
-  font-size:12px;
-}
-
-.tiny{
-  font-size:10px;
-}
-
-.good{
-  color:#70db96;
-}
-
-.bad{
-  color:#f07a7a;
-}
-
-.gold-text{
-  color:var(--gold);
-}
-
-.row{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.row.wrap{
-  flex-wrap:wrap;
-}
-
-.spread{
-  justify-content:space-between;
-}
-
-.stat-value{
-  font-size:28px;
-  font-weight:900;
-}
-
-.stat-label{
-  color:var(--muted);
-  font-size:12px;
-}
+.stat-value{font-size:28px;font-weight:900;}
+.stat-label{color:var(--muted);font-size:12px;}
 
 .divider{
   border:none;
@@ -339,20 +226,9 @@ main{
   font-size:11px;
 }
 
-.pill.green{
-  border-color:#347950;
-  background:#153b27;
-}
-
-.pill.gold{
-  border-color:#806629;
-  background:#3b3017;
-}
-
-.pill.blue{
-  border-color:#2e6c8b;
-  background:#12334a;
-}
+.pill.green{border-color:#347950;background:#153b27;}
+.pill.gold{border-color:#806629;background:#3b3017;}
+.pill.blue{border-color:#2e6c8b;background:#12334a;}
 
 .progress{
   height:9px;
@@ -362,19 +238,14 @@ main{
   border:1px solid #1f3c44;
 }
 
-.progress > div{
+.progress>div{
   height:100%;
   background:linear-gradient(90deg,#2d8e58,#65d48d);
 }
 
-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:13px;
-}
+table{width:100%;border-collapse:collapse;font-size:13px;}
 
-th,
-td{
+th,td{
   padding:8px 7px;
   border-bottom:1px solid rgba(65,100,110,.35);
   text-align:left;
@@ -387,38 +258,19 @@ th{
   letter-spacing:.45px;
 }
 
-tr.player-row{
-  background:rgba(66,158,96,.1);
-}
+tr.player-row{background:rgba(66,158,96,.1);}
+.rank-1{color:#ffd66f;font-weight:900;}
+.rank-2{color:#cbd4df;font-weight:900;}
+.rank-3{color:#d69264;font-weight:900;}
 
-.rank-1{
-  color:#ffd66f;
-  font-weight:900;
-}
-
-.rank-2{
-  color:#cbd4df;
-  font-weight:900;
-}
-
-.rank-3{
-  color:#d69264;
-  font-weight:900;
-}
-
-.species-tab{
-  flex:1;
-  min-width:100px;
-}
+.species-tab{flex:1;min-width:100px;}
 
 .species-tab.active{
   background:#246344;
   border-color:#4fac72;
 }
 
-.form-group{
-  margin-bottom:10px;
-}
+.form-group{margin-bottom:10px;}
 
 .form-group label{
   display:block;
@@ -462,7 +314,6 @@ tr.player-row{
   display:block;
   font-size:14px;
   white-space:normal;
-  word-break:normal;
 }
 
 .fishing-layout{
@@ -483,9 +334,7 @@ tr.player-row{
 
 .scene-sky{
   position:absolute;
-  top:0;
-  left:0;
-  right:0;
+  inset:0 0 auto;
   height:22%;
   background:linear-gradient(to bottom,#506f7c,#7898a1);
 }
@@ -506,7 +355,6 @@ tr.player-row{
   transform:translateX(-50%);
   top:28%;
   font-size:46px;
-  filter:drop-shadow(0 5px 6px rgba(0,0,0,.4));
 }
 
 .water-label{
@@ -549,9 +397,7 @@ tr.player-row{
 
 .meter-zone{
   position:absolute;
-  top:0;
-  bottom:0;
-  left:40%;
+  inset:0 auto 0 40%;
   width:20%;
   background:rgba(74,193,116,.27);
   border-left:1px solid rgba(104,240,151,.5);
@@ -567,14 +413,8 @@ tr.player-row{
   box-shadow:0 0 8px white;
 }
 
-.fight-panel{
-  margin-top:10px;
-  display:none;
-}
-
-.fight-panel.active{
-  display:block;
-}
+.fight-panel{margin-top:10px;display:none;}
+.fight-panel.active{display:block;}
 
 .tension-bar{
   height:18px;
@@ -594,10 +434,7 @@ tr.player-row{
   box-shadow:0 0 6px white;
 }
 
-.livewell{
-  display:grid;
-  gap:6px;
-}
+.livewell{display:grid;gap:6px;}
 
 .livewell-fish{
   display:flex;
@@ -609,45 +446,16 @@ tr.player-row{
   border:1px solid #24414a;
 }
 
-.tournament-card{
-  border-left:4px solid #335967;
-}
+.tournament-card{border-left:4px solid #335967;}
+.tournament-card.local{border-left-color:#6b9b75;}
+.tournament-card.state{border-left-color:#4896c5;}
+.tournament-card.national{border-left-color:#9a6fd0;}
+.tournament-card.major{border-left-color:#d9ad4b;}
+.tournament-card.locked{opacity:.6;}
 
-.tournament-card.local{
-  border-left-color:#6b9b75;
-}
-
-.tournament-card.state{
-  border-left-color:#4896c5;
-}
-
-.tournament-card.national{
-  border-left-color:#9a6fd0;
-}
-
-.tournament-card.major{
-  border-left-color:#d9ad4b;
-}
-
-.tournament-card.locked{
-  opacity:.6;
-}
-
-.gear-card{
-  display:flex;
-  flex-direction:column;
-  height:100%;
-}
-
-.gear-card .gear-actions{
-  margin-top:auto;
-  padding-top:10px;
-}
-
-.gear-name{
-  font-weight:800;
-  font-size:15px;
-}
+.gear-card{display:flex;flex-direction:column;height:100%;}
+.gear-card .gear-actions{margin-top:auto;padding-top:10px;}
+.gear-name{font-weight:800;font-size:15px;}
 
 .equipped{
   border-color:#4c986b;
@@ -658,10 +466,7 @@ tr.player-row{
 .rarity-uncommon{color:#6fd590;}
 .rarity-rare{color:#6cbff2;}
 .rarity-epic{color:#c092f0;}
-.rarity-legendary{
-  color:#f2c25d;
-  text-shadow:0 0 8px rgba(242,194,93,.2);
-}
+.rarity-legendary{color:#f2c25d;}
 
 .fish-trophy{
   padding:10px;
@@ -708,9 +513,7 @@ tr.player-row{
   padding:20px;
 }
 
-.modal-backdrop.active{
-  display:flex;
-}
+.modal-backdrop.active{display:flex;}
 
 .modal{
   width:min(680px,100%);
@@ -744,19 +547,14 @@ tr.player-row{
   background:#0a171b;
 }
 
-.path-level.unlocked{
-  border-color:#4d9768;
-  background:#123120;
-}
+.path-level.unlocked{border-color:#4d9768;background:#123120;}
 
 .path-level.current{
   border-color:#c49d46;
   box-shadow:0 0 0 1px rgba(196,157,70,.3);
 }
 
-.ai-name{
-  white-space:nowrap;
-}
+.ai-name{white-space:nowrap;}
 
 .achievement{
   display:flex;
@@ -768,43 +566,21 @@ tr.player-row{
   background:#09171b;
 }
 
-.achievement.locked{
-  opacity:.35;
-}
-
-.achievement-icon{
-  font-size:24px;
-}
+.achievement.locked{opacity:.35;}
+.achievement-icon{font-size:24px;}
 
 .journal-entry{
   padding:10px;
   border-bottom:1px solid #28434b;
 }
 
-.journal-entry:last-child{
-  border-bottom:none;
-}
+.journal-entry:last-child{border-bottom:none;}
 
-.sponsor-card{
-  position:relative;
-  overflow:hidden;
-}
+.sponsor-card{position:relative;overflow:hidden;}
+.sponsor-card.active-sponsor{border-color:#a67f38;}
+.sponsor-badge{position:absolute;right:10px;top:10px;}
 
-.sponsor-card.active-sponsor{
-  border-color:#a67f38;
-}
-
-.sponsor-badge{
-  position:absolute;
-  right:10px;
-  top:10px;
-}
-
-.btn-row{
-  display:flex;
-  gap:7px;
-  flex-wrap:wrap;
-}
+.btn-row{display:flex;gap:7px;flex-wrap:wrap;}
 
 .empty{
   color:var(--muted);
@@ -815,23 +591,13 @@ tr.player-row{
 }
 
 @media(max-width:1250px){
-  .fishing-layout{
-    grid-template-columns:280px 1fr;
-  }
-
-  .fishing-layout > .right-fishing{
-    grid-column:1/-1;
-  }
-
-  .grid-4{
-    grid-template-columns:repeat(2,1fr);
-  }
+  .fishing-layout{grid-template-columns:280px 1fr;}
+  .fishing-layout>.right-fishing{grid-column:1/-1;}
+  .grid-4{grid-template-columns:repeat(2,1fr);}
 }
 
 @media(max-width:900px){
-  .app{
-    display:block;
-  }
+  .app{display:block;}
 
   nav{
     border-right:none;
@@ -848,29 +614,11 @@ tr.player-row{
     margin:0;
   }
 
-  .fishing-layout,
-  .grid-2,
-  .grid-3,
-  .grid-4{
-    grid-template-columns:1fr;
-  }
-
-  .condition-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-
-  .career-path{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .topbar{
-    align-items:flex-start;
-    flex-direction:column;
-  }
-
-  .top-stats{
-    justify-content:flex-start;
-  }
+  .fishing-layout,.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}
+  .condition-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .career-path{grid-template-columns:repeat(2,1fr);}
+  .topbar{align-items:flex-start;flex-direction:column;}
+  .top-stats{justify-content:flex-start;}
 }
 </style>
 </head>
@@ -878,37 +626,22 @@ tr.player-row{
 <body>
 
 <header>
-  <div class="topbar">
-    <div class="brand">
-      <div class="brand-logo">🎣</div>
-      <div>
-        <div class="brand-title">TOURNAMENT TRAIL</div>
-        <div class="tagline">Fish. Qualify. Climb the ranks.</div>
-      </div>
-    </div>
-
-    <div class="top-stats">
-      <div class="top-stat">
-        <small>Career Cash</small>
-        <strong id="topMoney">$0</strong>
-      </div>
-
-      <div class="top-stat">
-        <small>Reputation</small>
-        <strong id="topRep">0</strong>
-      </div>
-
-      <div class="top-stat">
-        <small>Career Wins</small>
-        <strong id="topWins">0</strong>
-      </div>
-
-      <div class="top-stat">
-        <small>Season</small>
-        <strong id="topSeason">1</strong>
-      </div>
+<div class="topbar">
+  <div class="brand">
+    <div class="brand-logo">🎣</div>
+    <div>
+      <div class="brand-title">TOURNAMENT TRAIL</div>
+      <div class="tagline">Fish. Qualify. Climb the ranks.</div>
     </div>
   </div>
+
+  <div class="top-stats">
+    <div class="top-stat"><small>Career Cash</small><strong id="topMoney">$0</strong></div>
+    <div class="top-stat"><small>Reputation</small><strong id="topRep">0</strong></div>
+    <div class="top-stat"><small>Career Wins</small><strong id="topWins">0</strong></div>
+    <div class="top-stat"><small>Season</small><strong id="topSeason">1</strong></div>
+  </div>
+</div>
 </header>
 
 <div class="app">
@@ -941,7 +674,6 @@ tr.player-row{
         <span class="pill green">Season <span id="heroSeason">1</span></span>
         <h2 style="font-size:28px;margin:12px 0 5px">Unknown Angler</h2>
         <p class="muted" id="careerStatusText">Your tournament career starts at the local level.</p>
-
         <div class="btn-row">
           <button class="primary" onclick="showPage('fish')">Go Fishing</button>
           <button onclick="showPage('tournaments')">Find Tournament</button>
@@ -949,54 +681,27 @@ tr.player-row{
       </div>
 
       <div class="grid grid-3">
-        <div>
-          <div class="stat-value" id="dashEarnings">$0</div>
-          <div class="stat-label">Career Earnings</div>
-        </div>
-
-        <div>
-          <div class="stat-value" id="dashWins">0</div>
-          <div class="stat-label">Tournament Wins</div>
-        </div>
-
-        <div>
-          <div class="stat-value" id="dashTop10">0</div>
-          <div class="stat-label">Top-10 Finishes</div>
-        </div>
+        <div><div class="stat-value" id="dashEarnings">$0</div><div class="stat-label">Career Earnings</div></div>
+        <div><div class="stat-value" id="dashWins">0</div><div class="stat-label">Tournament Wins</div></div>
+        <div><div class="stat-value" id="dashTop10">0</div><div class="stat-label">Top-10 Finishes</div></div>
       </div>
     </div>
   </div>
 
   <br>
-
   <div class="grid grid-3" id="speciesCareerCards"></div>
-
   <br>
 
   <div class="grid grid-2">
-    <div class="card">
-      <h2>Upcoming Events</h2>
-      <div id="dashboardEvents"></div>
-    </div>
-
-    <div class="card">
-      <h2>Recent Career Activity</h2>
-      <div id="careerFeed"></div>
-    </div>
+    <div class="card"><h2>Upcoming Events</h2><div id="dashboardEvents"></div></div>
+    <div class="card"><h2>Recent Career Activity</h2><div id="careerFeed"></div></div>
   </div>
 
   <br>
 
   <div class="grid grid-2">
-    <div class="card">
-      <h2>Current Conditions</h2>
-      <div id="dashboardWeather"></div>
-    </div>
-
-    <div class="card">
-      <h2>Equipment Overview</h2>
-      <div id="dashboardGear"></div>
-    </div>
+    <div class="card"><h2>Current Conditions</h2><div id="dashboardWeather"></div></div>
+    <div class="card"><h2>Equipment Overview</h2><div id="dashboardGear"></div></div>
   </div>
 </section>
 
@@ -1011,35 +716,15 @@ tr.player-row{
   <div id="activeTournamentBanner"></div>
 
   <div class="fishing-layout">
-
     <div>
       <div class="card">
         <h2>Fishing Plan</h2>
 
-        <div class="form-group">
-          <label>Target Species</label>
-          <select id="fishSpeciesSelect"></select>
-        </div>
-
-        <div class="form-group">
-          <label>Lake</label>
-          <select id="lakeSelect"></select>
-        </div>
-
-        <div class="form-group">
-          <label>Area / Spot</label>
-          <select id="spotSelect"></select>
-        </div>
-
-        <div class="form-group">
-          <label>Technique</label>
-          <select id="techniqueSelect"></select>
-        </div>
-
-        <div class="form-group">
-          <label>Lure / Bait</label>
-          <select id="lureSelect"></select>
-        </div>
+        <div class="form-group"><label>Target Species</label><select id="fishSpeciesSelect"></select></div>
+        <div class="form-group"><label>Lake</label><select id="lakeSelect"></select></div>
+        <div class="form-group"><label>Area / Spot</label><select id="spotSelect"></select></div>
+        <div class="form-group"><label>Technique</label><select id="techniqueSelect"></select></div>
+        <div class="form-group"><label>Lure / Bait</label><select id="lureSelect"></select></div>
 
         <div class="form-group">
           <label>Target Depth</label>
@@ -1053,10 +738,7 @@ tr.player-row{
         </div>
 
         <div id="electronicsIntel" class="info-box small"></div>
-
-        <button class="primary" id="castBtn" onclick="castLine()" style="width:100%">
-          CAST
-        </button>
+        <button class="primary" id="castBtn" onclick="castLine()" style="width:100%">CAST</button>
       </div>
 
       <br>
@@ -1079,19 +761,15 @@ tr.player-row{
         </div>
 
         <div class="cast-status">
-          <div class="cast-message" id="castMessage">
-            Choose your strategy and make a cast.
-          </div>
+          <div class="cast-message" id="castMessage">Choose your strategy and make a cast.</div>
 
-          <div class="meter" id="timingMeter">
+          <div class="meter">
             <div class="meter-zone"></div>
             <div class="meter-marker" id="timingMarker" style="left:0%"></div>
           </div>
 
           <div class="btn-row" style="justify-content:center;margin-top:9px">
-            <button id="hookBtn" onclick="attemptHookSet()" disabled>
-              SET HOOK
-            </button>
+            <button id="hookBtn" onclick="attemptHookSet()" disabled>SET HOOK</button>
           </div>
 
           <div class="fight-panel" id="fightPanel">
@@ -1117,25 +795,18 @@ tr.player-row{
 
       <div class="card">
         <h3>Today's Conditions</h3>
-
-        <!-- FIXED: weatherHTML creates the condition grid itself.
-             This container must NOT also have condition-grid. -->
         <div id="fishingConditions"></div>
       </div>
     </div>
 
     <div class="right-fishing">
-
       <div class="card">
         <h2 id="livewellTitle">Today's Catch</h2>
-
         <div class="row spread">
           <span class="small muted">Total Weight</span>
           <strong id="livewellWeight">0.00 lb</strong>
         </div>
-
         <hr class="divider">
-
         <div class="livewell" id="livewellList"></div>
       </div>
 
@@ -1152,7 +823,6 @@ tr.player-row{
         <h3>Lake Knowledge</h3>
         <div id="lakeKnowledge"></div>
       </div>
-
     </div>
   </div>
 </section>
@@ -1163,10 +833,7 @@ tr.player-row{
       <h1>Tournament Schedule</h1>
       <p>Earn your way from open tournaments to the biggest championships in fishing.</p>
     </div>
-
-    <button onclick="generateLocalOpen(true)">
-      Generate Local Open
-    </button>
+    <button onclick="generateLocalOpen(true)">Generate Local Open</button>
   </div>
 
   <div class="row wrap" style="margin-bottom:14px">
@@ -1176,9 +843,7 @@ tr.player-row{
   </div>
 
   <div id="tournamentCareerPath"></div>
-
   <br>
-
   <div class="grid grid-2" id="tournamentList"></div>
 </section>
 
@@ -1197,22 +862,9 @@ tr.player-row{
   </div>
 
   <div class="grid grid-3">
-
-    <div class="card">
-      <h2>Local / Open Points</h2>
-      <div id="localStandings"></div>
-    </div>
-
-    <div class="card">
-      <h2>State / Regional Tour</h2>
-      <div id="stateStandings"></div>
-    </div>
-
-    <div class="card">
-      <h2>National Tour</h2>
-      <div id="nationalStandings"></div>
-    </div>
-
+    <div class="card"><h2>Local / Open Points</h2><div id="localStandings"></div></div>
+    <div class="card"><h2>State / Regional Tour</h2><div id="stateStandings"></div></div>
+    <div class="card"><h2>National Tour</h2><div id="nationalStandings"></div></div>
   </div>
 </section>
 
@@ -1223,9 +875,7 @@ tr.player-row{
       <p>Better equipment unlocks tactics, information, mobility, and tournament-level capabilities.</p>
     </div>
   </div>
-
   <div class="row wrap" id="gearCategoryTabs" style="margin-bottom:14px"></div>
-
   <div class="grid grid-3" id="gearShop"></div>
 </section>
 
@@ -1238,17 +888,8 @@ tr.player-row{
   </div>
 
   <div class="grid grid-2">
-
-    <div class="card">
-      <h2>Lake Knowledge</h2>
-      <div id="journalKnowledge"></div>
-    </div>
-
-    <div class="card">
-      <h2>Recent Entries</h2>
-      <div id="journalEntries"></div>
-    </div>
-
+    <div class="card"><h2>Lake Knowledge</h2><div id="journalKnowledge"></div></div>
+    <div class="card"><h2>Recent Entries</h2><div id="journalEntries"></div></div>
   </div>
 </section>
 
@@ -1261,21 +902,11 @@ tr.player-row{
   </div>
 
   <div class="grid grid-3" id="personalBestCards"></div>
-
   <br>
 
   <div class="grid grid-2">
-
-    <div class="card">
-      <h2>Rare & Trophy Fish</h2>
-      <div id="trophyFishList"></div>
-    </div>
-
-    <div class="card">
-      <h2>Legendary Fish</h2>
-      <div id="legendaryFishList"></div>
-    </div>
-
+    <div class="card"><h2>Rare & Trophy Fish</h2><div id="trophyFishList"></div></div>
+    <div class="card"><h2>Legendary Fish</h2><div id="legendaryFishList"></div></div>
   </div>
 </section>
 
@@ -1286,7 +917,6 @@ tr.player-row{
       <p>Perform on the water, meet sponsor objectives, and build a professional career.</p>
     </div>
   </div>
-
   <div class="grid grid-3" id="sponsorList"></div>
 </section>
 
@@ -1299,27 +929,10 @@ tr.player-row{
   </div>
 
   <div class="grid grid-4">
-
-    <div class="card">
-      <div class="stat-value" id="careerEarnings">$0</div>
-      <div class="stat-label">Tournament Earnings</div>
-    </div>
-
-    <div class="card">
-      <div class="stat-value" id="careerWins">0</div>
-      <div class="stat-label">Tournament Wins</div>
-    </div>
-
-    <div class="card">
-      <div class="stat-value" id="careerTop10">0</div>
-      <div class="stat-label">Top-10 Finishes</div>
-    </div>
-
-    <div class="card">
-      <div class="stat-value" id="careerFish">0</div>
-      <div class="stat-label">Fish Landed</div>
-    </div>
-
+    <div class="card"><div class="stat-value" id="careerEarnings">$0</div><div class="stat-label">Tournament Earnings</div></div>
+    <div class="card"><div class="stat-value" id="careerWins">0</div><div class="stat-label">Tournament Wins</div></div>
+    <div class="card"><div class="stat-value" id="careerTop10">0</div><div class="stat-label">Top-10 Finishes</div></div>
+    <div class="card"><div class="stat-value" id="careerFish">0</div><div class="stat-label">Fish Landed</div></div>
   </div>
 
   <br>
@@ -1335,9 +948,7 @@ tr.player-row{
     <div class="row spread wrap">
       <div>
         <h2 style="margin-bottom:4px">Save Data</h2>
-        <div class="small muted">
-          Tournament Trail automatically saves in this browser.
-        </div>
+        <div class="small muted">Tournament Trail automatically saves in this browser.</div>
       </div>
 
       <div class="btn-row">
@@ -1357,7 +968,6 @@ tr.player-row{
 <div class="modal-backdrop" id="resultModal">
   <div class="modal">
     <div id="resultModalBody"></div>
-
     <div style="text-align:right;margin-top:15px">
       <button class="primary" onclick="closeModal()">Continue</button>
     </div>
@@ -1368,33 +978,18 @@ tr.player-row{
 const SPECIES={
   Walleye:{
     icon:"🐟",
-    color:"#71b7c5",
     baseMin:1.1,
     baseMax:8.8,
     trophy:10,
     legendaryThreshold:13,
     preferredTemps:[48,68],
-    depthRange:[12,42],
     strategy:"Depth, bottom structure, trolling speed, jigging, live bait, crankbaits and electronics.",
-    techniques:[
-      "Jigging",
-      "Bottom Bouncer",
-      "Trolling",
-      "Slip Bobber",
-      "Casting Crankbaits"
-    ],
-    lures:[
-      "Jig + Minnow",
-      "Jig + Plastic",
-      "Crawler Harness",
-      "Shad Crankbait",
-      "Blade Bait",
-      "Live Leech"
-    ],
+    techniques:["Jigging","Bottom Bouncer","Trolling","Slip Bobber","Casting Crankbaits"],
+    lures:["Jig + Minnow","Jig + Plastic","Crawler Harness","Shad Crankbait","Blade Bait","Live Leech"],
     affinity:{
-      "Jigging":["Rocky Point","Creek Mouth","River Section"],
+      Jigging:["Rocky Point","Creek Mouth","River Section"],
       "Bottom Bouncer":["Deep Channel","Offshore Hump"],
-      "Trolling":["Deep Channel","Offshore Hump"],
+      Trolling:["Deep Channel","Offshore Hump"],
       "Slip Bobber":["Rocky Point","Weed Line"],
       "Casting Crankbaits":["Shallow Bay","Rocky Point","River Section"]
     }
@@ -1402,81 +997,47 @@ const SPECIES={
 
   Bass:{
     icon:"🐠",
-    color:"#72c271",
     baseMin:.8,
     baseMax:6.5,
     trophy:7,
     legendaryThreshold:10,
     preferredTemps:[58,78],
-    depthRange:[2,25],
     strategy:"Cover, casting accuracy, presentation, shallow/deep movement and changing weather.",
-    techniques:[
-      "Power Casting",
-      "Pitching Cover",
-      "Finesse",
-      "Topwater",
-      "Deep Cranking"
-    ],
-    lures:[
-      "Spinnerbait",
-      "Jig",
-      "Worm",
-      "Frog",
-      "Crankbait",
-      "Drop Shot",
-      "Swimbait"
-    ],
+    techniques:["Power Casting","Pitching Cover","Finesse","Topwater","Deep Cranking"],
+    lures:["Spinnerbait","Jig","Worm","Frog","Crankbait","Drop Shot","Swimbait"],
     affinity:{
       "Power Casting":["Shallow Bay","Rocky Point","Weed Line"],
       "Pitching Cover":["Weed Line","Creek Mouth"],
-      "Finesse":["Rocky Point","Offshore Hump"],
-      "Topwater":["Shallow Bay","Weed Line"],
+      Finesse:["Rocky Point","Offshore Hump"],
+      Topwater:["Shallow Bay","Weed Line"],
       "Deep Cranking":["Offshore Hump","Deep Channel"]
     }
   },
 
   Trout:{
     icon:"🐟",
-    color:"#d88966",
     baseMin:.4,
     baseMax:5.5,
     trophy:6,
     legendaryThreshold:9,
     preferredTemps:[42,63],
-    depthRange:[1,20],
     strategy:"Water temperature, current, light, insect activity, fly or lure selection.",
-    techniques:[
-      "Drift Fishing",
-      "Dry Fly",
-      "Nymphing",
-      "Streamer",
-      "Casting Spoon"
-    ],
-    lures:[
-      "Stonefly Nymph",
-      "Mayfly Dry",
-      "Woolly Bugger",
-      "Small Spoon",
-      "Rooster Tail",
-      "Egg Pattern"
-    ],
+    techniques:["Drift Fishing","Dry Fly","Nymphing","Streamer","Casting Spoon"],
+    lures:["Stonefly Nymph","Mayfly Dry","Woolly Bugger","Small Spoon","Rooster Tail","Egg Pattern"],
     affinity:{
       "Drift Fishing":["River Section","Creek Mouth"],
       "Dry Fly":["River Section","Shallow Bay"],
-      "Nymphing":["River Section","Creek Mouth","Rocky Point"],
-      "Streamer":["Deep Channel","River Section","Rocky Point"],
+      Nymphing:["River Section","Creek Mouth","Rocky Point"],
+      Streamer:["Deep Channel","River Section","Rocky Point"],
       "Casting Spoon":["Shallow Bay","Rocky Point","Deep Channel"]
     }
   }
 };
 
 const LAKES={
-
   "Granite Lake":{
-    region:"Montana",
     species:["Walleye","Bass","Trout"],
     unlockRep:0,
-    description:"A diverse western reservoir with rocky shorelines, offshore structure and a productive river arm.",
     spots:[
       {name:"North Shallow Bay",type:"Shallow Bay",depth:[2,12],structure:"weeds",species:{Walleye:.75,Bass:1.25,Trout:.65}},
       {name:"Eagle Rock Point",type:"Rocky Point",depth:[5,25],structure:"rock",species:{Walleye:1.2,Bass:1.05,Trout:1}},
@@ -1488,10 +1049,8 @@ const LAKES={
   },
 
   "Prairie Reservoir":{
-    region:"Dakotas",
     species:["Walleye"],
     unlockRep:0,
-    description:"A windswept prairie reservoir loaded with long points, roadbeds and roaming schools of walleye.",
     spots:[
       {name:"Cottonwood Bay",type:"Shallow Bay",depth:[2,11],structure:"mud",species:{Walleye:.95}},
       {name:"Main Lake Point",type:"Rocky Point",depth:[7,29],structure:"gravel",species:{Walleye:1.3}},
@@ -1503,10 +1062,8 @@ const LAKES={
   },
 
   "Timber Wolf Reservoir":{
-    region:"Northern Plains",
     species:["Walleye"],
     unlockRep:0,
-    description:"A sprawling reservoir where windblown points, reefs and suspended baitfish create constantly changing walleye patterns.",
     spots:[
       {name:"Wolf Bay",type:"Shallow Bay",depth:[3,13],structure:"sand",species:{Walleye:.9}},
       {name:"Long Knife Point",type:"Rocky Point",depth:[8,30],structure:"rock",species:{Walleye:1.35}},
@@ -1518,10 +1075,8 @@ const LAKES={
   },
 
   "Red Rock Reservoir":{
-    region:"Mountain Prairie",
     species:["Walleye"],
     unlockRep:0,
-    description:"Clearer water and sharp breaklines make this a technical walleye lake where electronics and depth control matter.",
     spots:[
       {name:"Red Rock Flat",type:"Shallow Bay",depth:[3,14],structure:"gravel",species:{Walleye:.85}},
       {name:"Mesa Point",type:"Rocky Point",depth:[6,32],structure:"rock",species:{Walleye:1.3}},
@@ -1533,10 +1088,8 @@ const LAKES={
   },
 
   "Cypress Lake":{
-    region:"Central Plains",
     species:["Bass"],
     unlockRep:0,
-    description:"A shallow bass lake filled with vegetation, flooded timber and protected pockets.",
     spots:[
       {name:"Cypress Pocket",type:"Shallow Bay",depth:[2,8],structure:"wood",species:{Bass:1.45}},
       {name:"Dock Point",type:"Rocky Point",depth:[4,18],structure:"rock",species:{Bass:1.1}},
@@ -1548,10 +1101,8 @@ const LAKES={
   },
 
   "Willow Bend Reservoir":{
-    region:"Midwest",
     species:["Bass"],
     unlockRep:0,
-    description:"A mixed-cover reservoir where largemouth move between shallow vegetation and offshore structure.",
     spots:[
       {name:"Willow Bay",type:"Shallow Bay",depth:[2,10],structure:"brush",species:{Bass:1.4}},
       {name:"Granite Point",type:"Rocky Point",depth:[6,22],structure:"rock",species:{Bass:1.15}},
@@ -1563,10 +1114,8 @@ const LAKES={
   },
 
   "Blackwater Lake":{
-    region:"Southern Plains",
     species:["Bass"],
     unlockRep:0,
-    description:"Dark water, thick cover and aggressive bass reward accurate casting and power-fishing techniques.",
     spots:[
       {name:"Lily Pad Bay",type:"Shallow Bay",depth:[2,7],structure:"vegetation",species:{Bass:1.5}},
       {name:"Black Rock Point",type:"Rocky Point",depth:[5,20],structure:"rock",species:{Bass:1.1}},
@@ -1578,10 +1127,8 @@ const LAKES={
   },
 
   "Bluewater Lake":{
-    region:"Midwest",
     species:["Walleye","Bass"],
     unlockRep:45,
-    description:"Clear water, deep structure and pressure from experienced tournament anglers.",
     spots:[
       {name:"Glass Bay",type:"Shallow Bay",depth:[3,12],structure:"sand",species:{Walleye:.65,Bass:1.1}},
       {name:"Boulder Point",type:"Rocky Point",depth:[8,31],structure:"boulders",species:{Walleye:1.25,Bass:1.15}},
@@ -1592,10 +1139,8 @@ const LAKES={
   },
 
   "Clear Fork River":{
-    region:"Mountain West",
     species:["Trout"],
     unlockRep:0,
-    description:"Cold moving water where current seams, insect activity and presentation matter.",
     spots:[
       {name:"Upper Riffle",type:"River Section",depth:[1,6],structure:"riffle",species:{Trout:1.3}},
       {name:"Cottonwood Bend",type:"River Section",depth:[3,10],structure:"bend",species:{Trout:1.2}},
@@ -1606,10 +1151,8 @@ const LAKES={
   },
 
   "Timberline Lake":{
-    region:"Rockies",
     species:["Trout"],
     unlockRep:30,
-    description:"Cold clear mountain water holding fewer fish but exceptional trophy potential.",
     spots:[
       {name:"South Shelf",type:"Shallow Bay",depth:[2,11],structure:"gravel",species:{Trout:1}},
       {name:"Avalanche Point",type:"Rocky Point",depth:[6,27],structure:"rock",species:{Trout:1.3}},
@@ -1620,10 +1163,8 @@ const LAKES={
   },
 
   "Championship Waters":{
-    region:"National",
     species:["Walleye","Bass","Trout"],
     unlockRep:100,
-    description:"A rotating national championship venue designed to test every part of an angler's game.",
     spots:[
       {name:"Championship Bay",type:"Shallow Bay",depth:[2,15],structure:"mixed",species:{Walleye:1,Bass:1.25,Trout:.75}},
       {name:"Finals Point",type:"Rocky Point",depth:[5,30],structure:"rock",species:{Walleye:1.2,Bass:1.2,Trout:1.1}},
@@ -1679,38 +1220,9 @@ const SPONSORS=[
 ];
 
 const LEGENDARY_FISH=[
-  {
-    id:"old_marble_eye",
-    species:"Walleye",
-    name:"Old Marble Eye",
-    lake:"Bluewater Lake",
-    spot:"Forty Foot Break",
-    minWeight:13.2,
-    maxWeight:16.8,
-    description:"A giant walleye whispered about by generations of tournament anglers."
-  },
-
-  {
-    id:"mossback",
-    species:"Bass",
-    name:"Mossback",
-    lake:"Granite Lake",
-    spot:"West Weed Edge",
-    minWeight:9.6,
-    maxWeight:12.4,
-    description:"A massive old bass with a scar across its dorsal fin."
-  },
-
-  {
-    id:"ghost_granite",
-    species:"Trout",
-    name:"Ghost of Granite",
-    lake:"Timberline Lake",
-    spot:"Avalanche Point",
-    minWeight:9.2,
-    maxWeight:12.8,
-    description:"An enormous pale trout occasionally seen cruising beneath the rock shelf."
-  }
+  {id:"old_marble_eye",species:"Walleye",name:"Old Marble Eye",lake:"Bluewater Lake",spot:"Forty Foot Break",minWeight:13.2,maxWeight:16.8,description:"A giant walleye whispered about by generations of tournament anglers."},
+  {id:"mossback",species:"Bass",name:"Mossback",lake:"Granite Lake",spot:"West Weed Edge",minWeight:9.6,maxWeight:12.4,description:"A massive old bass with a scar across its dorsal fin."},
+  {id:"ghost_granite",species:"Trout",name:"Ghost of Granite",lake:"Timberline Lake",spot:"Avalanche Point",minWeight:9.2,maxWeight:12.8,description:"An enormous pale trout occasionally seen cruising beneath the rock shelf."}
 ];
 
 const ACHIEVEMENTS=[
@@ -1727,7 +1239,7 @@ const ACHIEVEMENTS=[
 ];
 
 const game={
-  version:3,
+  version:4,
   season:1,
   money:5000,
   reputation:0,
@@ -1739,11 +1251,7 @@ const game={
   highWins:0,
   majorWins:0,
 
-  speciesWins:{
-    Walleye:0,
-    Bass:0,
-    Trout:0
-  },
+  speciesWins:{Walleye:0,Bass:0,Trout:0},
 
   standings:{
     Walleye:{local:0,state:0,national:0},
@@ -1751,12 +1259,7 @@ const game={
     Trout:{local:0,state:0,national:0}
   },
 
-  speciesRank:{
-    Walleye:999,
-    Bass:999,
-    Trout:999
-  },
-
+  speciesRank:{Walleye:999,Bass:999,Trout:999},
   knowledge:{},
 
   equipped:{
@@ -1769,28 +1272,15 @@ const game={
   },
 
   ownedGear:[
-    "rod_starter",
-    "reel_starter",
-    "line_mono",
-    "boat_john",
-    "motor_basic",
-    "electronics_none"
+    "rod_starter","reel_starter","line_mono",
+    "boat_john","motor_basic","electronics_none"
   ],
 
-  personalBests:{
-    Walleye:null,
-    Bass:null,
-    Trout:null
-  },
-
+  personalBests:{Walleye:null,Bass:null,Trout:null},
   trophies:[],
   legendaryCaught:[],
   journal:[],
-
-  feed:[
-    "Career created. You are an unknown angler looking for your first break."
-  ],
-
+  feed:["Career created. You are an unknown angler looking for your first break."],
   achievements:[],
   sponsor:null,
   sponsorProgress:0,
@@ -1821,25 +1311,15 @@ const runtime={
   currentPotentialFish:null
 };
 
-function money(n){
-  return "$"+Math.round(n).toLocaleString();
-}
-
-function clamp(n,min,max){
-  return Math.max(min,Math.min(max,n));
-}
-
-function random(min,max){
-  return Math.random()*(max-min)+min;
-}
-
-function randomInt(min,max){
-  return Math.floor(random(min,max+1));
-}
-
-function choice(arr){
-  return arr[Math.floor(Math.random()*arr.length)];
-}
+function money(n){return "$"+Math.round(n).toLocaleString();}
+function clamp(n,min,max){return Math.max(min,Math.min(max,n));}
+function random(min,max){return Math.random()*(max-min)+min;}
+function randomInt(min,max){return Math.floor(random(min,max+1));}
+function choice(arr){return arr[Math.floor(Math.random()*arr.length)];}
+function capitalize(str){return str.charAt(0).toUpperCase()+str.slice(1);}
+function getGear(id){return GEAR.find(g=>g.id===id);}
+function equipped(category){return getGear(game.equipped[category]);}
+function ownsGear(id){return game.ownedGear.includes(id);}
 
 function weightedChoice(items){
   const total=items.reduce((s,x)=>s+x.weight,0);
@@ -1847,29 +1327,10 @@ function weightedChoice(items){
 
   for(const item of items){
     roll-=item.weight;
-
-    if(roll<=0){
-      return item.value;
-    }
+    if(roll<=0)return item.value;
   }
 
   return items[items.length-1].value;
-}
-
-function capitalize(str){
-  return str.charAt(0).toUpperCase()+str.slice(1);
-}
-
-function getGear(id){
-  return GEAR.find(g=>g.id===id);
-}
-
-function equipped(category){
-  return getGear(game.equipped[category]);
-}
-
-function ownsGear(id){
-  return game.ownedGear.includes(id);
 }
 
 function addFeed(text){
@@ -1879,16 +1340,11 @@ function addFeed(text){
 
 function notify(text,type=""){
   const wrap=document.getElementById("notifications");
-
-  if(!wrap){
-    return;
-  }
+  if(!wrap)return;
 
   const toast=document.createElement("div");
-
   toast.className="toast "+type;
   toast.textContent=text;
-
   wrap.appendChild(toast);
 
   setTimeout(()=>{
@@ -1896,9 +1352,7 @@ function notify(text,type=""){
     toast.style.transform="translateX(20px)";
   },3200);
 
-  setTimeout(()=>{
-    toast.remove();
-  },3700);
+  setTimeout(()=>toast.remove(),3700);
 }
 
 function showModal(html){
@@ -1912,49 +1366,33 @@ function closeModal(){
 
 function updateHeader(){
   document.getElementById("topMoney").textContent=money(game.money);
-  document.getElementById("topRep").textContent=Math.round(game.reputation);
+  document.getElementById("topRep").textContent=game.reputation.toFixed(2);
   document.getElementById("topWins").textContent=game.wins;
   document.getElementById("topSeason").textContent=game.season;
 }
 
 function showPage(page){
-  document.querySelectorAll(".page").forEach(p=>{
-    p.classList.remove("active");
-  });
+  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+  document.querySelectorAll(".nav-btn").forEach(b=>b.classList.remove("active"));
 
-  document.querySelectorAll(".nav-btn").forEach(b=>{
-    b.classList.remove("active");
-  });
+  document.getElementById("page-"+page)?.classList.add("active");
 
-  const target=document.getElementById("page-"+page);
+  const navButton=[...document.querySelectorAll(".nav-btn")].find(b=>b.dataset.page===page);
+  navButton?.classList.add("active");
 
-  if(target){
-    target.classList.add("active");
-  }
-
-  const navButton=[...document.querySelectorAll(".nav-btn")].find(
-    b=>b.dataset.page===page
-  );
-
-  if(navButton){
-    navButton.classList.add("active");
-  }
-
-  if(page==="dashboard") renderDashboard();
-  if(page==="fish") renderFishingPage();
-  if(page==="tournaments") renderTournaments();
-  if(page==="standings") renderStandings();
-  if(page==="gear") renderGear();
-  if(page==="journal") renderJournal();
-  if(page==="trophies") renderTrophies();
-  if(page==="sponsors") renderSponsors();
-  if(page==="career") renderCareer();
+  if(page==="dashboard")renderDashboard();
+  if(page==="fish")renderFishingPage();
+  if(page==="tournaments")renderTournaments();
+  if(page==="standings")renderStandings();
+  if(page==="gear")renderGear();
+  if(page==="journal")renderJournal();
+  if(page==="trophies")renderTrophies();
+  if(page==="sponsors")renderSponsors();
+  if(page==="career")renderCareer();
 }
 
 document.querySelectorAll(".nav-btn").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    showPage(btn.dataset.page);
-  });
+  btn.addEventListener("click",()=>showPage(btn.dataset.page));
 });
 
 function generateWeather(){
@@ -1968,18 +1406,12 @@ function generateWeather(){
 
   const wind=randomInt(2,24);
   const air=randomInt(48,86);
-  const water=clamp(
-    Math.round(air*.66+random(8,20)),
-    42,
-    78
-  );
+  const water=clamp(Math.round(air*.66+random(8,20)),42,78);
 
   const pressure=
-    clouds==="Storm Building"
-      ? random(29.2,29.65)
-      : clouds==="Clear"
-        ? random(29.85,30.35)
-        : random(29.55,30.15);
+    clouds==="Storm Building"?random(29.2,29.65):
+    clouds==="Clear"?random(29.85,30.35):
+    random(29.55,30.15);
 
   game.currentWeather={
     clouds,
@@ -1987,64 +1419,27 @@ function generateWeather(){
     air,
     water,
     pressure:Number(pressure.toFixed(2)),
-    time:choice([
-      "Early Morning",
-      "Morning",
-      "Midday",
-      "Afternoon",
-      "Evening"
-    ])
+    time:choice(["Early Morning","Morning","Midday","Afternoon","Evening"])
   };
 }
 
 function shiftWeather(){
   const w=game.currentWeather;
-
-  const clouds=[
-    "Clear",
-    "Partly Cloudy",
-    "Overcast",
-    "Storm Building",
-    "Rain"
-  ];
+  const clouds=["Clear","Partly Cloudy","Overcast","Storm Building","Rain"];
 
   let index=clouds.indexOf(w.clouds);
-
-  index=clamp(
-    index+choice([-1,0,0,1]),
-    0,
-    clouds.length-1
-  );
+  index=clamp(index+choice([-1,0,0,1]),0,clouds.length-1);
 
   w.clouds=clouds[index];
   w.wind=clamp(w.wind+randomInt(-4,5),0,32);
   w.air=clamp(w.air+randomInt(-3,3),38,95);
   w.water=clamp(w.water+randomInt(-1,1),40,82);
+  w.pressure=Number(clamp(w.pressure+random(-.07,.07),28.95,30.55).toFixed(2));
 
-  w.pressure=Number(
-    clamp(
-      w.pressure+random(-.07,.07),
-      28.95,
-      30.55
-    ).toFixed(2)
-  );
-
-  const times=[
-    "Early Morning",
-    "Morning",
-    "Midday",
-    "Afternoon",
-    "Evening"
-  ];
-
+  const times=["Early Morning","Morning","Midday","Afternoon","Evening"];
   let timeIndex=times.indexOf(w.time);
 
-  if(Math.random()<.35){
-    timeIndex=Math.min(
-      timeIndex+1,
-      times.length-1
-    );
-  }
+  if(Math.random()<.35)timeIndex=Math.min(timeIndex+1,times.length-1);
 
   w.time=times[timeIndex];
 }
@@ -2054,37 +1449,12 @@ function weatherHTML(){
 
   return `
     <div class="condition-grid">
-
-      <div class="condition">
-        <small>Air Temperature</small>
-        <strong>${w.air}°F</strong>
-      </div>
-
-      <div class="condition">
-        <small>Water Temperature</small>
-        <strong>${w.water}°F</strong>
-      </div>
-
-      <div class="condition">
-        <small>Wind</small>
-        <strong>${w.wind} mph</strong>
-      </div>
-
-      <div class="condition">
-        <small>Cloud Cover</small>
-        <strong>${w.clouds}</strong>
-      </div>
-
-      <div class="condition">
-        <small>Barometric Pressure</small>
-        <strong>${w.pressure} inHg</strong>
-      </div>
-
-      <div class="condition">
-        <small>Time of Day</small>
-        <strong>${w.time}</strong>
-      </div>
-
+      <div class="condition"><small>Air Temperature</small><strong>${w.air}°F</strong></div>
+      <div class="condition"><small>Water Temperature</small><strong>${w.water}°F</strong></div>
+      <div class="condition"><small>Wind</small><strong>${w.wind} mph</strong></div>
+      <div class="condition"><small>Cloud Cover</small><strong>${w.clouds}</strong></div>
+      <div class="condition"><small>Barometric Pressure</small><strong>${w.pressure} inHg</strong></div>
+      <div class="condition"><small>Time of Day</small><strong>${w.time}</strong></div>
     </div>
   `;
 }
@@ -2094,53 +1464,29 @@ function getKnowledgeKey(lake,spot,species){
 }
 
 function getKnowledge(lake,spot,species){
-  return game.knowledge[
-    getKnowledgeKey(lake,spot,species)
-  ]||0;
+  return game.knowledge[getKnowledgeKey(lake,spot,species)]||0;
 }
 
 function addKnowledge(lake,spot,species,amount){
-  const key=getKnowledgeKey(
-    lake,
-    spot,
-    species
-  );
-
-  game.knowledge[key]=clamp(
-    (game.knowledge[key]||0)+amount,
-    0,
-    100
-  );
+  const key=getKnowledgeKey(lake,spot,species);
+  game.knowledge[key]=clamp((game.knowledge[key]||0)+amount,0,100);
 }
 
 function knowledgeLabel(value){
-  if(value<10) return "Unknown";
-  if(value<25) return "Explored";
-  if(value<50) return "Familiar";
-  if(value<75) return "Well Known";
-
-  return "Dialed In";
+  if(value<10)return"Unknown";
+  if(value<25)return"Explored";
+  if(value<50)return"Familiar";
+  if(value<75)return"Well Known";
+  return"Dialed In";
 }
 
 function tournamentLevelUnlocked(species,level){
   const s=game.standings[species];
 
-  if(level==="local"){
-    return true;
-  }
-
-  if(level==="state"){
-    return s.local>=180 ||
-      game.speciesWins[species]>=2;
-  }
-
-  if(level==="national"){
-    return s.state>=300;
-  }
-
-  if(level==="major"){
-    return s.national>=420;
-  }
+  if(level==="local")return true;
+  if(level==="state")return s.local>=180||game.speciesWins[species]>=2;
+  if(level==="national")return s.state>=300;
+  if(level==="major")return s.national>=420;
 
   return false;
 }
@@ -2148,78 +1494,36 @@ function tournamentLevelUnlocked(species,level){
 function qualificationText(species,level){
   const s=game.standings[species];
 
-  if(level==="local"){
-    return "Open entry.";
-  }
+  if(level==="local")return"Open entry.";
+  if(level==="state")return`Requires 180 Local Points or 2 ${species} wins. Current: ${s.local} pts / ${game.speciesWins[species]} wins.`;
+  if(level==="national")return`Requires 300 State Tour Points. Current: ${s.state}.`;
+  if(level==="major")return`Requires 420 National Tour Points. Current: ${s.national}.`;
 
-  if(level==="state"){
-    return `Requires 180 Local Points or 2 ${species} wins. Current: ${s.local} pts / ${game.speciesWins[species]} wins.`;
-  }
-
-  if(level==="national"){
-    return `Requires 300 State Tour Points. Current: ${s.state}.`;
-  }
-
-  if(level==="major"){
-    return `Requires 420 National Tour Points. Current: ${s.national}.`;
-  }
-
-  return "";
+  return"";
 }
 
 function eventName(species,level){
   const localNames={
-    Walleye:[
-      "Granite Lake Walleye Open",
-      "Prairie Gold Walleye Shootout",
-      "Timber Wolf Walleye Classic",
-      "Red Rock Walleye Open",
-      "Weekend Walleye Challenge"
-    ],
-
-    Bass:[
-      "Granite Bass Open",
-      "Cypress Lake Bass Shootout",
-      "Willow Bend Bass Classic",
-      "Blackwater Big Bass Open",
-      "Summer Bass Challenge"
-    ],
-
-    Trout:[
-      "Clear Fork Trout Open",
-      "Mountain Trout Challenge",
-      "Coldwater Classic",
-      "River Trout Invitational"
-    ]
+    Walleye:["Granite Lake Walleye Open","Prairie Gold Walleye Shootout","Timber Wolf Walleye Classic","Red Rock Walleye Open","Weekend Walleye Challenge"],
+    Bass:["Granite Bass Open","Cypress Lake Bass Shootout","Willow Bend Bass Classic","Blackwater Big Bass Open","Summer Bass Challenge"],
+    Trout:["Clear Fork Trout Open","Mountain Trout Challenge","Coldwater Classic","River Trout Invitational"]
   };
 
-  if(level==="local"){
-    return choice(
-      localNames[species]
-    );
-  }
+  if(level==="local")return choice(localNames[species]);
 
   if(level==="state"){
-    if(species==="Walleye"){
-      return "Walleye State Tour";
-    }
-
-    if(species==="Bass"){
-      return "Western Bass Regional Tour";
-    }
-
-    return "Rocky Mountain Trout Tour";
+    if(species==="Walleye")return"Walleye State Tour";
+    if(species==="Bass")return"Western Bass Regional Tour";
+    return"Rocky Mountain Trout Tour";
   }
 
-  if(level==="national"){
-    return `National ${species} Tour`;
-  }
+  if(level==="national")return`National ${species} Tour`;
 
-  return `National ${species} Championship`;
+  return`National ${species} Championship`;
 }
 
 function tournamentPrize(level){
-  return {
+  return{
     local:randomInt(2200,5500),
     state:randomInt(12000,26000),
     national:randomInt(45000,85000),
@@ -2228,7 +1532,7 @@ function tournamentPrize(level){
 }
 
 function tournamentFee(level){
-  return {
+  return{
     local:randomInt(150,400),
     state:randomInt(650,1200),
     national:randomInt(1800,3500),
@@ -2237,29 +1541,16 @@ function tournamentFee(level){
 }
 
 function tournamentCasts(level){
-  return {
-    local:10,
-    state:14,
-    national:18,
-    major:24
-  }[level];
+  return{local:10,state:14,national:18,major:24}[level];
 }
 
 function chooseTournamentLake(species,level){
-  if(level==="major"){
-    return "Championship Waters";
-  }
+  if(level==="major")return"Championship Waters";
 
   const lakes=Object.entries(LAKES)
-    .filter(([name,lake])=>
-      lake.species.includes(species)
-    )
-    .filter(([name,lake])=>
-      game.reputation>=lake.unlockRep
-    )
-    .filter(([name])=>
-      name!=="Championship Waters"
-    )
+    .filter(([name,lake])=>lake.species.includes(species))
+    .filter(([name,lake])=>game.reputation>=lake.unlockRep)
+    .filter(([name])=>name!=="Championship Waters")
     .map(([name])=>name);
 
   return choice(lakes);
@@ -2276,7 +1567,7 @@ function createTournament(species,level){
     ]);
   }
 
-  return {
+  return{
     id:`${Date.now()}_${Math.random().toString(36).slice(2,8)}`,
     species,
     level,
@@ -2295,46 +1586,21 @@ function buildSeasonSchedule(){
   game.tournamentSchedule=[];
 
   ["Walleye","Bass","Trout"].forEach(species=>{
-    game.tournamentSchedule.push(
-      createTournament(species,"local")
-    );
-
-    game.tournamentSchedule.push(
-      createTournament(species,"local")
-    );
-
-    game.tournamentSchedule.push(
-      createTournament(species,"state")
-    );
-
-    game.tournamentSchedule.push(
-      createTournament(species,"national")
-    );
-
-    game.tournamentSchedule.push(
-      createTournament(species,"major")
-    );
+    game.tournamentSchedule.push(createTournament(species,"local"));
+    game.tournamentSchedule.push(createTournament(species,"local"));
+    game.tournamentSchedule.push(createTournament(species,"state"));
+    game.tournamentSchedule.push(createTournament(species,"national"));
+    game.tournamentSchedule.push(createTournament(species,"major"));
   });
 }
 
 function generateLocalOpen(showNotice=false){
-  const species=
-    game.settings.tournamentSpecies||
-    "Walleye";
-
-  const event=createTournament(
-    species,
-    "local"
-  );
+  const species=game.settings.tournamentSpecies||"Walleye";
+  const event=createTournament(species,"local");
 
   game.tournamentSchedule.unshift(event);
 
-  if(showNotice){
-    notify(
-      `${event.name} added to the schedule.`,
-      "good"
-    );
-  }
+  if(showNotice)notify(`${event.name} added to the schedule.`,"good");
 
   renderTournaments();
   saveGame();
@@ -2345,320 +1611,129 @@ function initializeAIStandings(){
 
   ["Walleye","Bass","Trout"].forEach(species=>{
     result[species]={
-      local:AI_NAMES.map(name=>({
-        name,
-        points:randomInt(20,260)
-      })),
-
-      state:AI_NAMES.map(name=>({
-        name,
-        points:randomInt(0,420)
-      })),
-
-      national:AI_NAMES.map(name=>({
-        name,
-        points:randomInt(0,600)
-      }))
+      local:AI_NAMES.map(name=>({name,points:randomInt(20,260)})),
+      state:AI_NAMES.map(name=>({name,points:randomInt(0,420)})),
+      national:AI_NAMES.map(name=>({name,points:randomInt(0,600)}))
     };
   });
 
   return result;
 }
 
-let AI_STANDINGS=
-  initializeAIStandings();
+let AI_STANDINGS=initializeAIStandings();
 
 function createTournamentAI(event){
-  const levelBonus={
-    local:0,
-    state:.12,
-    national:.25,
-    major:.38
-  }[event.level];
+  const levelBonus={local:0,state:.12,national:.25,major:.38}[event.level];
 
-  return AI_NAMES
-    .slice()
-    .sort(()=>Math.random()-.5)
-    .map(name=>({
-      name,
-      skill:.72+Math.random()*.42+levelBonus,
-      fish:[],
-      weight:0,
-      bigFish:0
-    }));
+  return AI_NAMES.slice().sort(()=>Math.random()-.5).map(name=>({
+    name,
+    skill:.72+Math.random()*.42+levelBonus,
+    fish:[],
+    weight:0,
+    bigFish:0
+  }));
 }
 
 function getCareerTitle(){
-  if(game.majorWins>=3){
-    return "Tournament Legend";
-  }
-
-  if(game.majorWins>=1){
-    return "National Champion";
-  }
-
-  if(game.reputation>=120){
-    return "Elite Pro Angler";
-  }
-
-  if(game.reputation>=80){
-    return "National Touring Pro";
-  }
-
-  if(game.reputation>=45){
-    return "Regional Pro";
-  }
-
-  if(game.reputation>=20){
-    return "Rising Tournament Angler";
-  }
-
-  if(game.wins>=1){
-    return "Local Tournament Angler";
-  }
-
-  return "Unknown Angler";
+  if(game.majorWins>=3)return"Tournament Legend";
+  if(game.majorWins>=1)return"National Champion";
+  if(game.reputation>=120)return"Elite Pro Angler";
+  if(game.reputation>=80)return"National Touring Pro";
+  if(game.reputation>=45)return"Regional Pro";
+  if(game.reputation>=20)return"Rising Tournament Angler";
+  if(game.wins>=1)return"Local Tournament Angler";
+  return"Unknown Angler";
 }
 
 function renderDashboard(){
   updateHeader();
 
-  document.querySelector(
-    "#page-dashboard .hero-card h2"
-  ).textContent=getCareerTitle();
+  document.querySelector("#page-dashboard .hero-card h2").textContent=getCareerTitle();
 
-  document.getElementById(
-    "careerStatusText"
-  ).textContent=
+  document.getElementById("careerStatusText").textContent=
     game.majorWins>0
-      ? "You have reached the biggest stage in tournament fishing."
-      : "Build points in each species to unlock State, National and Championship competition.";
+      ?"You have reached the biggest stage in tournament fishing."
+      :"Build points in each species to unlock State, National and Championship competition.";
 
-  document.getElementById(
-    "heroSeason"
-  ).textContent=game.season;
+  document.getElementById("heroSeason").textContent=game.season;
+  document.getElementById("dashEarnings").textContent=money(game.careerEarnings);
+  document.getElementById("dashWins").textContent=game.wins;
+  document.getElementById("dashTop10").textContent=game.top10;
 
-  document.getElementById(
-    "dashEarnings"
-  ).textContent=money(
-    game.careerEarnings
-  );
-
-  document.getElementById(
-    "dashWins"
-  ).textContent=game.wins;
-
-  document.getElementById(
-    "dashTop10"
-  ).textContent=game.top10;
-
-  document.getElementById(
-    "speciesCareerCards"
-  ).innerHTML=
+  document.getElementById("speciesCareerCards").innerHTML=
     ["Walleye","Bass","Trout"].map(species=>{
-      const standings=
-        game.standings[species];
-
+      const standings=game.standings[species];
       let current="Local";
 
-      if(
-        tournamentLevelUnlocked(
-          species,
-          "major"
-        )
-      ){
-        current="Championship";
-      }else if(
-        tournamentLevelUnlocked(
-          species,
-          "national"
-        )
-      ){
-        current="National";
-      }else if(
-        tournamentLevelUnlocked(
-          species,
-          "state"
-        )
-      ){
-        current="State / Regional";
-      }
+      if(tournamentLevelUnlocked(species,"major"))current="Championship";
+      else if(tournamentLevelUnlocked(species,"national"))current="National";
+      else if(tournamentLevelUnlocked(species,"state"))current="State / Regional";
 
-      return `
+      return`
         <div class="card">
-
           <div class="row spread">
-            <h2>
-              ${SPECIES[species].icon}
-              ${species}
-            </h2>
-
-            <span class="pill">
-              ${current}
-            </span>
+            <h2>${SPECIES[species].icon} ${species}</h2>
+            <span class="pill">${current}</span>
           </div>
-
-          <div class="small muted">
-            ${SPECIES[species].strategy}
-          </div>
-
+          <div class="small muted">${SPECIES[species].strategy}</div>
           <hr class="divider">
-
-          <div class="row spread small">
-            <span>Local Points</span>
-            <strong>${standings.local}</strong>
-          </div>
-
-          <div class="row spread small">
-            <span>State Points</span>
-            <strong>${standings.state}</strong>
-          </div>
-
-          <div class="row spread small">
-            <span>National Points</span>
-            <strong>${standings.national}</strong>
-          </div>
-
-          <div class="row spread small">
-            <span>Wins</span>
-            <strong>${game.speciesWins[species]}</strong>
-          </div>
-
+          <div class="row spread small"><span>Local Points</span><strong>${standings.local}</strong></div>
+          <div class="row spread small"><span>State Points</span><strong>${standings.state}</strong></div>
+          <div class="row spread small"><span>National Points</span><strong>${standings.national}</strong></div>
+          <div class="row spread small"><span>Wins</span><strong>${game.speciesWins[species]}</strong></div>
         </div>
       `;
     }).join("");
 
-  const upcoming=
-    game.tournamentSchedule
-      .filter(event=>!event.completed)
-      .slice(0,5);
+  const upcoming=game.tournamentSchedule.filter(event=>!event.completed).slice(0,5);
 
-  document.getElementById(
-    "dashboardEvents"
-  ).innerHTML=
+  document.getElementById("dashboardEvents").innerHTML=
     upcoming.length
-      ? upcoming.map(event=>`
-          <div
-            class="row spread"
-            style="padding:7px 0;border-bottom:1px solid #29424a"
-          >
-            <div>
-              <strong>${event.name}</strong>
-
-              <div class="small muted">
-                ${event.lake}
-                •
-                ${capitalize(event.level)}
-                •
-                ${event.format}
-              </div>
-            </div>
-
-            <span>${money(event.fee)}</span>
+      ?upcoming.map(event=>`
+        <div class="row spread" style="padding:7px 0;border-bottom:1px solid #29424a">
+          <div>
+            <strong>${event.name}</strong>
+            <div class="small muted">${event.lake} • ${capitalize(event.level)} • ${event.format}</div>
           </div>
-        `).join("")
-      : `<div class="empty">No events scheduled.</div>`;
-
-  document.getElementById(
-    "careerFeed"
-  ).innerHTML=
-    game.feed.length
-      ? game.feed
-          .slice(0,8)
-          .map(entry=>`
-            <div class="journal-entry small">
-              ${entry}
-            </div>
-          `)
-          .join("")
-      : `<div class="empty">Your career story starts here.</div>`;
-
-  document.getElementById(
-    "dashboardWeather"
-  ).innerHTML=
-    weatherHTML();
-
-  document.getElementById(
-    "dashboardGear"
-  ).innerHTML=
-    [
-      "Rod",
-      "Reel",
-      "Line",
-      "Boat",
-      "Trolling Motor",
-      "Electronics"
-    ].map(category=>{
-      const gear=
-        equipped(category);
-
-      return `
-        <div
-          class="row spread small"
-          style="padding:5px 0"
-        >
-          <span>${category}</span>
-          <strong>${gear.name}</strong>
+          <span>${money(event.fee)}</span>
         </div>
-      `;
+      `).join("")
+      :`<div class="empty">No events scheduled.</div>`;
+
+  document.getElementById("careerFeed").innerHTML=
+    game.feed.length
+      ?game.feed.slice(0,8).map(entry=>`<div class="journal-entry small">${entry}</div>`).join("")
+      :`<div class="empty">Your career story starts here.</div>`;
+
+  document.getElementById("dashboardWeather").innerHTML=weatherHTML();
+
+  document.getElementById("dashboardGear").innerHTML=
+    ["Rod","Reel","Line","Boat","Trolling Motor","Electronics"].map(category=>{
+      const gear=equipped(category);
+      return`<div class="row spread small" style="padding:5px 0"><span>${category}</span><strong>${gear.name}</strong></div>`;
     }).join("");
 }
 
 function populateFishingSelectors(){
-  const speciesSelect=
-    document.getElementById(
-      "fishSpeciesSelect"
-    );
+  const speciesSelect=document.getElementById("fishSpeciesSelect");
 
   if(!speciesSelect.options.length){
-    speciesSelect.innerHTML=
-      ["Walleye","Bass","Trout"]
-        .map(species=>
-          `<option>${species}</option>`
-        )
-        .join("");
+    speciesSelect.innerHTML=["Walleye","Bass","Trout"].map(species=>`<option>${species}</option>`).join("");
   }
 
-  const selectedSpecies=
-    speciesSelect.value||
-    "Walleye";
+  const selectedSpecies=speciesSelect.value||"Walleye";
+  const lakeSelect=document.getElementById("lakeSelect");
 
-  const lakeSelect=
-    document.getElementById(
-      "lakeSelect"
-    );
+  const validLakes=Object.entries(LAKES)
+    .filter(([name,lake])=>lake.species.includes(selectedSpecies))
+    .filter(([name,lake])=>game.reputation>=lake.unlockRep)
+    .map(([name])=>name);
 
-  const validLakes=
-    Object.entries(LAKES)
-      .filter(([name,lake])=>
-        lake.species.includes(
-          selectedSpecies
-        )
-      )
-      .filter(([name,lake])=>
-        game.reputation>=
-        lake.unlockRep
-      )
-      .map(([name])=>name);
+  const oldLake=lakeSelect.value;
 
-  const oldLake=
-    lakeSelect.value;
+  lakeSelect.innerHTML=validLakes.map(name=>`<option>${name}</option>`).join("");
 
-  lakeSelect.innerHTML=
-    validLakes
-      .map(name=>
-        `<option>${name}</option>`
-      )
-      .join("");
-
-  if(
-    validLakes.includes(
-      oldLake
-    )
-  ){
-    lakeSelect.value=
-      oldLake;
-  }
+  if(validLakes.includes(oldLake))lakeSelect.value=oldLake;
 
   populateSpotSelector();
   populateTechniqueSelector();
@@ -2666,324 +1741,126 @@ function populateFishingSelectors(){
 }
 
 function populateSpotSelector(){
-  const lakeName=
-    document.getElementById(
-      "lakeSelect"
-    ).value;
+  const lakeName=document.getElementById("lakeSelect").value;
+  const lake=LAKES[lakeName];
 
-  const lake=
-    LAKES[lakeName];
+  if(!lake)return;
 
-  if(!lake){
-    return;
-  }
+  const select=document.getElementById("spotSelect");
+  const old=select.value;
 
-  const select=
-    document.getElementById(
-      "spotSelect"
-    );
+  select.innerHTML=lake.spots.map(spot=>`<option>${spot.name}</option>`).join("");
 
-  const old=
-    select.value;
-
-  select.innerHTML=
-    lake.spots
-      .map(spot=>
-        `<option>${spot.name}</option>`
-      )
-      .join("");
-
-  if(
-    lake.spots.some(
-      spot=>spot.name===old
-    )
-  ){
-    select.value=old;
-  }
+  if(lake.spots.some(spot=>spot.name===old))select.value=old;
 }
 
 function populateTechniqueSelector(){
-  const species=
-    document.getElementById(
-      "fishSpeciesSelect"
-    ).value;
+  const species=document.getElementById("fishSpeciesSelect").value;
+  const select=document.getElementById("techniqueSelect");
+  const old=select.value;
 
-  const select=
-    document.getElementById(
-      "techniqueSelect"
-    );
+  select.innerHTML=SPECIES[species].techniques.map(technique=>`<option>${technique}</option>`).join("");
 
-  const old=
-    select.value;
-
-  select.innerHTML=
-    SPECIES[species]
-      .techniques
-      .map(technique=>
-        `<option>${technique}</option>`
-      )
-      .join("");
-
-  if(
-    SPECIES[species]
-      .techniques
-      .includes(old)
-  ){
-    select.value=old;
-  }
+  if(SPECIES[species].techniques.includes(old))select.value=old;
 }
 
 function populateLureSelector(){
-  const species=
-    document.getElementById(
-      "fishSpeciesSelect"
-    ).value;
+  const species=document.getElementById("fishSpeciesSelect").value;
+  const select=document.getElementById("lureSelect");
+  const old=select.value;
 
-  const select=
-    document.getElementById(
-      "lureSelect"
-    );
+  select.innerHTML=SPECIES[species].lures.map(lure=>`<option>${lure}</option>`).join("");
 
-  const old=
-    select.value;
-
-  select.innerHTML=
-    SPECIES[species]
-      .lures
-      .map(lure=>
-        `<option>${lure}</option>`
-      )
-      .join("");
-
-  if(
-    SPECIES[species]
-      .lures
-      .includes(old)
-  ){
-    select.value=old;
-  }
+  if(SPECIES[species].lures.includes(old))select.value=old;
 }
 
-document.getElementById(
-  "fishSpeciesSelect"
-).addEventListener(
-  "change",
-  ()=>{
-    populateFishingSelectors();
-    updateFishingIntel();
-  }
-);
+document.getElementById("fishSpeciesSelect").addEventListener("change",()=>{
+  populateFishingSelectors();
+  updateFishingIntel();
+});
 
-document.getElementById(
-  "lakeSelect"
-).addEventListener(
-  "change",
-  ()=>{
-    populateSpotSelector();
-    updateFishingIntel();
-  }
-);
+document.getElementById("lakeSelect").addEventListener("change",()=>{
+  populateSpotSelector();
+  updateFishingIntel();
+});
 
-[
-  "spotSelect",
-  "techniqueSelect",
-  "lureSelect",
-  "depthSelect"
-].forEach(id=>{
-  document.getElementById(id)
-    .addEventListener(
-      "change",
-      updateFishingIntel
-    );
+["spotSelect","techniqueSelect","lureSelect","depthSelect"].forEach(id=>{
+  document.getElementById(id).addEventListener("change",updateFishingIntel);
 });
 
 function getCurrentFishingSetup(){
-  const species=
-    document.getElementById(
-      "fishSpeciesSelect"
-    ).value;
+  const species=document.getElementById("fishSpeciesSelect").value;
+  const lake=document.getElementById("lakeSelect").value;
+  const spotName=document.getElementById("spotSelect").value;
+  const technique=document.getElementById("techniqueSelect").value;
+  const lure=document.getElementById("lureSelect").value;
+  const depth=Number(document.getElementById("depthSelect").value);
+  const spot=LAKES[lake]?.spots.find(spot=>spot.name===spotName);
 
-  const lake=
-    document.getElementById(
-      "lakeSelect"
-    ).value;
-
-  const spotName=
-    document.getElementById(
-      "spotSelect"
-    ).value;
-
-  const technique=
-    document.getElementById(
-      "techniqueSelect"
-    ).value;
-
-  const lure=
-    document.getElementById(
-      "lureSelect"
-    ).value;
-
-  const depth=
-    Number(
-      document.getElementById(
-        "depthSelect"
-      ).value
-    );
-
-  const spot=
-    LAKES[lake]?.spots.find(
-      spot=>
-        spot.name===spotName
-    );
-
-  return {
-    species,
-    lake,
-    spot,
-    technique,
-    lure,
-    depth
-  };
+  return{species,lake,spot,technique,lure,depth};
 }
 
 function updateFishingIntel(){
-  const setup=
-    getCurrentFishingSetup();
+  const setup=getCurrentFishingSetup();
 
-  if(
-    !setup.lake ||
-    !setup.spot
-  ){
-    return;
-  }
+  if(!setup.lake||!setup.spot)return;
 
-  document.getElementById(
-    "sceneLake"
-  ).textContent=
-    setup.lake;
+  document.getElementById("sceneLake").textContent=setup.lake;
+  document.getElementById("sceneSpot").textContent=`${setup.spot.name} • ${setup.spot.type}`;
 
-  document.getElementById(
-    "sceneSpot"
-  ).textContent=
-    `${setup.spot.name} • ${setup.spot.type}`;
+  const electronics=equipped("Electronics");
+  const knowledge=getKnowledge(setup.lake,setup.spot.name,setup.species);
 
-  const electronics=
-    equipped("Electronics");
-
-  const knowledge=
-    getKnowledge(
-      setup.lake,
-      setup.spot.name,
-      setup.species
-    );
-
-  let intel=
-    `<strong>${electronics.name}</strong><br>`;
-
-  intel+=
-    `Depth range: ${setup.spot.depth[0]}-${setup.spot.depth[1]} ft.<br>`;
+  let intel=`<strong>${electronics.name}</strong><br>`;
+  intel+=`Depth range: ${setup.spot.depth[0]}-${setup.spot.depth[1]} ft.<br>`;
 
   if(electronics.level>=2){
-    const ideal=
-      Math.round(
-        (
-          setup.spot.depth[0]+
-          setup.spot.depth[1]
-        )*.55
-      );
-
-    intel+=
-      `Mapped contour suggests focusing near ${ideal} ft.<br>`;
+    const ideal=Math.round((setup.spot.depth[0]+setup.spot.depth[1])*.55);
+    intel+=`Mapped contour suggests focusing near ${ideal} ft.<br>`;
   }
 
   if(electronics.level>=3){
-    intel+=
-      `Structure scan: ${capitalize(setup.spot.structure)} detected.<br>`;
+    intel+=`Structure scan: ${capitalize(setup.spot.structure)} detected.<br>`;
   }
 
   if(electronics.level>=4){
-    const signal=
-      Math.random();
+    const signal=Math.random();
 
-    if(signal>.66){
-      intel+=
-        `<span class="good">Forward sonar: multiple active fish detected.</span><br>`;
-    }else if(signal>.32){
-      intel+=
-        `Forward sonar: scattered targets detected.<br>`;
-    }else{
-      intel+=
-        `<span class="bad">Forward sonar: very few active targets visible.</span><br>`;
-    }
+    if(signal>.66)intel+=`<span class="good">Forward sonar: multiple active fish detected.</span><br>`;
+    else if(signal>.32)intel+=`Forward sonar: scattered targets detected.<br>`;
+    else intel+=`<span class="bad">Forward sonar: very few active targets visible.</span><br>`;
   }
 
-  intel+=
-    `Lake knowledge: ${knowledgeLabel(knowledge)} (${Math.round(knowledge)}%).`;
+  intel+=`Lake knowledge: ${knowledgeLabel(knowledge)} (${Math.round(knowledge)}%).`;
 
-  document.getElementById(
-    "electronicsIntel"
-  ).innerHTML=
-    intel;
+  document.getElementById("electronicsIntel").innerHTML=intel;
 
-  document.getElementById(
-    "lakeKnowledge"
-  ).innerHTML=`
+  document.getElementById("lakeKnowledge").innerHTML=`
     <div class="row spread small">
       <span>${knowledgeLabel(knowledge)}</span>
       <strong>${Math.round(knowledge)}%</strong>
     </div>
-
-    <div class="progress" style="margin-top:6px">
-      <div style="width:${knowledge}%"></div>
-    </div>
-
-    <p class="small muted">
-      Fishing this area under different conditions improves your knowledge.
-    </p>
+    <div class="progress" style="margin-top:6px"><div style="width:${knowledge}%"></div></div>
+    <p class="small muted">Fishing this area under different conditions improves your knowledge.</p>
   `;
 }
 
 function renderFishingGearSummary(){
-  document.getElementById(
-    "fishingGearSummary"
-  ).innerHTML=
-    [
-      "Rod",
-      "Reel",
-      "Line",
-      "Boat",
-      "Trolling Motor",
-      "Electronics"
-    ].map(category=>{
-      const gear=
-        equipped(category);
-
-      return `
-        <div
-          class="row spread small"
-          style="margin-bottom:5px"
-        >
-          <span class="muted">${category}</span>
-          <strong>${gear.name}</strong>
-        </div>
-      `;
+  document.getElementById("fishingGearSummary").innerHTML=
+    ["Rod","Reel","Line","Boat","Trolling Motor","Electronics"].map(category=>{
+      const gear=equipped(category);
+      return`<div class="row spread small" style="margin-bottom:5px"><span class="muted">${category}</span><strong>${gear.name}</strong></div>`;
     }).join("");
 }
 
 function renderFishingPage(){
   updateHeader();
-
-  document.getElementById(
-    "fishSpeciesSelect"
-  ).disabled=false;
+  document.getElementById("fishSpeciesSelect").disabled=false;
 
   populateFishingSelectors();
   renderActiveTournamentBanner();
 
-  document.getElementById(
-    "fishingConditions"
-  ).innerHTML=
-    weatherHTML();
+  document.getElementById("fishingConditions").innerHTML=weatherHTML();
 
   renderFishingGearSummary();
   renderLivewell();
@@ -2992,93 +1869,44 @@ function renderFishingPage(){
 }
 
 function renderActiveTournamentBanner(){
-  const box=
-    document.getElementById(
-      "activeTournamentBanner"
-    );
+  const box=document.getElementById("activeTournamentBanner");
 
   if(!game.activeTournament){
     box.innerHTML=`
       <div class="info-box">
         <strong>Practice Fishing</strong>
-
-        <div class="small muted">
-          Fish freely, learn lakes, catch trophies and improve your journal.
-        </div>
+        <div class="small muted">Fish freely, learn lakes, catch trophies and improve your journal.</div>
       </div>
     `;
-
     return;
   }
 
-  const tournament=
-    game.activeTournament;
+  const tournament=game.activeTournament;
 
   box.innerHTML=`
-    <div
-      class="card tournament-card ${tournament.level}"
-      style="margin-bottom:14px"
-    >
+    <div class="card tournament-card ${tournament.level}" style="margin-bottom:14px">
       <div class="row spread wrap">
-
         <div>
-          <span class="pill gold">
-            ${capitalize(tournament.level)}
-          </span>
-
-          <h2 style="margin:7px 0 3px">
-            ${tournament.name}
-          </h2>
-
-          <div class="small muted">
-            ${tournament.lake}
-            •
-            ${tournament.format}
-            •
-            ${tournament.castsRemaining}
-            casts remaining
-          </div>
+          <span class="pill gold">${capitalize(tournament.level)}</span>
+          <h2 style="margin:7px 0 3px">${tournament.name}</h2>
+          <div class="small muted">${tournament.lake} • ${tournament.format} • ${tournament.castsRemaining} casts remaining</div>
         </div>
-
-        <button
-          class="danger"
-          onclick="withdrawTournament()"
-        >
-          Withdraw
-        </button>
-
+        <button class="danger" onclick="withdrawTournament()">Withdraw</button>
       </div>
     </div>
   `;
 
-  const speciesSelect=
-    document.getElementById(
-      "fishSpeciesSelect"
-    );
+  const speciesSelect=document.getElementById("fishSpeciesSelect");
 
-  speciesSelect.value=
-    tournament.species;
+  speciesSelect.value=tournament.species;
 
-  if(
-    tournament.format!==
-    "Multi-Species"
-  ){
-    speciesSelect.disabled=
-      true;
-  }
+  if(tournament.format!=="Multi-Species")speciesSelect.disabled=true;
 
   populateFishingSelectors();
 
-  const lakeSelect=
-    document.getElementById(
-      "lakeSelect"
-    );
-
-  lakeSelect.innerHTML=
-    `<option>${tournament.lake}</option>`;
-
-  lakeSelect.value=
-    tournament.lake;
+  const lakeSelect=document.getElementById("lakeSelect");
+  lakeSelect.innerHTML=`<option>${tournament.lake}</option>`;
+  lakeSelect.value=tournament.lake;
 
   populateSpotSelector();
 }
@@ -3090,321 +1918,117 @@ function resetFishingControl(){
   runtime.tension=45;
   runtime.fightProgress=0;
 
-  clearTimeout(
-    runtime.biteTimer
-  );
+  clearTimeout(runtime.biteTimer);
+  cancelAnimationFrame(runtime.timingAnimation);
+  clearInterval(runtime.fightTimer);
 
-  cancelAnimationFrame(
-    runtime.timingAnimation
-  );
-
-  clearInterval(
-    runtime.fightTimer
-  );
-
-  document.getElementById(
-    "hookBtn"
-  ).disabled=true;
-
-  document.getElementById(
-    "fightPanel"
-  ).classList.remove(
-    "active"
-  );
-
-  document.getElementById(
-    "timingMarker"
-  ).style.left="0%";
-
-  document.getElementById(
-    "castBtn"
-  ).disabled=false;
+  document.getElementById("hookBtn").disabled=true;
+  document.getElementById("fightPanel").classList.remove("active");
+  document.getElementById("timingMarker").style.left="0%";
+  document.getElementById("castBtn").disabled=false;
 }
 
 function strategyScore(setup){
-  const species=
-    SPECIES[setup.species];
-
-  const weather=
-    game.currentWeather;
+  const species=SPECIES[setup.species];
+  const weather=game.currentWeather;
 
   let score=1;
 
-  score*=
-    setup.spot
-      .species[
-        setup.species
-      ]||.3;
+  score*=setup.spot.species[setup.species]||.3;
 
-  const preferred=
-    species.affinity[
-      setup.technique
-    ]||[];
+  const preferred=species.affinity[setup.technique]||[];
+  score*=preferred.includes(setup.spot.type)?1.22:.88;
 
-  score*=
-    preferred.includes(
-      setup.spot.type
-    )
-      ? 1.22
-      : .88;
+  if(setup.depth>=setup.spot.depth[0]&&setup.depth<=setup.spot.depth[1])score*=1.14;
+  else score*=.72;
 
-  if(
-    setup.depth>=
-      setup.spot.depth[0] &&
-    setup.depth<=
-      setup.spot.depth[1]
-  ){
-    score*=1.14;
-  }else{
-    score*=.72;
+  const[tempLow,tempHigh]=species.preferredTemps;
+
+  score*=weather.water>=tempLow&&weather.water<=tempHigh?1.14:.88;
+
+  if(setup.species==="Walleye"){
+    if(["Overcast","Storm Building","Rain"].includes(weather.clouds))score*=1.14;
+    if(["Early Morning","Evening"].includes(weather.time))score*=1.1;
+    if(setup.technique==="Trolling"&&weather.wind>=8)score*=1.12;
   }
 
-  const [
-    tempLow,
-    tempHigh
-  ]=
-    species.preferredTemps;
+  if(setup.species==="Bass"){
+    if(weather.water>=62)score*=1.08;
 
-  score*=
-    weather.water>=tempLow &&
-    weather.water<=tempHigh
-      ? 1.14
-      : .88;
-
-  if(
-    setup.species===
-    "Walleye"
-  ){
-    if(
-      [
-        "Overcast",
-        "Storm Building",
-        "Rain"
-      ].includes(
-        weather.clouds
-      )
-    ){
-      score*=1.14;
-    }
-
-    if(
-      [
-        "Early Morning",
-        "Evening"
-      ].includes(
-        weather.time
-      )
-    ){
-      score*=1.1;
-    }
-
-    if(
-      setup.technique===
-        "Trolling" &&
-      weather.wind>=8
-    ){
-      score*=1.12;
-    }
-  }
-
-  if(
-    setup.species===
-    "Bass"
-  ){
-    if(weather.water>=62){
-      score*=1.08;
-    }
-
-    if(
-      setup.technique===
-        "Topwater" &&
-      [
-        "Early Morning",
-        "Evening"
-      ].includes(
-        weather.time
-      )
-    ){
+    if(setup.technique==="Topwater"&&["Early Morning","Evening"].includes(weather.time)){
       score*=1.28;
     }
 
-    if(
-      setup.technique===
-        "Pitching Cover" &&
-      [
-        "vegetation",
-        "wood",
-        "brush"
-      ].includes(
-        setup.spot.structure
-      )
-    ){
+    if(setup.technique==="Pitching Cover"&&["vegetation","wood","brush"].includes(setup.spot.structure)){
       score*=1.22;
     }
   }
 
-  if(
-    setup.species===
-    "Trout"
-  ){
-    if(weather.water<=60){
-      score*=1.15;
-    }
+  if(setup.species==="Trout"){
+    if(weather.water<=60)score*=1.15;
+    if(setup.spot.structure==="current")score*=1.18;
 
-    if(
-      setup.spot.structure===
-      "current"
-    ){
-      score*=1.18;
-    }
-
-    if(
-      setup.technique===
-        "Dry Fly" &&
-      [
-        "Morning",
-        "Evening"
-      ].includes(
-        weather.time
-      )
-    ){
+    if(setup.technique==="Dry Fly"&&["Morning","Evening"].includes(weather.time)){
       score*=1.2;
     }
   }
 
-  const knowledge=
-    getKnowledge(
-      setup.lake,
-      setup.spot.name,
-      setup.species
-    );
+  const knowledge=getKnowledge(setup.lake,setup.spot.name,setup.species);
 
-  score*=
-    1+knowledge/500;
-
-  score*=
-    equipped(
-      "Electronics"
-    ).intel;
-
-  score*=
-    equipped(
-      "Trolling Motor"
-    ).control;
+  score*=1+knowledge/500;
+  score*=equipped("Electronics").intel;
+  score*=equipped("Trolling Motor").control;
 
   return score;
 }
 
 function potentialFish(setup,score){
-  const species=
-    SPECIES[setup.species];
+  const species=SPECIES[setup.species];
 
-  let weight=
-    random(
-      species.baseMin,
-      species.baseMax
-    )*
-    random(.75,1.12);
+  let weight=random(species.baseMin,species.baseMax)*random(.75,1.12);
 
-  if(
-    Math.random()<
-    .12*score
-  ){
-    weight*=
-      random(
-        1.18,
-        1.5
-      );
-  }
+  if(Math.random()<.12*score)weight*=random(1.18,1.5);
 
-  const knowledge=
-    getKnowledge(
-      setup.lake,
-      setup.spot.name,
-      setup.species
-    );
-
-  weight*=
-    1+knowledge/1000;
+  const knowledge=getKnowledge(setup.lake,setup.spot.name,setup.species);
+  weight*=1+knowledge/1000;
 
   let legendary=null;
 
-  const candidate=
-    LEGENDARY_FISH.find(
-      fish=>
-        fish.species===
-          setup.species &&
-        fish.lake===
-          setup.lake &&
-        fish.spot===
-          setup.spot.name &&
-        !game.legendaryCaught.includes(
-          fish.id
-        )
-    );
+  const candidate=LEGENDARY_FISH.find(fish=>
+    fish.species===setup.species&&
+    fish.lake===setup.lake&&
+    fish.spot===setup.spot.name&&
+    !game.legendaryCaught.includes(fish.id)
+  );
 
-  const legendaryChance=
-    .0007*
-    score*
-    (
-      1+
-      knowledge/60
-    );
+  const legendaryChance=.0007*score*(1+knowledge/60);
 
-  if(
-    candidate &&
-    Math.random()<
-      legendaryChance
-  ){
-    legendary=
-      candidate;
-
-    weight=
-      random(
-        candidate.minWeight,
-        candidate.maxWeight
-      );
+  if(candidate&&Math.random()<legendaryChance){
+    legendary=candidate;
+    weight=random(candidate.minWeight,candidate.maxWeight);
   }
 
-  weight=
-    Number(
-      weight.toFixed(2)
-    );
+  weight=Number(weight.toFixed(2));
 
   const rarity=
-    legendary
-      ? "Legendary"
-      : weight>=species.legendaryThreshold
-        ? "Epic"
-        : weight>=species.trophy
-          ? "Rare"
-          : weight>=species.baseMax*.78
-            ? "Uncommon"
-            : "Common";
+    legendary?"Legendary":
+    weight>=species.legendaryThreshold?"Epic":
+    weight>=species.trophy?"Rare":
+    weight>=species.baseMax*.78?"Uncommon":
+    "Common";
 
-  const length=
-    Number(
-      (
-        setup.species==="Walleye"
-          ? 13+weight*2.05
-          : setup.species==="Bass"
-            ? 11+weight*1.9
-            : 10+weight*2.3
-      ).toFixed(1)
-    );
+  const length=Number((
+    setup.species==="Walleye"?13+weight*2.05:
+    setup.species==="Bass"?11+weight*1.9:
+    10+weight*2.3
+  ).toFixed(1));
 
-  return {
+  return{
     id:`fish_${Date.now()}_${Math.random().toString(36).slice(2,6)}`,
     species:setup.species,
     weight,
     length,
-    condition:choice([
-      "Excellent",
-      "Healthy",
-      "Heavy",
-      "Lean",
-      "Prime"
-    ]),
+    condition:choice(["Excellent","Healthy","Heavy","Lean","Prime"]),
     rarity,
     lure:setup.lure,
     technique:setup.technique,
@@ -3412,347 +2036,153 @@ function potentialFish(setup,score){
     spot:setup.spot.name,
     spotType:setup.spot.type,
     depth:setup.depth,
-    legendaryId:
-      legendary?.id||
-      null,
-    legendaryName:
-      legendary?.name||
-      null
+    legendaryId:legendary?.id||null,
+    legendaryName:legendary?.name||null
   };
 }
 
 function castLine(){
-  if(
-    runtime.castState!==
-    "idle"
-  ){
-    return;
-  }
+  if(runtime.castState!=="idle")return;
 
-  const setup=
-    getCurrentFishingSetup();
+  const setup=getCurrentFishingSetup();
 
   if(!setup.spot){
-    notify(
-      "Choose a valid fishing area.",
-      "bad"
-    );
-
+    notify("Choose a valid fishing area.","bad");
     return;
   }
 
   if(game.activeTournament){
-
-    if(
-      game.activeTournament
-        .castsRemaining<=0
-    ){
+    if(game.activeTournament.castsRemaining<=0){
       finishTournament();
       return;
     }
 
-    if(
-      setup.lake!==
-      game.activeTournament.lake
-    ){
-      notify(
-        "Tournament competitors must fish the event lake.",
-        "bad"
-      );
-
+    if(setup.lake!==game.activeTournament.lake){
+      notify("Tournament competitors must fish the event lake.","bad");
       return;
     }
 
-    if(
-      game.activeTournament.format!==
-        "Multi-Species" &&
-      setup.species!==
-        game.activeTournament.species
-    ){
-      notify(
-        `This tournament targets ${game.activeTournament.species}.`,
-        "bad"
-      );
-
+    if(game.activeTournament.format!=="Multi-Species"&&setup.species!==game.activeTournament.species){
+      notify(`This tournament targets ${game.activeTournament.species}.`,"bad");
       return;
     }
   }
 
-  runtime.castState=
-    "waiting";
+  runtime.castState="waiting";
 
-  document.getElementById(
-    "castBtn"
-  ).disabled=true;
+  document.getElementById("castBtn").disabled=true;
+  document.getElementById("castMessage").textContent="Cast made... watching the line.";
 
-  document.getElementById(
-    "castMessage"
-  ).textContent=
-    "Cast made... watching the line.";
+  addKnowledge(setup.lake,setup.spot.name,setup.species,random(.6,1.5));
 
-  addKnowledge(
-    setup.lake,
-    setup.spot.name,
-    setup.species,
-    random(.6,1.5)
-  );
+  const score=strategyScore(setup);
+  const biteChance=clamp(.43*score,.12,.82);
 
-  const score=
-    strategyScore(
-      setup
-    );
+  runtime.currentPotentialFish=potentialFish(setup,score);
 
-  const biteChance=
-    clamp(
-      .43*score,
-      .12,
-      .82
-    );
+  runtime.biteTimer=setTimeout(()=>{
+    if(Math.random()<biteChance){
+      beginBite();
+    }else{
+      document.getElementById("castMessage").textContent="No bite. That cast didn't produce.";
+      completeCast();
 
-  runtime.currentPotentialFish=
-    potentialFish(
-      setup,
-      score
-    );
-
-  runtime.biteTimer=
-    setTimeout(
-      ()=>{
-        if(
-          Math.random()<
-          biteChance
-        ){
-          beginBite();
-        }else{
-          document.getElementById(
-            "castMessage"
-          ).textContent=
-            "No bite. That cast didn't produce.";
-
-          completeCast(false);
-
-          setTimeout(
-            ()=>{
-              resetFishingControl();
-
-              document.getElementById(
-                "castMessage"
-              ).textContent=
-                "Adjust or make another cast.";
-            },
-            800
-          );
-        }
-      },
-      randomInt(
-        700,
-        1900
-      )
-    );
+      setTimeout(()=>{
+        resetFishingControl();
+        document.getElementById("castMessage").textContent="Adjust or make another cast.";
+      },800);
+    }
+  },randomInt(700,1900));
 }
 
 function beginBite(){
-  runtime.castState=
-    "bite";
-
+  runtime.castState="bite";
   runtime.timingPosition=0;
   runtime.timingDirection=1;
 
-  document.getElementById(
-    "castMessage"
-  ).textContent=
-    "BITE! Time your hook set!";
-
-  document.getElementById(
-    "hookBtn"
-  ).disabled=false;
+  document.getElementById("castMessage").textContent="BITE! Time your hook set!";
+  document.getElementById("hookBtn").disabled=false;
 
   animateTimingMarker();
 }
 
 function animateTimingMarker(){
-  if(
-    runtime.castState!==
-    "bite"
-  ){
-    return;
-  }
+  if(runtime.castState!=="bite")return;
 
-  runtime.timingPosition+=
-    1.9*
-    runtime.timingDirection;
+  runtime.timingPosition+=1.9*runtime.timingDirection;
 
-  if(
-    runtime.timingPosition>=100
-  ){
+  if(runtime.timingPosition>=100){
     runtime.timingPosition=100;
     runtime.timingDirection=-1;
   }
 
-  if(
-    runtime.timingPosition<=0
-  ){
+  if(runtime.timingPosition<=0){
     runtime.timingPosition=0;
     runtime.timingDirection=1;
   }
 
-  document.getElementById(
-    "timingMarker"
-  ).style.left=
-    `${runtime.timingPosition}%`;
+  document.getElementById("timingMarker").style.left=`${runtime.timingPosition}%`;
 
-  runtime.timingAnimation=
-    requestAnimationFrame(
-      animateTimingMarker
-    );
+  runtime.timingAnimation=requestAnimationFrame(animateTimingMarker);
 }
 
 function attemptHookSet(){
-  if(
-    runtime.castState!==
-    "bite"
-  ){
-    return;
-  }
+  if(runtime.castState!=="bite")return;
 
-  cancelAnimationFrame(
-    runtime.timingAnimation
-  );
+  cancelAnimationFrame(runtime.timingAnimation);
+  document.getElementById("hookBtn").disabled=true;
 
-  document.getElementById(
-    "hookBtn"
-  ).disabled=true;
-
-  const distance=
-    Math.abs(
-      runtime.timingPosition-
-      50
-    );
-
-  const tolerance=
-    16*
-    equipped("Rod").power*
-    equipped("Reel").power;
+  const distance=Math.abs(runtime.timingPosition-50);
+  const tolerance=16*equipped("Rod").power*equipped("Reel").power;
 
   if(distance<=tolerance){
-    beginFight(
-      runtime.currentPotentialFish
-    );
+    beginFight(runtime.currentPotentialFish);
   }else{
-    document.getElementById(
-      "castMessage"
-    ).textContent=
-      distance>35
-        ? "Too early or late — the fish missed the hook."
-        : "Almost! The fish came unbuttoned.";
+    document.getElementById("castMessage").textContent=
+      distance>35?"Too early or late — the fish missed the hook.":"Almost! The fish came unbuttoned.";
 
-    completeCast(false);
+    completeCast();
 
-    setTimeout(
-      ()=>{
-        resetFishingControl();
-
-        document.getElementById(
-          "castMessage"
-        ).textContent=
-          "Make another cast.";
-      },
-      1000
-    );
+    setTimeout(()=>{
+      resetFishingControl();
+      document.getElementById("castMessage").textContent="Make another cast.";
+    },1000);
   }
 }
 
 function beginFight(fish){
-  runtime.castState=
-    "fight";
-
-  runtime.hookedFish=
-    fish;
-
+  runtime.castState="fight";
+  runtime.hookedFish=fish;
   runtime.tension=45;
   runtime.fightProgress=3;
   runtime.fishStamina=100;
 
-  document.getElementById(
-    "castMessage"
-  ).textContent=
-    `Fish on! ${fish.weight.toFixed(2)} lb class fish fighting hard.`;
-
-  document.getElementById(
-    "fightPanel"
-  ).classList.add(
-    "active"
-  );
+  document.getElementById("castMessage").textContent=`Fish on! ${fish.weight.toFixed(2)} lb class fish fighting hard.`;
+  document.getElementById("fightPanel").classList.add("active");
 
   updateFightUI();
 
-  runtime.fightTimer=
-    setInterval(
-      ()=>{
-        if(
-          runtime.castState!==
-          "fight"
-        ){
-          return;
-        }
+  runtime.fightTimer=setInterval(()=>{
+    if(runtime.castState!=="fight")return;
 
-        const fishPower=
-          fish.weight/
-          (
-            fish.species==="Walleye"
-              ? 7
-              : fish.species==="Bass"
-                ? 5
-                : 4
-          );
+    const fishPower=fish.weight/(fish.species==="Walleye"?7:fish.species==="Bass"?5:4);
 
-        runtime.tension+=
-          random(-3,5)+
-          fishPower*2.2;
+    runtime.tension+=random(-3,5)+fishPower*2.2;
+    runtime.tension-=equipped("Reel").power*1.1;
+    runtime.fishStamina-=random(.7,1.8);
 
-        runtime.tension-=
-          equipped(
-            "Reel"
-          ).power*1.1;
+    if(runtime.fishStamina<45)runtime.tension-=1;
 
-        runtime.fishStamina-=
-          random(.7,1.8);
-
-        if(
-          runtime.fishStamina<
-          45
-        ){
-          runtime.tension-=1;
-        }
-
-        checkFight();
-        updateFightUI();
-      },
-      500
-    );
+    checkFight();
+    updateFightUI();
+  },500);
 }
 
 function fightReel(){
-  if(
-    runtime.castState!==
-    "fight"
-  ){
-    return;
-  }
+  if(runtime.castState!=="fight")return;
 
-  runtime.fightProgress+=
-    6*
-    equipped(
-      "Reel"
-    ).power;
-
-  runtime.tension+=
-    7+
-    runtime.hookedFish.weight/3-
-    equipped(
-      "Rod"
-    ).power*1.4;
-
+  runtime.fightProgress+=6*equipped("Reel").power;
+  runtime.tension+=7+runtime.hookedFish.weight/3-equipped("Rod").power*1.4;
   runtime.fishStamina-=4;
 
   checkFight();
@@ -3760,12 +2190,7 @@ function fightReel(){
 }
 
 function fightHold(){
-  if(
-    runtime.castState!==
-    "fight"
-  ){
-    return;
-  }
+  if(runtime.castState!=="fight")return;
 
   runtime.fightProgress+=2;
   runtime.tension+=random(-2,2);
@@ -3776,25 +2201,10 @@ function fightHold(){
 }
 
 function fightGiveLine(){
-  if(
-    runtime.castState!==
-    "fight"
-  ){
-    return;
-  }
+  if(runtime.castState!=="fight")return;
 
-  runtime.tension-=
-    10*
-    equipped(
-      "Reel"
-    ).power;
-
-  runtime.fightProgress=
-    Math.max(
-      0,
-      runtime.fightProgress-2
-    );
-
+  runtime.tension-=10*equipped("Reel").power;
+  runtime.fightProgress=Math.max(0,runtime.fightProgress-2);
   runtime.fishStamina-=1;
 
   checkFight();
@@ -3802,259 +2212,118 @@ function fightGiveLine(){
 }
 
 function updateFightUI(){
-  document.getElementById(
-    "tensionMarker"
-  ).style.left=
-    `${clamp(runtime.tension,0,100)}%`;
-
-  document.getElementById(
-    "fightProgressText"
-  ).textContent=
-    `Fish ${Math.round(runtime.fightProgress)}%`;
+  document.getElementById("tensionMarker").style.left=`${clamp(runtime.tension,0,100)}%`;
+  document.getElementById("fightProgressText").textContent=`Fish ${Math.round(runtime.fightProgress)}%`;
 }
 
 function checkFight(){
-  const breakThreshold=
-    91+
-    Math.min(
-      7,
-      (
-        equipped("Line").strength-
-        10
-      )*.25
-    );
+  const breakThreshold=91+Math.min(7,(equipped("Line").strength-10)*.25);
 
-  if(
-    runtime.tension>=
-    breakThreshold
-  ){
-    loseFight(
-      "The line broke under too much tension."
-    );
-
+  if(runtime.tension>=breakThreshold){
+    loseFight("The line broke under too much tension.");
     return;
   }
 
-  if(
-    runtime.tension<=3 &&
-    Math.random()<.22
-  ){
-    loseFight(
-      "The line went slack and the fish threw the hook."
-    );
-
+  if(runtime.tension<=3&&Math.random()<.22){
+    loseFight("The line went slack and the fish threw the hook.");
     return;
   }
 
-  if(
-    runtime.fightProgress>=
-    100
-  ){
-    landFish(
-      runtime.hookedFish
-    );
-  }
+  if(runtime.fightProgress>=100)landFish(runtime.hookedFish);
 }
 
 function loseFight(message){
-  clearInterval(
-    runtime.fightTimer
-  );
+  clearInterval(runtime.fightTimer);
 
-  runtime.castState=
-    "lost";
+  runtime.castState="lost";
 
-  document.getElementById(
-    "castMessage"
-  ).textContent=
-    message;
+  document.getElementById("castMessage").textContent=message;
 
-  completeCast(false);
+  completeCast();
 
-  setTimeout(
-    ()=>{
-      resetFishingControl();
-
-      document.getElementById(
-        "castMessage"
-      ).textContent=
-        "That one got away. Make another cast.";
-    },
-    1100
-  );
+  setTimeout(()=>{
+    resetFishingControl();
+    document.getElementById("castMessage").textContent="That one got away. Make another cast.";
+  },1100);
 }
 
 function landFish(fish){
-  clearInterval(
-    runtime.fightTimer
-  );
+  clearInterval(runtime.fightTimer);
 
-  runtime.castState=
-    "landed";
+  runtime.castState="landed";
 
-  document.getElementById(
-    "fightPanel"
-  ).classList.remove(
-    "active"
-  );
+  document.getElementById("fightPanel").classList.remove("active");
 
-  document.getElementById(
-    "castMessage"
-  ).textContent=
+  document.getElementById("castMessage").textContent=
     fish.legendaryName
-      ? `LEGENDARY FISH! ${fish.legendaryName} — ${fish.weight.toFixed(2)} lb!`
-      : `Landed! ${fish.species} — ${fish.weight.toFixed(2)} lb, ${fish.length}"`;
+      ?`LEGENDARY FISH! ${fish.legendaryName} — ${fish.weight.toFixed(2)} lb!`
+      :`Landed! ${fish.species} — ${fish.weight.toFixed(2)} lb, ${fish.length}"`;
 
   recordFish(fish);
-  completeCast(true);
+  completeCast();
 
   if(fish.legendaryName){
     showModal(`
-      <div
-        class="gold-text"
-        style="font-size:46px;text-align:center"
-      >
-        👑
-      </div>
-
-      <h2 style="text-align:center">
-        ${fish.legendaryName}
-      </h2>
-
-      <p style="text-align:center">
-        ${fish.weight.toFixed(2)} lb ${fish.species}
-      </p>
-
-      <div class="info-box">
-        ${
-          LEGENDARY_FISH.find(
-            item=>
-              item.id===
-              fish.legendaryId
-          )?.description||
-          ""
-        }
-      </div>
-
-      <p
-        class="muted small"
-        style="text-align:center"
-      >
-        Caught at ${fish.spot}, ${fish.lake}
-        using ${fish.lure}.
-      </p>
+      <div class="gold-text" style="font-size:46px;text-align:center">👑</div>
+      <h2 style="text-align:center">${fish.legendaryName}</h2>
+      <p style="text-align:center">${fish.weight.toFixed(2)} lb ${fish.species}</p>
+      <div class="info-box">${LEGENDARY_FISH.find(item=>item.id===fish.legendaryId)?.description||""}</div>
+      <p class="muted small" style="text-align:center">Caught at ${fish.spot}, ${fish.lake} using ${fish.lure}.</p>
     `);
   }
 
-  setTimeout(
-    ()=>{
-      resetFishingControl();
-
-      document.getElementById(
-        "castMessage"
-      ).textContent=
-        "Fish recorded. Make another cast.";
-    },
-    fish.legendaryName
-      ? 1600
-      : 900
-  );
+  setTimeout(()=>{
+    resetFishingControl();
+    document.getElementById("castMessage").textContent="Fish recorded. Make another cast.";
+  },fish.legendaryName?1600:900);
 }
 
 function completeCast(){
   if(game.activeTournament){
-    game.activeTournament
-      .castsRemaining--;
-
+    game.activeTournament.castsRemaining--;
     simulateAICast();
 
-    if(
-      game.activeTournament
-        .castsRemaining<=0
-    ){
-      setTimeout(
-        ()=>finishTournament(),
-        900
-      );
+    if(game.activeTournament.castsRemaining<=0){
+      setTimeout(()=>finishTournament(),900);
     }
   }
 
-  if(Math.random()<.22){
-    shiftWeather();
-  }
+  if(Math.random()<.22)shiftWeather();
 
   renderFishingPage();
   saveGame();
 }
 
+/* REPUTATION BALANCE:
+   Every landed fish = +0.10 reputation.
+   New personal best = additional +0.05 reputation.
+*/
 function recordFish(fish){
   game.fishLanded++;
-  game.reputation+=.15;
+  game.reputation+=.10;
 
-  unlockAchievement(
-    "first_fish"
-  );
+  unlockAchievement("first_fish");
 
-  const currentPB=
-    game.personalBests[
-      fish.species
-    ];
+  const currentPB=game.personalBests[fish.species];
 
-  if(
-    !currentPB ||
-    fish.weight>
-      currentPB.weight
-  ){
-    game.personalBests[
-      fish.species
-    ]=
-      fish;
+  if(!currentPB||fish.weight>currentPB.weight){
+    game.personalBests[fish.species]=fish;
+    game.reputation+=.05;
 
-    notify(
-      `New personal best ${fish.species}: ${fish.weight.toFixed(2)} lb!`,
-      "gold"
-    );
+    notify(`New personal best ${fish.species}: ${fish.weight.toFixed(2)} lb!`,"gold");
   }
 
-  if(
-    [
-      "Rare",
-      "Epic",
-      "Legendary"
-    ].includes(
-      fish.rarity
-    )
-  ){
-    game.trophies.unshift(
-      fish
-    );
+  if(["Rare","Epic","Legendary"].includes(fish.rarity)){
+    game.trophies.unshift(fish);
   }
 
-  if(
-    fish.legendaryId &&
-    !game.legendaryCaught.includes(
-      fish.legendaryId
-    )
-  ){
-    game.legendaryCaught.push(
-      fish.legendaryId
-    );
+  if(fish.legendaryId&&!game.legendaryCaught.includes(fish.legendaryId)){
+    game.legendaryCaught.push(fish.legendaryId);
 
-    game.reputation+=20;
+    unlockAchievement("legendary");
+    updateSponsorProgress("legendary",1);
 
-    unlockAchievement(
-      "legendary"
-    );
-
-    updateSponsorProgress(
-      "legendary",
-      1
-    );
-
-    notify(
-      `Legendary fish caught: ${fish.legendaryName}!`,
-      "gold"
-    );
+    notify(`Legendary fish caught: ${fish.legendaryName}!`,"gold");
   }
 
   game.journal.unshift({
@@ -4066,527 +2335,223 @@ function recordFish(fish){
     technique:fish.technique,
     depth:fish.depth,
     weight:fish.weight,
-    waterTemp:
-      game.currentWeather.water,
-    weather:
-      game.currentWeather.clouds,
-    wind:
-      game.currentWeather.wind
+    waterTemp:game.currentWeather.water,
+    weather:game.currentWeather.clouds,
+    wind:game.currentWeather.wind
   });
 
-  game.journal=
-    game.journal.slice(
-      0,
-      100
-    );
+  game.journal=game.journal.slice(0,100);
 
-  addKnowledge(
-    fish.lake,
-    fish.spot,
-    fish.species,
-    random(2,4)
-  );
+  addKnowledge(fish.lake,fish.spot,fish.species,random(2,4));
 
-  if(
-    game.activeTournament
-  ){
-    addTournamentFish(
-      fish
-    );
+  if(game.activeTournament){
+    addTournamentFish(fish);
   }else{
-    game.freeCatch.unshift(
-      fish
-    );
-
-    game.freeCatch=
-      game.freeCatch.slice(
-        0,
-        12
-      );
+    game.freeCatch.unshift(fish);
+    game.freeCatch=game.freeCatch.slice(0,12);
   }
 
-  updateSponsorProgress(
-    "fish",
-    1
-  );
+  updateSponsorProgress("fish",1);
 }
 
 function addTournamentFish(fish){
-  const tournament=
-    game.activeTournament;
+  const tournament=game.activeTournament;
 
-  if(
-    tournament.format===
-    "Multi-Species"
-  ){
-    tournament.playerFish.push(
-      fish
-    );
-
-    tournament.playerFish.sort(
-      (a,b)=>
-        b.weight-a.weight
-    );
-
-    tournament.playerFish=
-      tournament.playerFish.slice(
-        0,
-        5
-      );
-  }else if(
-    tournament.format===
-    "Big Fish"
-  ){
-    if(
-      !tournament.playerFish.length ||
-      fish.weight>
-        tournament.playerFish[0].weight
-    ){
-      tournament.playerFish=[
-        fish
-      ];
+  if(tournament.format==="Multi-Species"){
+    tournament.playerFish.push(fish);
+    tournament.playerFish.sort((a,b)=>b.weight-a.weight);
+    tournament.playerFish=tournament.playerFish.slice(0,5);
+  }else if(tournament.format==="Big Fish"){
+    if(!tournament.playerFish.length||fish.weight>tournament.playerFish[0].weight){
+      tournament.playerFish=[fish];
     }
   }else{
-    if(
-      fish.species!==
-      tournament.species
-    ){
-      return;
-    }
+    if(fish.species!==tournament.species)return;
 
-    tournament.playerFish.push(
-      fish
-    );
-
-    tournament.playerFish.sort(
-      (a,b)=>
-        b.weight-a.weight
-    );
-
-    tournament.playerFish=
-      tournament.playerFish.slice(
-        0,
-        5
-      );
+    tournament.playerFish.push(fish);
+    tournament.playerFish.sort((a,b)=>b.weight-a.weight);
+    tournament.playerFish=tournament.playerFish.slice(0,5);
   }
 
   calculateTournamentWeights();
 }
 
 function calculateTournamentWeights(){
-  if(
-    !game.activeTournament
-  ){
-    return;
-  }
+  if(!game.activeTournament)return;
 
-  game.activeTournament
-    .playerWeight=
-      game.activeTournament
-        .playerFish
-        .reduce(
-          (sum,fish)=>
-            sum+fish.weight,
-          0
-        );
+  game.activeTournament.playerWeight=
+    game.activeTournament.playerFish.reduce((sum,fish)=>sum+fish.weight,0);
 
-  game.activeTournament
-    .playerBigFish=
-      game.activeTournament
-        .playerFish.length
-          ? Math.max(
-              ...game.activeTournament
-                .playerFish
-                .map(
-                  fish=>fish.weight
-                )
-            )
-          : 0;
+  game.activeTournament.playerBigFish=
+    game.activeTournament.playerFish.length
+      ?Math.max(...game.activeTournament.playerFish.map(fish=>fish.weight))
+      :0;
 }
 
 function simulateAICast(){
-  const tournament=
-    game.activeTournament;
+  const tournament=game.activeTournament;
+  if(!tournament)return;
 
-  if(!tournament){
-    return;
-  }
+  const lake=LAKES[tournament.lake];
 
-  const lake=
-    LAKES[
-      tournament.lake
-    ];
+  tournament.ai.forEach(competitor=>{
+    const catchChance=clamp(.38*competitor.skill,.18,.8);
 
-  tournament.ai.forEach(
-    competitor=>{
-      const catchChance=
-        clamp(
-          .38*
-          competitor.skill,
-          .18,
-          .8
-        );
+    if(Math.random()<catchChance){
+      let species=tournament.species;
 
-      if(
-        Math.random()<
-        catchChance
-      ){
-        let species=
-          tournament.species;
-
-        if(
-          tournament.format===
-          "Multi-Species"
-        ){
-          species=
-            choice(
-              lake.species
-            );
-        }
-
-        const speciesData=
-          SPECIES[species];
-
-        let weight=
-          random(
-            speciesData.baseMin*.8,
-            speciesData.baseMax*.92
-          )*
-          competitor.skill;
-
-        if(
-          Math.random()<
-          .07*
-          competitor.skill
-        ){
-          weight*=
-            random(
-              1.1,
-              1.35
-            );
-        }
-
-        weight=
-          Number(
-            weight.toFixed(2)
-          );
-
-        const fish={
-          species,
-          weight
-        };
-
-        if(
-          tournament.format===
-          "Big Fish"
-        ){
-          if(
-            !competitor.fish.length ||
-            weight>
-              competitor.fish[0].weight
-          ){
-            competitor.fish=[
-              fish
-            ];
-          }
-        }else{
-          competitor.fish.push(
-            fish
-          );
-
-          competitor.fish.sort(
-            (a,b)=>
-              b.weight-a.weight
-          );
-
-          competitor.fish=
-            competitor.fish.slice(
-              0,
-              5
-            );
-        }
-
-        competitor.weight=
-          competitor.fish.reduce(
-            (sum,fish)=>
-              sum+fish.weight,
-            0
-          );
-
-        competitor.bigFish=
-          competitor.fish.length
-            ? Math.max(
-                ...competitor.fish.map(
-                  fish=>fish.weight
-                )
-              )
-            : 0;
+      if(tournament.format==="Multi-Species"){
+        species=choice(lake.species);
       }
+
+      const speciesData=SPECIES[species];
+
+      let weight=random(speciesData.baseMin*.8,speciesData.baseMax*.92)*competitor.skill;
+
+      if(Math.random()<.07*competitor.skill){
+        weight*=random(1.1,1.35);
+      }
+
+      weight=Number(weight.toFixed(2));
+
+      const fish={species,weight};
+
+      if(tournament.format==="Big Fish"){
+        if(!competitor.fish.length||weight>competitor.fish[0].weight){
+          competitor.fish=[fish];
+        }
+      }else{
+        competitor.fish.push(fish);
+        competitor.fish.sort((a,b)=>b.weight-a.weight);
+        competitor.fish=competitor.fish.slice(0,5);
+      }
+
+      competitor.weight=competitor.fish.reduce((sum,fish)=>sum+fish.weight,0);
+      competitor.bigFish=competitor.fish.length?Math.max(...competitor.fish.map(fish=>fish.weight)):0;
     }
-  );
+  });
 }
 
 function tournamentLeaderboard(){
-  const tournament=
-    game.activeTournament;
+  const tournament=game.activeTournament;
 
-  if(!tournament){
-    return [];
-  }
+  if(!tournament)return[];
 
-  const rows=
-    tournament.ai.map(
-      competitor=>({
-        name:
-          competitor.name,
-
-        weight:
-          tournament.format===
-          "Big Fish"
-            ? competitor.bigFish
-            : competitor.weight,
-
-        player:false
-      })
-    );
+  const rows=tournament.ai.map(competitor=>({
+    name:competitor.name,
+    weight:tournament.format==="Big Fish"?competitor.bigFish:competitor.weight,
+    player:false
+  }));
 
   rows.push({
     name:"YOU",
-
-    weight:
-      tournament.format===
-      "Big Fish"
-        ? tournament.playerBigFish
-        : tournament.playerWeight,
-
+    weight:tournament.format==="Big Fish"?tournament.playerBigFish:tournament.playerWeight,
     player:true
   });
 
-  rows.sort(
-    (a,b)=>
-      b.weight-a.weight
-  );
+  rows.sort((a,b)=>b.weight-a.weight);
 
   return rows;
 }
 
 function renderFishingLeaderboard(){
-  const box=
-    document.getElementById(
-      "fishingLeaderboard"
-    );
+  const box=document.getElementById("fishingLeaderboard");
 
   if(!game.activeTournament){
-    box.innerHTML=`
-      <div class="small muted">
-        Enter a tournament to activate live standings.
-      </div>
-    `;
-
+    box.innerHTML=`<div class="small muted">Enter a tournament to activate live standings.</div>`;
     return;
   }
 
-  const rows=
-    tournamentLeaderboard()
-      .slice(
-        0,
-        10
-      );
+  const rows=tournamentLeaderboard().slice(0,10);
 
   box.innerHTML=`
     <table>
-
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Angler</th>
-          <th>Weight</th>
-        </tr>
-      </thead>
-
+      <thead><tr><th>#</th><th>Angler</th><th>Weight</th></tr></thead>
       <tbody>
-        ${
-          rows.map(
-            (row,index)=>`
-              <tr
-                class="${row.player?"player-row":""}"
-              >
-                <td>${index+1}</td>
-                <td>${row.name}</td>
-                <td>${row.weight.toFixed(2)} lb</td>
-              </tr>
-            `
-          ).join("")
-        }
+        ${rows.map((row,index)=>`
+          <tr class="${row.player?"player-row":""}">
+            <td>${index+1}</td>
+            <td>${row.name}</td>
+            <td>${row.weight.toFixed(2)} lb</td>
+          </tr>
+        `).join("")}
       </tbody>
-
     </table>
   `;
 }
 
 function renderLivewell(){
-  const fish=
-    game.activeTournament
-      ? game.activeTournament.playerFish
-      : game.freeCatch;
+  const fish=game.activeTournament?game.activeTournament.playerFish:game.freeCatch;
 
-  document.getElementById(
-    "livewellTitle"
-  ).textContent=
-    game.activeTournament
-      ? "Tournament Livewell"
-      : "Today's Catch";
+  document.getElementById("livewellTitle").textContent=
+    game.activeTournament?"Tournament Livewell":"Today's Catch";
 
-  const total=
-    fish.reduce(
-      (sum,item)=>
-        sum+item.weight,
-      0
-    );
+  const total=fish.reduce((sum,item)=>sum+item.weight,0);
 
-  document.getElementById(
-    "livewellWeight"
-  ).textContent=
-    `${total.toFixed(2)} lb`;
+  document.getElementById("livewellWeight").textContent=`${total.toFixed(2)} lb`;
 
-  document.getElementById(
-    "livewellList"
-  ).innerHTML=
+  document.getElementById("livewellList").innerHTML=
     fish.length
-      ? fish.map(item=>`
-          <div class="livewell-fish">
-            <span>
-              ${SPECIES[item.species]?.icon||"🐟"}
-              ${item.species}
-            </span>
-
-            <strong>
-              ${item.weight.toFixed(2)} lb
-            </strong>
-          </div>
-        `).join("")
-      : `<div class="empty">No fish yet.</div>`;
+      ?fish.map(item=>`
+        <div class="livewell-fish">
+          <span>${SPECIES[item.species]?.icon||"🐟"} ${item.species}</span>
+          <strong>${item.weight.toFixed(2)} lb</strong>
+        </div>
+      `).join("")
+      :`<div class="empty">No fish yet.</div>`;
 }
 
 function startTournament(id){
   if(game.activeTournament){
-    notify(
-      "Finish or withdraw from your current tournament first.",
-      "bad"
-    );
-
+    notify("Finish or withdraw from your current tournament first.","bad");
     return;
   }
 
-  const event=
-    game.tournamentSchedule.find(
-      item=>item.id===id
-    );
+  const event=game.tournamentSchedule.find(item=>item.id===id);
 
-  if(
-    !event ||
-    event.completed
-  ){
+  if(!event||event.completed)return;
+
+  if(!tournamentLevelUnlocked(event.species,event.level)){
+    notify("You have not qualified for this event yet.","bad");
     return;
   }
 
-  if(
-    !tournamentLevelUnlocked(
-      event.species,
-      event.level
-    )
-  ){
-    notify(
-      "You have not qualified for this event yet.",
-      "bad"
-    );
-
+  if(game.money<event.fee){
+    notify("You don't have enough money for this entry fee.","bad");
     return;
   }
 
-  if(
-    game.money<
-    event.fee
-  ){
-    notify(
-      "You don't have enough money for this entry fee.",
-      "bad"
-    );
-
-    return;
-  }
-
-  game.money-=
-    event.fee;
+  game.money-=event.fee;
 
   game.activeTournament={
-    ...JSON.parse(
-      JSON.stringify(
-        event
-      )
-    ),
-
-    castsRemaining:
-      event.casts,
-
+    ...JSON.parse(JSON.stringify(event)),
+    castsRemaining:event.casts,
     playerFish:[],
     playerWeight:0,
     playerBigFish:0,
-
-    ai:
-      createTournamentAI(
-        event
-      ),
-
-    startWeather:{
-      ...game.currentWeather
-    }
+    ai:createTournamentAI(event),
+    startWeather:{...game.currentWeather}
   };
 
-  addFeed(
-    `Entered ${event.name} at ${event.lake}.`
-  );
-
-  notify(
-    `Entered ${event.name}. Entry fee: ${money(event.fee)}.`,
-    "good"
-  );
+  addFeed(`Entered ${event.name} at ${event.lake}.`);
+  notify(`Entered ${event.name}. Entry fee: ${money(event.fee)}.`,"good");
 
   saveGame();
-
-  showPage(
-    "fish"
-  );
+  showPage("fish");
 }
 
 function withdrawTournament(){
-  if(
-    !game.activeTournament
-  ){
-    return;
-  }
+  if(!game.activeTournament)return;
 
-  const event=
-    game.tournamentSchedule.find(
-      item=>
-        item.id===
-        game.activeTournament.id
-    );
+  const event=game.tournamentSchedule.find(item=>item.id===game.activeTournament.id);
 
-  if(event){
-    event.completed=true;
-  }
+  if(event)event.completed=true;
 
-  addFeed(
-    `Withdrew from ${game.activeTournament.name}.`
-  );
+  addFeed(`Withdrew from ${game.activeTournament.name}.`);
 
-  game.activeTournament=
-    null;
+  game.activeTournament=null;
 
-  document.getElementById(
-    "fishSpeciesSelect"
-  ).disabled=false;
+  document.getElementById("fishSpeciesSelect").disabled=false;
 
   resetFishingControl();
   saveGame();
@@ -4594,182 +2559,109 @@ function withdrawTournament(){
 }
 
 function placementPoints(place){
-  if(place===1) return 100;
-  if(place===2) return 92;
-  if(place===3) return 86;
+  if(place===1)return100;
+  if(place===2)return92;
+  if(place===3)return86;
+  if(place<=5)return78-(place-4)*5;
+  if(place<=10)return60-(place-6)*4;
 
-  if(place<=5){
-    return 78-
-      (place-4)*5;
+  return Math.max(5,45-Math.floor((place-11)*1.7));
+}
+
+function calculateTournamentReputation(level,place){
+  if(level==="local"){
+    if(place===1)return2;
+    if(place<=3)return1;
+    if(place<=10)return.25;
+    return 0;
   }
 
-  if(place<=10){
-    return 60-
-      (place-6)*4;
+  if(level==="state"){
+    if(place===1)return5;
+    if(place<=3)return3;
+    if(place<=10)return1;
+    return.25;
   }
 
-  return Math.max(
-    5,
-    45-
-    Math.floor(
-      (place-11)*1.7
-    )
-  );
+  if(level==="national"){
+    if(place===1)return10;
+    if(place<=3)return6;
+    if(place<=10)return3;
+    return1;
+  }
+
+  if(level==="major"){
+    if(place===1)return20;
+    if(place<=3)return12;
+    if(place<=10)return6;
+    return2;
+  }
+
+  return 0;
 }
 
 function finishTournament(){
-  const tournament=
-    game.activeTournament;
+  const tournament=game.activeTournament;
 
-  if(!tournament){
-    return;
-  }
+  if(!tournament)return;
 
   calculateTournamentWeights();
 
-  const rows=
-    tournamentLeaderboard();
+  const rows=tournamentLeaderboard();
+  const place=rows.findIndex(row=>row.player)+1;
+  const field=rows.length;
 
-  const place=
-    rows.findIndex(
-      row=>row.player
-    )+1;
+  const event=game.tournamentSchedule.find(item=>item.id===tournament.id);
 
-  const field=
-    rows.length;
+  if(event)event.completed=true;
 
-  const event=
-    game.tournamentSchedule.find(
-      item=>
-        item.id===
-        tournament.id
-    );
-
-  if(event){
-    event.completed=true;
-  }
-
-  const points=
-    placementPoints(
-      place
-    );
+  const points=placementPoints(place);
 
   const standingsKey=
-    tournament.level==="local"
-      ? "local"
-      : tournament.level==="state"
-        ? "state"
-        : "national";
+    tournament.level==="local"?"local":
+    tournament.level==="state"?"state":
+    "national";
 
-  game.standings[
-    tournament.species
-  ][
-    standingsKey
-  ]+=points;
+  game.standings[tournament.species][standingsKey]+=points;
 
   const prizeScale={
-    1:1,
-    2:.6,
-    3:.4,
-    4:.25,
-    5:.18,
-    6:.12,
-    7:.1,
-    8:.08,
-    9:.06,
-    10:.05
+    1:1,2:.6,3:.4,4:.25,5:.18,
+    6:.12,7:.1,8:.08,9:.06,10:.05
   };
 
-  const winnings=
-    Math.round(
-      tournament.prize*
-      (
-        prizeScale[place]||
-        0
-      )
-    );
+  const winnings=Math.round(tournament.prize*(prizeScale[place]||0));
 
-  game.money+=
-    winnings;
+  game.money+=winnings;
+  game.careerEarnings+=winnings;
 
-  game.careerEarnings+=
-    winnings;
-
-  let reputationGain=
-    Math.max(
-      2,
-      16-place
-    );
-
-  reputationGain*={
-    local:1,
-    state:1.6,
-    national:2.5,
-    major:4
-  }[
-    tournament.level
-  ];
-
-  game.reputation+=
-    reputationGain;
+  const reputationGain=calculateTournamentReputation(tournament.level,place);
+  game.reputation+=reputationGain;
 
   if(place===1){
     game.wins++;
+    game.speciesWins[tournament.species]++;
 
-    game.speciesWins[
-      tournament.species
-    ]++;
+    unlockAchievement("first_win");
 
-    unlockAchievement(
-      "first_win"
-    );
-
-    if(
-      tournament.level===
-      "local"
-    ){
+    if(tournament.level==="local"){
       game.localWins++;
 
-      if(
-        game.localWins>=5
-      ){
-        unlockAchievement(
-          "local_ace"
-        );
-      }
+      if(game.localWins>=5)unlockAchievement("local_ace");
     }else{
       game.highWins++;
-
-      updateSponsorProgress(
-        "highWins",
-        1
-      );
+      updateSponsorProgress("highWins",1);
     }
 
-    if(
-      tournament.level===
-      "major"
-    ){
+    if(tournament.level==="major"){
       game.majorWins++;
-
-      updateSponsorProgress(
-        "majorWin",
-        1
-      );
-
-      unlockAchievement(
-        "champion"
-      );
+      updateSponsorProgress("majorWin",1);
+      unlockAchievement("champion");
     }
   }
 
   if(place<=10){
     game.top10++;
-
-    updateSponsorProgress(
-      "top10",
-      1
-    );
+    updateSponsorProgress("top10",1);
   }
 
   checkQualificationAchievements();
@@ -4779,305 +2671,137 @@ function finishTournament(){
   addFeed(
     `${place===1?"Won":"Finished #"+place+" in"} ${tournament.name}. `+
     `${winnings?`Earned ${money(winnings)}. `:""}`+
-    `${points} season points.`
+    `${points} season points. +${reputationGain.toFixed(2)} reputation.`
   );
 
   const resultHTML=`
     <div style="text-align:center">
-
-      <div style="font-size:44px">
-        ${
-          place===1
-            ? "🏆"
-            : place<=3
-              ? "🥉"
-              : "🎣"
-        }
-      </div>
-
-      <h2>
-        ${tournament.name}
-      </h2>
-
-      <div class="stat-value">
-        #${place}
-      </div>
-
-      <div class="stat-label">
-        of ${field} anglers
-      </div>
-
+      <div style="font-size:44px">${place===1?"🏆":place<=3?"🥉":"🎣"}</div>
+      <h2>${tournament.name}</h2>
+      <div class="stat-value">#${place}</div>
+      <div class="stat-label">of ${field} anglers</div>
     </div>
 
     <hr class="divider">
 
-    <div class="grid grid-3">
-
+    <div class="grid grid-4">
       <div>
-        <div class="stat-value">
-          ${tournament.playerWeight.toFixed(2)}
-        </div>
-
-        <div class="stat-label">
-          ${
-            tournament.format==="Big Fish"
-              ? "Big Fish"
-              : "Total Weight"
-          } lb
-        </div>
+        <div class="stat-value">${tournament.playerWeight.toFixed(2)}</div>
+        <div class="stat-label">${tournament.format==="Big Fish"?"Big Fish":"Total Weight"} lb</div>
       </div>
-
       <div>
-        <div class="stat-value">
-          ${points}
-        </div>
-
-        <div class="stat-label">
-          Season Points
-        </div>
+        <div class="stat-value">${points}</div>
+        <div class="stat-label">Season Points</div>
       </div>
-
       <div>
-        <div class="stat-value">
-          ${money(winnings)}
-        </div>
-
-        <div class="stat-label">
-          Prize Money
-        </div>
+        <div class="stat-value">${money(winnings)}</div>
+        <div class="stat-label">Prize Money</div>
       </div>
-
+      <div>
+        <div class="stat-value">+${reputationGain.toFixed(2)}</div>
+        <div class="stat-label">Reputation</div>
+      </div>
     </div>
 
     <hr class="divider">
 
-    <h3>
-      Top Finishers
-    </h3>
+    <h3>Top Finishers</h3>
 
     <table>
-      ${
-        rows
-          .slice(0,8)
-          .map(
-            (row,index)=>`
-              <tr
-                class="${row.player?"player-row":""}"
-              >
-                <td>#${index+1}</td>
-                <td>${row.name}</td>
-                <td>${row.weight.toFixed(2)} lb</td>
-              </tr>
-            `
-          )
-          .join("")
-      }
+      ${rows.slice(0,8).map((row,index)=>`
+        <tr class="${row.player?"player-row":""}">
+          <td>#${index+1}</td>
+          <td>${row.name}</td>
+          <td>${row.weight.toFixed(2)} lb</td>
+        </tr>
+      `).join("")}
     </table>
   `;
 
-  game.activeTournament=
-    null;
+  game.activeTournament=null;
 
-  document.getElementById(
-    "fishSpeciesSelect"
-  ).disabled=false;
+  document.getElementById("fishSpeciesSelect").disabled=false;
 
   generateLocalOpen(false);
 
   saveGame();
   renderAll();
 
-  showModal(
-    resultHTML
-  );
+  showModal(resultHTML);
 }
 
 function checkQualificationAchievements(){
-  [
-    "Walleye",
-    "Bass",
-    "Trout"
-  ].forEach(species=>{
-
-    if(
-      tournamentLevelUnlocked(
-        species,
-        "state"
-      )
-    ){
-      unlockAchievement(
-        "state_qualified"
-      );
-    }
-
-    if(
-      tournamentLevelUnlocked(
-        species,
-        "national"
-      )
-    ){
-      unlockAchievement(
-        "national_qualified"
-      );
-    }
-
-    if(
-      tournamentLevelUnlocked(
-        species,
-        "major"
-      )
-    ){
-      unlockAchievement(
-        "major_qualified"
-      );
-    }
+  ["Walleye","Bass","Trout"].forEach(species=>{
+    if(tournamentLevelUnlocked(species,"state"))unlockAchievement("state_qualified");
+    if(tournamentLevelUnlocked(species,"national"))unlockAchievement("national_qualified");
+    if(tournamentLevelUnlocked(species,"major"))unlockAchievement("major_qualified");
   });
 }
 
 function checkTripleSpecies(){
   if(
-    game.speciesWins.Walleye>0 &&
-    game.speciesWins.Bass>0 &&
+    game.speciesWins.Walleye>0&&
+    game.speciesWins.Bass>0&&
     game.speciesWins.Trout>0
   ){
-    unlockAchievement(
-      "triple_species"
-    );
+    unlockAchievement("triple_species");
   }
 }
 
 function checkMillionaire(){
-  if(
-    game.careerEarnings>=
-    1000000
-  ){
-    unlockAchievement(
-      "millionaire"
-    );
-  }
+  if(game.careerEarnings>=1000000)unlockAchievement("millionaire");
 }
 
 function unlockAchievement(id){
-  if(
-    game.achievements.includes(
-      id
-    )
-  ){
-    return;
-  }
+  if(game.achievements.includes(id))return;
 
-  const achievement=
-    ACHIEVEMENTS.find(
-      item=>item.id===id
-    );
+  const achievement=ACHIEVEMENTS.find(item=>item.id===id);
 
-  if(!achievement){
-    return;
-  }
+  if(!achievement)return;
 
-  game.achievements.push(
-    id
-  );
+  game.achievements.push(id);
 
-  game.reputation+=3;
-
-  notify(
-    `Achievement unlocked: ${achievement.name}`,
-    "gold"
-  );
+  notify(`Achievement unlocked: ${achievement.name}`,"gold");
 }
   function renderTournamentCareerPath(species){
   const levels=[
-    {
-      key:"local",
-      name:"Local Opens"
-    },
-    {
-      key:"state",
-      name:"State / Regional"
-    },
-    {
-      key:"national",
-      name:"National Tour"
-    },
-    {
-      key:"major",
-      name:"Championship"
-    }
+    {key:"local",name:"Local Opens"},
+    {key:"state",name:"State / Regional"},
+    {key:"national",name:"National Tour"},
+    {key:"major",name:"Championship"}
   ];
 
-  let highest=
-    "local";
+  let highest="local";
 
   levels.forEach(level=>{
-    if(
-      tournamentLevelUnlocked(
-        species,
-        level.key
-      )
-    ){
-      highest=
-        level.key;
+    if(tournamentLevelUnlocked(species,level.key)){
+      highest=level.key;
     }
   });
 
-  document.getElementById(
-    "tournamentCareerPath"
-  ).innerHTML=`
+  document.getElementById("tournamentCareerPath").innerHTML=`
     <div class="card">
-
       <div class="row spread wrap">
-
         <div>
-          <h2>
-            ${species} Tournament Career
-          </h2>
-
-          <div class="small muted">
-            ${SPECIES[species].strategy}
-          </div>
+          <h2>${species} Tournament Career</h2>
+          <div class="small muted">${SPECIES[species].strategy}</div>
         </div>
-
-        <span class="pill gold">
-          ${capitalize(highest)} Level
-        </span>
-
+        <span class="pill gold">${capitalize(highest)} Level</span>
       </div>
 
       <hr class="divider">
 
       <div class="career-path">
+        ${levels.map(level=>{
+          const unlocked=tournamentLevelUnlocked(species,level.key);
 
-        ${
-          levels.map(level=>{
-            const unlocked=
-              tournamentLevelUnlocked(
-                species,
-                level.key
-              );
-
-            return `
-              <div
-                class="path-level
-                ${unlocked?"unlocked":""}
-                ${highest===level.key?"current":""}"
-              >
-                <strong>
-                  ${unlocked?"✓ ":"🔒 "}
-                  ${level.name}
-                </strong>
-
-                <div
-                  class="tiny muted"
-                  style="margin-top:5px"
-                >
-                  ${qualificationText(species,level.key)}
-                </div>
-              </div>
-            `;
-          }).join("")
-        }
-
+          return`
+            <div class="path-level ${unlocked?"unlocked":""} ${highest===level.key?"current":""}">
+              <strong>${unlocked?"✓ ":"🔒 "}${level.name}</strong>
+              <div class="tiny muted" style="margin-top:5px">${qualificationText(species,level.key)}</div>
+            </div>
+          `;
+        }).join("")}
       </div>
     </div>
   `;
@@ -5086,191 +2810,80 @@ function unlockAchievement(id){
 function renderTournaments(){
   updateHeader();
 
-  const species=
-    game.settings
-      .tournamentSpecies;
+  const species=game.settings.tournamentSpecies;
 
-  renderTournamentCareerPath(
-    species
-  );
+  renderTournamentCareerPath(species);
 
-  document.querySelectorAll(
-    "[data-tourney-species]"
-  ).forEach(btn=>{
-
-    btn.classList.toggle(
-      "active",
-      btn.dataset.tourneySpecies===
-        species
-    );
+  document.querySelectorAll("[data-tourney-species]").forEach(btn=>{
+    btn.classList.toggle("active",btn.dataset.tourneySpecies===species);
 
     btn.onclick=()=>{
-      game.settings
-        .tournamentSpecies=
-          btn.dataset
-            .tourneySpecies;
-
+      game.settings.tournamentSpecies=btn.dataset.tourneySpecies;
       renderTournaments();
     };
   });
 
-  const levels={
-    local:0,
-    state:1,
-    national:2,
-    major:3
-  };
+  const levels={local:0,state:1,national:2,major:3};
 
-  const events=
-    game.tournamentSchedule
-      .filter(
-        event=>
-          event.species===
-          species
-      )
-      .sort(
-        (a,b)=>{
-          if(
-            a.completed!==
-            b.completed
-          ){
-            return a.completed
-              ? 1
-              : -1;
-          }
+  const events=game.tournamentSchedule
+    .filter(event=>event.species===species)
+    .sort((a,b)=>{
+      if(a.completed!==b.completed)return a.completed?1:-1;
+      return levels[a.level]-levels[b.level];
+    });
 
-          return (
-            levels[a.level]-
-            levels[b.level]
-          );
-        }
-      );
-
-  document.getElementById(
-    "tournamentList"
-  ).innerHTML=
+  document.getElementById("tournamentList").innerHTML=
     events.map(event=>{
-      const unlocked=
-        tournamentLevelUnlocked(
-          event.species,
-          event.level
-        );
+      const unlocked=tournamentLevelUnlocked(event.species,event.level);
 
-      return `
-        <div
-          class="
-            card
-            tournament-card
-            ${event.level}
-            ${!unlocked?"locked":""}
-          "
-        >
-
+      return`
+        <div class="card tournament-card ${event.level} ${!unlocked?"locked":""}">
           <div class="row spread wrap">
-
             <div>
-
-              <span
-                class="
-                  pill
-                  ${
-                    event.level==="major"
-                      ? "gold"
-                      : event.level==="national"
-                        ? "blue"
-                        : ""
-                  }
-                "
-              >
+              <span class="pill ${event.level==="major"?"gold":event.level==="national"?"blue":""}">
                 ${capitalize(event.level)}
               </span>
 
-              <h2 style="margin:8px 0 3px">
-                ${event.name}
-              </h2>
+              <h2 style="margin:8px 0 3px">${event.name}</h2>
 
               <div class="small muted">
-                ${event.lake}
-                •
-                ${event.format}
+                ${event.lake} • ${event.format}
               </div>
-
             </div>
 
             ${
               event.completed
-                ? `
-                  <span class="pill">
-                    Completed
-                  </span>
-                `
-                : unlocked
-                  ? `
-                    <button
-                      class="primary"
-                      onclick="startTournament('${event.id}')"
-                    >
-                      Enter Event
-                    </button>
-                  `
-                  : `
-                    <button disabled>
-                      Locked
-                    </button>
-                  `
+                ?`<span class="pill">Completed</span>`
+                :unlocked
+                  ?`<button class="primary" onclick="startTournament('${event.id}')">Enter Event</button>`
+                  :`<button disabled>Locked</button>`
             }
-
           </div>
 
           <hr class="divider">
 
           <div class="grid grid-3">
-
             <div>
-              <strong>
-                ${money(event.fee)}
-              </strong>
-
-              <div class="tiny muted">
-                Entry Fee
-              </div>
+              <strong>${money(event.fee)}</strong>
+              <div class="tiny muted">Entry Fee</div>
             </div>
 
             <div>
-              <strong>
-                ${money(event.prize)}
-              </strong>
-
-              <div class="tiny muted">
-                1st Place
-              </div>
+              <strong>${money(event.prize)}</strong>
+              <div class="tiny muted">1st Place</div>
             </div>
 
             <div>
-              <strong>
-                ${event.casts}
-              </strong>
-
-              <div class="tiny muted">
-                Tournament Casts
-              </div>
+              <strong>${event.casts}</strong>
+              <div class="tiny muted">Tournament Casts</div>
             </div>
-
           </div>
 
           ${
             !unlocked
-              ? `
-                <div
-                  class="info-box small"
-                  style="margin-top:12px"
-                >
-                  ${qualificationText(event.species,event.level)}
-                </div>
-              `
-              : ""
+              ?`<div class="info-box small" style="margin-top:12px">${qualificationText(event.species,event.level)}</div>`
+              :""
           }
-
         </div>
       `;
     }).join("");
@@ -5278,69 +2891,31 @@ function renderTournaments(){
 
 function buildStandingsRows(species,level){
   const rows=[
-    ...AI_STANDINGS[
-      species
-    ][
-      level
-    ].map(
-      competitor=>({
-        name:
-          competitor.name,
-
-        points:
-          competitor.points,
-
-        player:false
-      })
-    ),
-
+    ...AI_STANDINGS[species][level].map(competitor=>({
+      name:competitor.name,
+      points:competitor.points,
+      player:false
+    })),
     {
       name:"YOU",
-
-      points:
-        game.standings[
-          species
-        ][
-          level
-        ],
-
+      points:game.standings[species][level],
       player:true
     }
   ];
 
-  rows.sort(
-    (a,b)=>
-      b.points-a.points
-  );
+  rows.sort((a,b)=>b.points-a.points);
 
   return rows;
 }
 
 function standingsTable(species,level){
-  const rows=
-    buildStandingsRows(
-      species,
-      level
-    );
+  const rows=buildStandingsRows(species,level);
+  const playerIndex=rows.findIndex(row=>row.player);
 
-  const playerIndex=
-    rows.findIndex(
-      row=>row.player
-    );
+  game.speciesRank[species]=Math.min(game.speciesRank[species],playerIndex+1);
 
-  game.speciesRank[
-    species
-  ]=
-    Math.min(
-      game.speciesRank[
-        species
-      ],
-      playerIndex+1
-    );
-
-  return `
+  return`
     <table>
-
       <thead>
         <tr>
           <th>#</th>
@@ -5350,182 +2925,70 @@ function standingsTable(species,level){
       </thead>
 
       <tbody>
-
-        ${
-          rows
-            .slice(0,12)
-            .map(
-              (row,index)=>`
-                <tr
-                  class="${row.player?"player-row":""}"
-                >
-                  <td
-                    class="${
-                      index===0
-                        ? "rank-1"
-                        : index===1
-                          ? "rank-2"
-                          : index===2
-                            ? "rank-3"
-                            : ""
-                    }"
-                  >
-                    ${index+1}
-                  </td>
-
-                  <td class="ai-name">
-                    ${row.name}
-                  </td>
-
-                  <td>
-                    ${row.points}
-                  </td>
-                </tr>
-              `
-            )
-            .join("")
-        }
+        ${rows.slice(0,12).map((row,index)=>`
+          <tr class="${row.player?"player-row":""}">
+            <td class="${index===0?"rank-1":index===1?"rank-2":index===2?"rank-3":""}">
+              ${index+1}
+            </td>
+            <td class="ai-name">${row.name}</td>
+            <td>${row.points}</td>
+          </tr>
+        `).join("")}
 
         ${
           playerIndex>=12
-            ? `
-              <tr>
-                <td
-                  colspan="3"
-                  class="muted"
-                >
-                  •••
-                </td>
-              </tr>
-
+            ?`
+              <tr><td colspan="3" class="muted">•••</td></tr>
               <tr class="player-row">
-                <td>
-                  ${playerIndex+1}
-                </td>
-
-                <td>
-                  YOU
-                </td>
-
-                <td>
-                  ${
-                    game.standings[
-                      species
-                    ][
-                      level
-                    ]
-                  }
-                </td>
+                <td>${playerIndex+1}</td>
+                <td>YOU</td>
+                <td>${game.standings[species][level]}</td>
               </tr>
             `
-            : ""
+            :""
         }
-
       </tbody>
     </table>
   `;
 }
 
 function renderStandings(){
-  const species=
-    game.settings
-      .standingSpecies;
+  const species=game.settings.standingSpecies;
 
-  document.querySelectorAll(
-    "[data-standing-species]"
-  ).forEach(btn=>{
-
-    btn.classList.toggle(
-      "active",
-      btn.dataset.standingSpecies===
-        species
-    );
+  document.querySelectorAll("[data-standing-species]").forEach(btn=>{
+    btn.classList.toggle("active",btn.dataset.standingSpecies===species);
 
     btn.onclick=()=>{
-      game.settings
-        .standingSpecies=
-          btn.dataset
-            .standingSpecies;
-
+      game.settings.standingSpecies=btn.dataset.standingSpecies;
       renderStandings();
     };
   });
 
-  document.getElementById(
-    "localStandings"
-  ).innerHTML=
-    standingsTable(
-      species,
-      "local"
-    );
-
-  document.getElementById(
-    "stateStandings"
-  ).innerHTML=
-    standingsTable(
-      species,
-      "state"
-    );
-
-  document.getElementById(
-    "nationalStandings"
-  ).innerHTML=
-    standingsTable(
-      species,
-      "national"
-    );
+  document.getElementById("localStandings").innerHTML=standingsTable(species,"local");
+  document.getElementById("stateStandings").innerHTML=standingsTable(species,"state");
+  document.getElementById("nationalStandings").innerHTML=standingsTable(species,"national");
 }
 
 function buyGear(id){
-  const item=
-    getGear(id);
+  const item=getGear(id);
 
-  if(
-    !item ||
-    ownsGear(id)
-  ){
+  if(!item||ownsGear(id))return;
+
+  if(game.reputation<item.rep){
+    notify(`Requires ${item.rep} reputation.`,"bad");
     return;
   }
 
-  if(
-    game.reputation<
-    item.rep
-  ){
-    notify(
-      `Requires ${item.rep} reputation.`,
-      "bad"
-    );
-
+  if(game.money<item.price){
+    notify("Not enough money.","bad");
     return;
   }
 
-  if(
-    game.money<
-    item.price
-  ){
-    notify(
-      "Not enough money.",
-      "bad"
-    );
+  game.money-=item.price;
+  game.ownedGear.push(item.id);
 
-    return;
-  }
-
-  game.money-=
-    item.price;
-
-  game.ownedGear.push(
-    item.id
-  );
-
-  addFeed(
-    `Purchased ${item.name} for ${money(item.price)}.`
-  );
-
-  notify(
-    `${item.name} purchased.`,
-    "good"
-  );
+  addFeed(`Purchased ${item.name} for ${money(item.price)}.`);
+  notify(`${item.name} purchased.`,"good");
 
   saveGame();
   renderGear();
@@ -5533,25 +2996,13 @@ function buyGear(id){
 }
 
 function equipGear(id){
-  const item=
-    getGear(id);
+  const item=getGear(id);
 
-  if(
-    !item ||
-    !ownsGear(id)
-  ){
-    return;
-  }
+  if(!item||!ownsGear(id))return;
 
-  game.equipped[
-    item.category
-  ]=
-    id;
+  game.equipped[item.category]=id;
 
-  notify(
-    `${item.name} equipped.`,
-    "good"
-  );
+  notify(`${item.name} equipped.`,"good");
 
   saveGame();
   renderGear();
@@ -5561,166 +3012,60 @@ function renderGear(){
   updateHeader();
 
   const categories=[
-    "Rod",
-    "Reel",
-    "Line",
-    "Boat",
-    "Trolling Motor",
-    "Electronics"
+    "Rod","Reel","Line","Boat","Trolling Motor","Electronics"
   ];
 
-  document.getElementById(
-    "gearCategoryTabs"
-  ).innerHTML=
+  document.getElementById("gearCategoryTabs").innerHTML=
     categories.map(category=>`
       <button
-        class="${
-          game.settings
-            .gearCategory===
-          category
-            ? "primary"
-            : ""
-        }"
-        onclick="
-          game.settings.gearCategory='${category}';
-          renderGear()
-        "
+        class="${game.settings.gearCategory===category?"primary":""}"
+        onclick="game.settings.gearCategory='${category}';renderGear()"
       >
         ${category}
       </button>
     `).join("");
 
-  const items=
-    GEAR.filter(
-      item=>
-        item.category===
-        game.settings
-          .gearCategory
-    );
+  const items=GEAR.filter(item=>item.category===game.settings.gearCategory);
 
-  document.getElementById(
-    "gearShop"
-  ).innerHTML=
+  document.getElementById("gearShop").innerHTML=
     items.map(item=>{
+      const owned=ownsGear(item.id);
+      const equippedNow=game.equipped[item.category]===item.id;
+      const unlocked=game.reputation>=item.rep;
 
-      const owned=
-        ownsGear(
-          item.id
-        );
-
-      const equippedNow=
-        game.equipped[
-          item.category
-        ]===
-        item.id;
-
-      const unlocked=
-        game.reputation>=
-        item.rep;
-
-      return `
-        <div
-          class="
-            card
-            gear-card
-            ${equippedNow?"equipped":""}
-          "
-        >
-
+      return`
+        <div class="card gear-card ${equippedNow?"equipped":""}">
           <div class="row spread">
-
-            <span class="pill">
-              ${item.category}
-            </span>
-
-            ${
-              equippedNow
-                ? `
-                  <span class="pill green">
-                    Equipped
-                  </span>
-                `
-                : ""
-            }
-
+            <span class="pill">${item.category}</span>
+            ${equippedNow?`<span class="pill green">Equipped</span>`:""}
           </div>
 
-          <div
-            class="gear-name"
-            style="margin-top:10px"
-          >
-            ${item.name}
-          </div>
+          <div class="gear-name" style="margin-top:10px">${item.name}</div>
 
-          <p class="small muted">
-            ${item.info}
-          </p>
+          <p class="small muted">${item.info}</p>
 
           <hr class="divider">
 
           <div class="row spread small">
             <span>Price</span>
-
-            <strong>
-              ${
-                item.price===0
-                  ? "Starter"
-                  : money(item.price)
-              }
-            </strong>
+            <strong>${item.price===0?"Starter":money(item.price)}</strong>
           </div>
 
           <div class="row spread small">
-            <span>
-              Required Reputation
-            </span>
-
-            <strong>
-              ${item.rep}
-            </strong>
+            <span>Required Reputation</span>
+            <strong>${item.rep}</strong>
           </div>
 
           <div class="gear-actions">
-
             ${
               equippedNow
-                ? `
-                  <button
-                    disabled
-                    style="width:100%"
-                  >
-                    Equipped
-                  </button>
-                `
-                : owned
-                  ? `
-                    <button
-                      class="primary"
-                      style="width:100%"
-                      onclick="equipGear('${item.id}')"
-                    >
-                      Equip
-                    </button>
-                  `
-                  : unlocked
-                    ? `
-                      <button
-                        style="width:100%"
-                        onclick="buyGear('${item.id}')"
-                      >
-                        Buy
-                      </button>
-                    `
-                    : `
-                      <button
-                        disabled
-                        style="width:100%"
-                      >
-                        Locked
-                      </button>
-                    `
+                ?`<button disabled style="width:100%">Equipped</button>`
+                :owned
+                  ?`<button class="primary" style="width:100%" onclick="equipGear('${item.id}')">Equip</button>`
+                  :unlocked
+                    ?`<button style="width:100%" onclick="buyGear('${item.id}')">Buy</button>`
+                    :`<button disabled style="width:100%">Locked</button>`
             }
-
           </div>
         </div>
       `;
@@ -5730,388 +3075,158 @@ function renderGear(){
 function renderJournal(){
   const lakeKnowledge={};
 
-  Object.entries(
-    game.knowledge
-  ).forEach(
-    ([key,value])=>{
-      const [
-        lake,
-        spot,
-        species
-      ]=
-        key.split("|");
+  Object.entries(game.knowledge).forEach(([key,value])=>{
+    const[lake,spot,species]=key.split("|");
 
-      if(
-        !lakeKnowledge[
-          lake
-        ]
-      ){
-        lakeKnowledge[
-          lake
-        ]=[];
-      }
+    if(!lakeKnowledge[lake])lakeKnowledge[lake]=[];
 
-      lakeKnowledge[
-        lake
-      ].push({
-        spot,
-        species,
-        value
-      });
-    }
-  );
+    lakeKnowledge[lake].push({spot,species,value});
+  });
 
-  document.getElementById(
-    "journalKnowledge"
-  ).innerHTML=
-    Object.keys(
-      lakeKnowledge
-    ).length
-      ? Object.entries(
-          lakeKnowledge
-        ).map(
-          ([lake,records])=>{
-            const average=
-              records.reduce(
-                (sum,record)=>
-                  sum+
-                  record.value,
-                0
-              )/
-              records.length;
+  document.getElementById("journalKnowledge").innerHTML=
+    Object.keys(lakeKnowledge).length
+      ?Object.entries(lakeKnowledge).map(([lake,records])=>{
+        const average=records.reduce((sum,record)=>sum+record.value,0)/records.length;
 
-            return `
-              <div
-                style="margin-bottom:14px"
-              >
-
-                <div class="row spread">
-
-                  <strong>
-                    ${lake}
-                  </strong>
-
-                  <span class="small">
-                    ${knowledgeLabel(average)}
-                    •
-                    ${Math.round(average)}%
-                  </span>
-
-                </div>
-
-                <div
-                  class="progress"
-                  style="margin-top:5px"
-                >
-                  <div
-                    style="width:${average}%"
-                  ></div>
-                </div>
-
-                <div
-                  class="tiny muted"
-                  style="margin-top:4px"
-                >
-                  ${records.length}
-                  area/species observations recorded.
-                </div>
-
-              </div>
-            `;
-          }
-        ).join("")
-      : `
-        <div class="empty">
-          Fish a lake to begin building your journal.
-        </div>
-      `;
-
-  document.getElementById(
-    "journalEntries"
-  ).innerHTML=
-    game.journal.length
-      ? game.journal
-          .slice(0,25)
-          .map(entry=>`
-            <div class="journal-entry">
-
-              <div class="row spread">
-
-                <strong>
-                  ${entry.weight.toFixed(2)} lb
-                  ${entry.species}
-                </strong>
-
-                <span class="tiny muted">
-                  ${
-                    new Date(
-                      entry.time
-                    ).toLocaleDateString()
-                  }
-                </span>
-
-              </div>
-
-              <div class="small muted">
-                ${entry.lake}
-                •
-                ${entry.spot}
-                <br>
-
-                ${entry.technique}
-                •
-                ${entry.lure}
-                •
-                ${entry.depth} ft
-                <br>
-
-                Water ${entry.waterTemp}°F
-                •
-                ${entry.weather}
-                •
-                Wind ${entry.wind} mph
-              </div>
-
+        return`
+          <div style="margin-bottom:14px">
+            <div class="row spread">
+              <strong>${lake}</strong>
+              <span class="small">${knowledgeLabel(average)} • ${Math.round(average)}%</span>
             </div>
-          `).join("")
-      : `
-        <div class="empty">
-          Your fishing journal is empty.
+
+            <div class="progress" style="margin-top:5px">
+              <div style="width:${average}%"></div>
+            </div>
+
+            <div class="tiny muted" style="margin-top:4px">
+              ${records.length} area/species observations recorded.
+            </div>
+          </div>
+        `;
+      }).join("")
+      :`<div class="empty">Fish a lake to begin building your journal.</div>`;
+
+  document.getElementById("journalEntries").innerHTML=
+    game.journal.length
+      ?game.journal.slice(0,25).map(entry=>`
+        <div class="journal-entry">
+          <div class="row spread">
+            <strong>${entry.weight.toFixed(2)} lb ${entry.species}</strong>
+            <span class="tiny muted">${new Date(entry.time).toLocaleDateString()}</span>
+          </div>
+
+          <div class="small muted">
+            ${entry.lake} • ${entry.spot}<br>
+            ${entry.technique} • ${entry.lure} • ${entry.depth} ft<br>
+            Water ${entry.waterTemp}°F • ${entry.weather} • Wind ${entry.wind} mph
+          </div>
         </div>
-      `;
+      `).join("")
+      :`<div class="empty">Your fishing journal is empty.</div>`;
 }
 
 function renderTrophies(){
-  document.getElementById(
-    "personalBestCards"
-  ).innerHTML=
-    [
-      "Walleye",
-      "Bass",
-      "Trout"
-    ].map(species=>{
+  document.getElementById("personalBestCards").innerHTML=
+    ["Walleye","Bass","Trout"].map(species=>{
+      const fish=game.personalBests[species];
 
-      const fish=
-        game.personalBests[
-          species
-        ];
-
-      return `
+      return`
         <div class="card">
-
           <div class="row spread">
-
-            <h2>
-              ${SPECIES[species].icon}
-              ${species}
-            </h2>
-
-            <span class="pill">
-              Personal Best
-            </span>
-
+            <h2>${SPECIES[species].icon} ${species}</h2>
+            <span class="pill">Personal Best</span>
           </div>
 
           ${
             fish
-              ? `
-                <div class="stat-value">
-                  ${fish.weight.toFixed(2)} lb
-                </div>
-
-                <div class="muted">
-                  ${fish.length}"
-                  •
-                  ${fish.rarity}
-                </div>
-
+              ?`
+                <div class="stat-value">${fish.weight.toFixed(2)} lb</div>
+                <div class="muted">${fish.length}" • ${fish.rarity}</div>
                 <hr class="divider">
-
                 <div class="small">
-                  ${fish.lake}
-                  <br>
-                  ${fish.spot}
-                  <br>
+                  ${fish.lake}<br>
+                  ${fish.spot}<br>
                   ${fish.lure}
                 </div>
               `
-              : `
-                <div class="empty">
-                  No ${species} recorded.
-                </div>
-              `
+              :`<div class="empty">No ${species} recorded.</div>`
           }
-
         </div>
       `;
     }).join("");
 
-  document.getElementById(
-    "trophyFishList"
-  ).innerHTML=
+  document.getElementById("trophyFishList").innerHTML=
     game.trophies.length
-      ? game.trophies
-          .slice(0,30)
-          .map(fish=>`
-            <div
-              class="
-                fish-trophy
-                ${fish.legendaryName?"legendary":""}
-              "
-              style="margin-bottom:7px"
-            >
+      ?game.trophies.slice(0,30).map(fish=>`
+        <div class="fish-trophy ${fish.legendaryName?"legendary":""}" style="margin-bottom:7px">
+          <div class="row spread">
+            <strong class="rarity-${fish.rarity.toLowerCase()}">
+              ${fish.legendaryName||`${fish.weight.toFixed(2)} lb ${fish.species}`}
+            </strong>
+            <span>${fish.weight.toFixed(2)} lb</span>
+          </div>
 
-              <div class="row spread">
+          <div class="small muted">
+            ${fish.lake} • ${fish.spot} • ${fish.lure}
+          </div>
+        </div>
+      `).join("")
+      :`<div class="empty">Rare, epic and legendary catches will appear here.</div>`;
 
-                <strong
-                  class="rarity-${fish.rarity.toLowerCase()}"
-                >
-                  ${
-                    fish.legendaryName||
-                    `${fish.weight.toFixed(2)} lb ${fish.species}`
-                  }
-                </strong>
+  document.getElementById("legendaryFishList").innerHTML=
+    LEGENDARY_FISH.map(legendary=>{
+      const caught=game.legendaryCaught.includes(legendary.id);
+      const fish=game.trophies.find(item=>item.legendaryId===legendary.id);
 
-                <span>
-                  ${fish.weight.toFixed(2)} lb
-                </span>
+      return`
+        <div class="fish-trophy legendary" style="margin-bottom:8px;opacity:${caught?1:.45}">
+          <div class="row spread">
+            <strong class="gold-text">
+              ${caught?"👑":"?"} ${caught?legendary.name:"Unknown Legendary Fish"}
+            </strong>
+            <span class="pill gold">${caught?"Caught":"Uncaught"}</span>
+          </div>
 
-              </div>
-
-              <div class="small muted">
-                ${fish.lake}
-                •
-                ${fish.spot}
-                •
-                ${fish.lure}
-              </div>
-
-            </div>
-          `).join("")
-      : `
-        <div class="empty">
-          Rare, epic and legendary catches will appear here.
+          ${
+            caught&&fish
+              ?`
+                <div class="small">${fish.weight.toFixed(2)} lb ${legendary.species}</div>
+                <div class="small muted">${legendary.description}</div>
+              `
+              :`
+                <div class="small muted">
+                  Somewhere in ${legendary.species} water, a fish of legend is waiting.
+                </div>
+              `
+          }
         </div>
       `;
-
-  document.getElementById(
-    "legendaryFishList"
-  ).innerHTML=
-    LEGENDARY_FISH.map(
-      legendary=>{
-
-        const caught=
-          game.legendaryCaught.includes(
-            legendary.id
-          );
-
-        const fish=
-          game.trophies.find(
-            item=>
-              item.legendaryId===
-              legendary.id
-          );
-
-        return `
-          <div
-            class="fish-trophy legendary"
-            style="
-              margin-bottom:8px;
-              opacity:${caught?1:.45}
-            "
-          >
-
-            <div class="row spread">
-
-              <strong class="gold-text">
-                ${caught?"👑":"?"}
-                ${
-                  caught
-                    ? legendary.name
-                    : "Unknown Legendary Fish"
-                }
-              </strong>
-
-              <span class="pill gold">
-                ${caught?"Caught":"Uncaught"}
-              </span>
-
-            </div>
-
-            ${
-              caught && fish
-                ? `
-                  <div class="small">
-                    ${fish.weight.toFixed(2)} lb
-                    ${legendary.species}
-                  </div>
-
-                  <div class="small muted">
-                    ${legendary.description}
-                  </div>
-                `
-                : `
-                  <div class="small muted">
-                    Somewhere in ${legendary.species} water,
-                    a fish of legend is waiting.
-                  </div>
-                `
-            }
-
-          </div>
-        `;
-      }
-    ).join("");
+    }).join("");
 }
 
 function signSponsor(id){
-  const sponsor=
-    SPONSORS.find(
-      item=>item.id===id
-    );
+  const sponsor=SPONSORS.find(item=>item.id===id);
 
-  if(!sponsor){
-    return;
-  }
+  if(!sponsor)return;
 
   if(game.sponsor){
-    notify(
-      "You already have an active sponsor contract.",
-      "bad"
-    );
-
+    notify("You already have an active sponsor contract.","bad");
     return;
   }
 
-  if(
-    game.reputation<
-    sponsor.rep
-  ){
-    notify(
-      `Requires ${sponsor.rep} reputation.`,
-      "bad"
-    );
-
+  if(game.reputation<sponsor.rep){
+    notify(`Requires ${sponsor.rep} reputation.`,"bad");
     return;
   }
 
-  game.sponsor=
-    id;
+  game.sponsor=id;
+  game.sponsorProgress=0;
+  game.money+=sponsor.signing;
 
-  game.sponsorProgress=
-    0;
+  addFeed(`Signed sponsorship contract with ${sponsor.name}.`);
 
-  game.money+=
-    sponsor.signing;
-
-  addFeed(
-    `Signed sponsorship contract with ${sponsor.name}.`
-  );
-
-  notify(
-    `${sponsor.name} signed you. Bonus: ${money(sponsor.signing)}.`,
-    "gold"
-  );
+  notify(`${sponsor.name} signed you. Bonus: ${money(sponsor.signing)}.`,"gold");
 
   saveGame();
   renderSponsors();
@@ -6119,56 +3234,25 @@ function signSponsor(id){
 }
 
 function updateSponsorProgress(type,amount){
-  if(!game.sponsor){
-    return;
-  }
+  if(!game.sponsor)return;
 
-  const sponsor=
-    SPONSORS.find(
-      item=>
-        item.id===
-        game.sponsor
-    );
+  const sponsor=SPONSORS.find(item=>item.id===game.sponsor);
 
-  if(
-    !sponsor ||
-    sponsor.targetType!==
-    type
-  ){
-    return;
-  }
+  if(!sponsor||sponsor.targetType!==type)return;
 
-  game.sponsorProgress+=
-    amount;
+  game.sponsorProgress+=amount;
 
-  if(
-    game.sponsorProgress>=
-    sponsor.target
-  ){
-    game.money+=
-      sponsor.bonus;
+  if(game.sponsorProgress>=sponsor.target){
+    game.money+=sponsor.bonus;
+    game.careerEarnings+=sponsor.bonus;
 
-    game.careerEarnings+=
-      sponsor.bonus;
-
-    if(
-      !game.sponsorCompleted.includes(
-        sponsor.id
-      )
-    ){
-      game.sponsorCompleted.push(
-        sponsor.id
-      );
+    if(!game.sponsorCompleted.includes(sponsor.id)){
+      game.sponsorCompleted.push(sponsor.id);
     }
 
-    notify(
-      `Sponsor objective complete! ${money(sponsor.bonus)} bonus.`,
-      "gold"
-    );
+    notify(`Sponsor objective complete! ${money(sponsor.bonus)} bonus.`,"gold");
 
-    addFeed(
-      `Completed ${sponsor.name} sponsor objective for ${money(sponsor.bonus)}.`
-    );
+    addFeed(`Completed ${sponsor.name} sponsor objective for ${money(sponsor.bonus)}.`);
 
     game.sponsor=null;
     game.sponsorProgress=0;
@@ -6176,188 +3260,79 @@ function updateSponsorProgress(type,amount){
 }
 
 function renderSponsors(){
-  document.getElementById(
-    "sponsorList"
-  ).innerHTML=
+  document.getElementById("sponsorList").innerHTML=
     SPONSORS.map(sponsor=>{
-
-      const active=
-        game.sponsor===
-        sponsor.id;
-
-      const completed=
-        game.sponsorCompleted.includes(
-          sponsor.id
-        );
-
-      const unlocked=
-        game.reputation>=
-        sponsor.rep;
+      const active=game.sponsor===sponsor.id;
+      const completed=game.sponsorCompleted.includes(sponsor.id);
+      const unlocked=game.reputation>=sponsor.rep;
 
       const progress=
         active
-          ? clamp(
-              (
-                game.sponsorProgress/
-                sponsor.target
-              )*100,
-              0,
-              100
-            )
-          : 0;
+          ?clamp((game.sponsorProgress/sponsor.target)*100,0,100)
+          :0;
 
-      return `
-        <div
-          class="
-            card
-            sponsor-card
-            ${active?"active-sponsor":""}
-          "
-        >
-
+      return`
+        <div class="card sponsor-card ${active?"active-sponsor":""}">
           ${
             active
-              ? `
-                <span
-                  class="pill gold sponsor-badge"
-                >
-                  ACTIVE
-                </span>
-              `
-              : completed
-                ? `
-                  <span
-                    class="pill green sponsor-badge"
-                  >
-                    Completed
-                  </span>
-                `
-                : ""
+              ?`<span class="pill gold sponsor-badge">ACTIVE</span>`
+              :completed
+                ?`<span class="pill green sponsor-badge">Completed</span>`
+                :""
           }
 
-          <span class="pill">
-            ${sponsor.category}
-          </span>
+          <span class="pill">${sponsor.category}</span>
 
-          <h2 style="margin:10px 0 3px">
-            ${sponsor.name}
-          </h2>
+          <h2 style="margin:10px 0 3px">${sponsor.name}</h2>
 
-          <div class="small muted">
-            ${sponsor.objective}
-          </div>
+          <div class="small muted">${sponsor.objective}</div>
 
           <hr class="divider">
 
           <div class="row spread small">
-            <span>
-              Signing Bonus
-            </span>
-
-            <strong>
-              ${money(sponsor.signing)}
-            </strong>
+            <span>Signing Bonus</span>
+            <strong>${money(sponsor.signing)}</strong>
           </div>
 
           <div class="row spread small">
-            <span>
-              Objective Bonus
-            </span>
-
-            <strong>
-              ${money(sponsor.bonus)}
-            </strong>
+            <span>Objective Bonus</span>
+            <strong>${money(sponsor.bonus)}</strong>
           </div>
 
           <div class="row spread small">
-            <span>
-              Required Reputation
-            </span>
-
-            <strong>
-              ${sponsor.rep}
-            </strong>
+            <span>Required Reputation</span>
+            <strong>${sponsor.rep}</strong>
           </div>
 
           ${
             active
-              ? `
+              ?`
                 <div style="margin-top:10px">
-
                   <div class="row spread small">
-                    <span>
-                      Contract Progress
-                    </span>
-
-                    <strong>
-                      ${game.sponsorProgress}/${sponsor.target}
-                    </strong>
+                    <span>Contract Progress</span>
+                    <strong>${game.sponsorProgress}/${sponsor.target}</strong>
                   </div>
 
-                  <div
-                    class="progress"
-                    style="margin-top:5px"
-                  >
-                    <div
-                      style="width:${progress}%"
-                    ></div>
+                  <div class="progress" style="margin-top:5px">
+                    <div style="width:${progress}%"></div>
                   </div>
-
                 </div>
               `
-              : ""
+              :""
           }
 
           <div style="margin-top:12px">
-
             ${
               active
-                ? `
-                  <button
-                    disabled
-                    style="width:100%"
-                  >
-                    Current Sponsor
-                  </button>
-                `
-                : completed
-                  ? `
-                    <button
-                      disabled
-                      style="width:100%"
-                    >
-                      Contract Completed
-                    </button>
-                  `
-                  : !unlocked
-                    ? `
-                      <button
-                        disabled
-                        style="width:100%"
-                      >
-                        Locked
-                      </button>
-                    `
-                    : game.sponsor
-                      ? `
-                        <button
-                          disabled
-                          style="width:100%"
-                        >
-                          Another Contract Active
-                        </button>
-                      `
-                      : `
-                        <button
-                          class="primary"
-                          style="width:100%"
-                          onclick="signSponsor('${sponsor.id}')"
-                        >
-                          Sign Contract
-                        </button>
-                      `
+                ?`<button disabled style="width:100%">Current Sponsor</button>`
+                :completed
+                  ?`<button disabled style="width:100%">Contract Completed</button>`
+                  :!unlocked
+                    ?`<button disabled style="width:100%">Locked</button>`
+                    :game.sponsor
+                      ?`<button disabled style="width:100%">Another Contract Active</button>`
+                      :`<button class="primary" style="width:100%" onclick="signSponsor('${sponsor.id}')">Sign Contract</button>`
             }
-
           </div>
         </div>
       `;
@@ -6365,309 +3340,148 @@ function renderSponsors(){
 }
 
 function renderCareer(){
-  document.getElementById(
-    "careerEarnings"
-  ).textContent=
-    money(
-      game.careerEarnings
-    );
+  document.getElementById("careerEarnings").textContent=money(game.careerEarnings);
+  document.getElementById("careerWins").textContent=game.wins;
+  document.getElementById("careerTop10").textContent=game.top10;
+  document.getElementById("careerFish").textContent=game.fishLanded;
 
-  document.getElementById(
-    "careerWins"
-  ).textContent=
-    game.wins;
+  document.getElementById("achievementList").innerHTML=
+    ACHIEVEMENTS.map(achievement=>{
+      const unlocked=game.achievements.includes(achievement.id);
 
-  document.getElementById(
-    "careerTop10"
-  ).textContent=
-    game.top10;
+      return`
+        <div class="achievement ${unlocked?"":"locked"}">
+          <div class="achievement-icon">${achievement.icon}</div>
 
-  document.getElementById(
-    "careerFish"
-  ).textContent=
-    game.fishLanded;
-
-  document.getElementById(
-    "achievementList"
-  ).innerHTML=
-    ACHIEVEMENTS.map(
-      achievement=>{
-
-        const unlocked=
-          game.achievements.includes(
-            achievement.id
-          );
-
-        return `
-          <div
-            class="
-              achievement
-              ${unlocked?"":"locked"}
-            "
-          >
-
-            <div class="achievement-icon">
-              ${achievement.icon}
+          <div>
+            <strong>${achievement.name}</strong>
+            <div class="small muted">${achievement.text}</div>
+            <div class="tiny ${unlocked?"good":"muted"}" style="margin-top:4px">
+              ${unlocked?"UNLOCKED":"LOCKED"}
             </div>
-
-            <div>
-
-              <strong>
-                ${achievement.name}
-              </strong>
-
-              <div class="small muted">
-                ${achievement.text}
-              </div>
-
-              <div
-                class="
-                  tiny
-                  ${unlocked?"good":"muted"}
-                "
-                style="margin-top:4px"
-              >
-                ${unlocked?"UNLOCKED":"LOCKED"}
-              </div>
-
-            </div>
-
           </div>
-        `;
-      }
-    ).join("");
+        </div>
+      `;
+    }).join("");
 }
 
 function startNewSeason(){
   if(game.activeTournament){
-    notify(
-      "Finish your tournament before starting a new season.",
-      "bad"
-    );
-
+    notify("Finish your tournament before starting a new season.","bad");
     return;
   }
 
-  const proceed=
-    confirm(
-      "Start a new season? Current season standings will reset, but career progress stays."
-    );
+  const proceed=confirm(
+    "Start a new season? Current season standings will reset, but career progress stays."
+  );
 
-  if(!proceed){
-    return;
-  }
+  if(!proceed)return;
 
   game.season++;
 
-  [
-    "Walleye",
-    "Bass",
-    "Trout"
-  ].forEach(species=>{
-    game.standings[
-      species
-    ]={
+  ["Walleye","Bass","Trout"].forEach(species=>{
+    game.standings[species]={
       local:0,
       state:0,
       national:0
     };
   });
 
-  AI_STANDINGS=
-    initializeAIStandings();
+  AI_STANDINGS=initializeAIStandings();
 
   buildSeasonSchedule();
   generateWeather();
 
-  addFeed(
-    `Season ${game.season} began.`
-  );
+  addFeed(`Season ${game.season} began.`);
 
   saveGame();
   renderAll();
 
-  notify(
-    `Season ${game.season} is underway.`,
-    "good"
-  );
+  notify(`Season ${game.season} is underway.`,"good");
 }
 
 function resetGame(){
-  const proceed=
-    confirm(
-      "Reset your entire Tournament Trail career? This cannot be undone."
-    );
-
-  if(!proceed){
-    return;
-  }
-
-  localStorage.removeItem(
-    "tournamentTrailSave"
+  const proceed=confirm(
+    "Reset your entire Tournament Trail career? This cannot be undone."
   );
 
+  if(!proceed)return;
+
+  localStorage.removeItem("tournamentTrailSave");
   location.reload();
 }
 
 function saveGame(showNotice=false){
   try{
-    localStorage.setItem(
-      "tournamentTrailSave",
-      JSON.stringify(game)
-    );
+    localStorage.setItem("tournamentTrailSave",JSON.stringify(game));
 
     if(showNotice){
-      notify(
-        "Career saved.",
-        "good"
-      );
+      notify("Career saved.","good");
     }
   }catch(error){
-    console.error(
-      "Save error:",
-      error
-    );
+    console.error("Save error:",error);
 
     if(showNotice){
-      notify(
-        "Unable to save career.",
-        "bad"
-      );
+      notify("Unable to save career.","bad");
     }
   }
 }
 
 function loadGame(){
-  const raw=
-    localStorage.getItem(
-      "tournamentTrailSave"
-    );
+  const raw=localStorage.getItem("tournamentTrailSave");
 
-  if(!raw){
-    return false;
-  }
+  if(!raw)return false;
 
   try{
-    const saved=
-      JSON.parse(raw);
+    const saved=JSON.parse(raw);
 
-    Object.keys(
-      saved
-    ).forEach(key=>{
-      game[key]=
-        saved[key];
+    Object.keys(saved).forEach(key=>{
+      game[key]=saved[key];
     });
 
     return true;
   }catch(error){
-    console.error(
-      "Save load error:",
-      error
-    );
-
+    console.error("Save load error:",error);
     return false;
   }
 }
 
 function ensureSaveCompatibility(){
+  const previousVersion=game.version||1;
+
   if(!game.standings){
     game.standings={
-      Walleye:{
-        local:0,
-        state:0,
-        national:0
-      },
-
-      Bass:{
-        local:0,
-        state:0,
-        national:0
-      },
-
-      Trout:{
-        local:0,
-        state:0,
-        national:0
-      }
+      Walleye:{local:0,state:0,national:0},
+      Bass:{local:0,state:0,national:0},
+      Trout:{local:0,state:0,national:0}
     };
   }
 
-  [
-    "Walleye",
-    "Bass",
-    "Trout"
-  ].forEach(species=>{
-    if(
-      !game.standings[
-        species
-      ]
-    ){
-      game.standings[
-        species
-      ]={
-        local:0,
-        state:0,
-        national:0
-      };
+  ["Walleye","Bass","Trout"].forEach(species=>{
+    if(!game.standings[species]){
+      game.standings[species]={local:0,state:0,national:0};
     }
   });
 
   if(!game.speciesWins){
-    game.speciesWins={
-      Walleye:0,
-      Bass:0,
-      Trout:0
-    };
+    game.speciesWins={Walleye:0,Bass:0,Trout:0};
   }
 
   if(!game.personalBests){
-    game.personalBests={
-      Walleye:null,
-      Bass:null,
-      Trout:null
-    };
+    game.personalBests={Walleye:null,Bass:null,Trout:null};
   }
 
-  if(!game.knowledge){
-    game.knowledge={};
-  }
+  if(!game.knowledge)game.knowledge={};
+  if(!game.journal)game.journal=[];
+  if(!game.trophies)game.trophies=[];
+  if(!game.legendaryCaught)game.legendaryCaught=[];
+  if(!game.feed)game.feed=[];
+  if(!game.achievements)game.achievements=[];
+  if(!game.freeCatch)game.freeCatch=[];
+  if(!game.ownedGear)game.ownedGear=[];
+  if(!game.sponsorCompleted)game.sponsorCompleted=[];
 
-  if(!game.journal){
-    game.journal=[];
-  }
-
-  if(!game.trophies){
-    game.trophies=[];
-  }
-
-  if(!game.legendaryCaught){
-    game.legendaryCaught=[];
-  }
-
-  if(!game.feed){
-    game.feed=[];
-  }
-
-  if(!game.achievements){
-    game.achievements=[];
-  }
-
-  if(!game.freeCatch){
-    game.freeCatch=[];
-  }
-
-  if(!game.ownedGear){
-    game.ownedGear=[];
-  }
-
-  if(!game.sponsorCompleted){
-    game.sponsorCompleted=[];
-  }
-
-  if(
-    typeof game.sponsorProgress!==
-    "number"
-  ){
+  if(typeof game.sponsorProgress!=="number"){
     game.sponsorProgress=0;
   }
 
@@ -6682,24 +3496,16 @@ function ensureSaveCompatibility(){
     };
   }
 
-  const starterGear=[
+  [
     "rod_starter",
     "reel_starter",
     "line_mono",
     "boat_john",
     "motor_basic",
     "electronics_none"
-  ];
-
-  starterGear.forEach(id=>{
-    if(
-      !game.ownedGear.includes(
-        id
-      )
-    ){
-      game.ownedGear.push(
-        id
-      );
+  ].forEach(id=>{
+    if(!game.ownedGear.includes(id)){
+      game.ownedGear.push(id);
     }
   });
 
@@ -6715,23 +3521,12 @@ function ensureSaveCompatibility(){
     generateWeather();
   }
 
-  /*
-    IMPORTANT:
-    Version 3 rebuilds the initial tournament schedule so existing
-    saved games can use the new lakes.
-  */
-  if(
-    game.version!==3 ||
-    !game.tournamentSchedule ||
-    !game.tournamentSchedule.length
-  ){
-    game.version=3;
+  if(!game.tournamentSchedule||!game.tournamentSchedule.length){
+    buildSeasonSchedule();
+  }
 
-    if(
-      !game.activeTournament
-    ){
-      buildSeasonSchedule();
-    }
+  if(previousVersion<4){
+    game.version=4;
   }
 }
 
@@ -6746,13 +3541,7 @@ function renderAll(){
   renderSponsors();
   renderCareer();
 
-  if(
-    document.getElementById(
-      "page-fish"
-    ).classList.contains(
-      "active"
-    )
-  ){
+  if(document.getElementById("page-fish").classList.contains("active")){
     renderFishingPage();
   }
 }
@@ -6761,65 +3550,32 @@ function debugAdvanceCareer(){
   game.money+=100000;
   game.reputation+=100;
 
-  [
-    "Walleye",
-    "Bass",
-    "Trout"
-  ].forEach(species=>{
-    game.standings[
-      species
-    ].local=250;
-
-    game.standings[
-      species
-    ].state=350;
-
-    game.standings[
-      species
-    ].national=500;
+  ["Walleye","Bass","Trout"].forEach(species=>{
+    game.standings[species].local=250;
+    game.standings[species].state=350;
+    game.standings[species].national=500;
   });
 
   renderAll();
   saveGame();
 
-  notify(
-    "Developer career boost applied.",
-    "good"
-  );
+  notify("Developer career boost applied.","good");
 }
 
 function debugCatchLegendary(){
-  const legendary=
-    LEGENDARY_FISH.find(
-      fish=>
-        !game.legendaryCaught.includes(
-          fish.id
-        )
-    );
+  const legendary=LEGENDARY_FISH.find(
+    fish=>!game.legendaryCaught.includes(fish.id)
+  );
 
   if(!legendary){
-    notify(
-      "All legendary fish already caught."
-    );
-
+    notify("All legendary fish already caught.");
     return;
   }
 
   const fish={
-    id:
-      `debug_${Date.now()}`,
-
-    species:
-      legendary.species,
-
-    weight:
-      Number(
-        random(
-          legendary.minWeight,
-          legendary.maxWeight
-        ).toFixed(2)
-      ),
-
+    id:`debug_${Date.now()}`,
+    species:legendary.species,
+    weight:Number(random(legendary.minWeight,legendary.maxWeight).toFixed(2)),
     length:32,
     condition:"Prime",
     rarity:"Legendary",
@@ -6829,144 +3585,82 @@ function debugCatchLegendary(){
     spot:legendary.spot,
     spotType:"",
     depth:20,
-
-    legendaryId:
-      legendary.id,
-
-    legendaryName:
-      legendary.name
+    legendaryId:legendary.id,
+    legendaryName:legendary.name
   };
 
-  recordFish(
-    fish
-  );
+  recordFish(fish);
 
   renderAll();
   saveGame();
 }
 
 function buildDeveloperTools(){
-  const careerPage=
-    document.getElementById(
-      "page-career"
-    );
+  const careerPage=document.getElementById("page-career");
 
-  if(
-    document.getElementById(
-      "developerTools"
-    )
-  ){
-    return;
-  }
+  if(document.getElementById("developerTools"))return;
 
-  const dev=
-    document.createElement(
-      "div"
-    );
+  const dev=document.createElement("div");
 
-  dev.className=
-    "card";
-
-  dev.id=
-    "developerTools";
-
-  dev.style.marginTop=
-    "14px";
+  dev.className="card";
+  dev.id="developerTools";
+  dev.style.marginTop="14px";
 
   dev.innerHTML=`
     <div class="row spread wrap">
-
       <div>
-        <h2 style="margin-bottom:3px">
-          Developer Tools
-        </h2>
-
-        <div class="small muted">
-          Testing controls for Tournament Trail development.
-        </div>
+        <h2 style="margin-bottom:3px">Developer Tools</h2>
+        <div class="small muted">Testing controls for Tournament Trail development.</div>
       </div>
 
       <div class="btn-row">
+        <button onclick="debugAdvanceCareer()">Advance Career</button>
+        <button onclick="debugCatchLegendary()">Spawn Legendary Catch</button>
 
-        <button
-          onclick="debugAdvanceCareer()"
-        >
-          Advance Career
-        </button>
-
-        <button
-          onclick="debugCatchLegendary()"
-        >
-          Spawn Legendary Catch
-        </button>
-
-        <button
-          onclick="
-            game.money+=10000;
-            renderAll();
-            saveGame();
-            notify('Added $10,000.','good')
-          "
-        >
+        <button onclick="
+          game.money+=10000;
+          renderAll();
+          saveGame();
+          notify('Added $10,000.','good')
+        ">
           +$10,000
         </button>
 
-        <button
-          onclick="
-            game.reputation+=25;
-            renderAll();
-            saveGame();
-            notify('Added 25 reputation.','good')
-          "
-        >
+        <button onclick="
+          game.reputation+=25;
+          renderAll();
+          saveGame();
+          notify('Added 25 reputation.','good')
+        ">
           +25 Reputation
         </button>
-
       </div>
     </div>
   `;
 
-  careerPage.appendChild(
-    dev
-  );
+  careerPage.appendChild(dev);
 }
 
 function init(){
-  const loaded=
-    loadGame();
+  const loaded=loadGame();
 
   ensureSaveCompatibility();
 
   if(!loaded){
     generateWeather();
     buildSeasonSchedule();
-    saveGame();
-  }else{
-    /*
-      This makes sure older browser saves receive the new
-      Tournament Trail version and lake schedule.
-    */
-    game.version=3;
-
-    if(
-      !game.activeTournament
-    ){
-      buildSeasonSchedule();
-    }
-
-    saveGame();
   }
+
+  game.version=4;
 
   populateFishingSelectors();
   buildDeveloperTools();
   renderAll();
+  saveGame();
 
-  setInterval(
-    ()=>{
-      saveGame();
-    },
-    30000
-  );
+  setInterval(()=>{
+    saveGame();
+  },30000);
 }
 
 init();
