@@ -15,17 +15,13 @@
   --text:#eef6f5;
   --muted:#8ca6aa;
   --green:#4dbf78;
-  --green2:#2e8b57;
   --gold:#e0b85b;
   --red:#df6666;
   --blue:#4aa6d8;
-  --orange:#e38d42;
-  --purple:#ac83e6;
-  --cyan:#4acbc9;
   --shadow:0 12px 30px rgba(0,0,0,.3);
 }
 
-*{box-sizing:border-box;}
+*{box-sizing:border-box}
 
 body{
   margin:0;
@@ -38,7 +34,7 @@ body{
   min-height:100vh;
 }
 
-button,select,input{font:inherit;}
+button,select,input{font:inherit}
 
 button{
   border:1px solid var(--line);
@@ -56,11 +52,10 @@ button:hover:not(:disabled){
   background:#1c3a45;
 }
 
-button:disabled{opacity:.4;cursor:not-allowed;}
-button.primary{background:linear-gradient(135deg,#2c8e57,#3fac68);border-color:#56c97d;}
-button.danger{background:#632e34;border-color:#94464e;}
-button.gold{background:#70571c;border-color:#9b7d31;}
-button.blue{background:#174e69;border-color:#2e779a;}
+button:disabled{opacity:.4;cursor:not-allowed}
+button.primary{background:linear-gradient(135deg,#2c8e57,#3fac68);border-color:#56c97d}
+button.danger{background:#632e34;border-color:#94464e}
+button.blue{background:#174e69;border-color:#2e779a}
 
 select,input{
   width:100%;
@@ -90,7 +85,7 @@ header{
   justify-content:space-between;
 }
 
-.brand{display:flex;align-items:center;gap:12px;}
+.brand{display:flex;align-items:center;gap:12px}
 
 .brand-logo{
   width:44px;
@@ -103,8 +98,8 @@ header{
   border:1px solid #3e7480;
 }
 
-.brand-title{font-size:22px;font-weight:900;letter-spacing:.5px;}
-.tagline{font-size:12px;color:var(--muted);margin-top:2px;}
+.brand-title{font-size:22px;font-weight:900;letter-spacing:.5px}
+.tagline{font-size:12px;color:var(--muted);margin-top:2px}
 
 .top-stats{
   display:flex;
@@ -128,8 +123,6 @@ header{
   text-transform:uppercase;
   letter-spacing:.7px;
 }
-
-.top-stat strong{font-size:15px;}
 
 .app{
   max-width:1600px;
@@ -163,9 +156,9 @@ nav{
   color:white;
 }
 
-main{min-width:0;padding:18px;}
-.page{display:none;}
-.page.active{display:block;}
+main{min-width:0;padding:18px}
+.page{display:none}
+.page.active{display:block}
 
 .page-title{
   display:flex;
@@ -175,13 +168,13 @@ main{min-width:0;padding:18px;}
   margin-bottom:17px;
 }
 
-.page-title h1{margin:0;font-size:27px;}
-.page-title p{margin:5px 0 0;color:var(--muted);}
+.page-title h1{margin:0;font-size:27px}
+.page-title p{margin:5px 0 0;color:var(--muted)}
 
-.grid{display:grid;gap:14px;}
-.grid-2{grid-template-columns:repeat(2,minmax(0,1fr));}
-.grid-3{grid-template-columns:repeat(3,minmax(0,1fr));}
-.grid-4{grid-template-columns:repeat(4,minmax(0,1fr));}
+.grid{display:grid;gap:14px}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
 
 .card{
   background:linear-gradient(145deg,rgba(17,38,44,.95),rgba(10,25,29,.96));
@@ -191,23 +184,23 @@ main{min-width:0;padding:18px;}
   box-shadow:var(--shadow);
 }
 
-.card h2,.card h3,.card h4{margin-top:0;}
-.card h2{font-size:18px;}
-.card h3{font-size:15px;}
+.card h2,.card h3,.card h4{margin-top:0}
+.card h2{font-size:18px}
+.card h3{font-size:15px}
 
-.muted{color:var(--muted);}
-.small{font-size:12px;}
-.tiny{font-size:10px;}
-.good{color:#70db96;}
-.bad{color:#f07a7a;}
-.gold-text{color:var(--gold);}
+.muted{color:var(--muted)}
+.small{font-size:12px}
+.tiny{font-size:10px}
+.good{color:#70db96}
+.bad{color:#f07a7a}
+.gold-text{color:var(--gold)}
 
-.row{display:flex;align-items:center;gap:10px;}
-.row.wrap{flex-wrap:wrap;}
-.spread{justify-content:space-between;}
+.row{display:flex;align-items:center;gap:10px}
+.row.wrap{flex-wrap:wrap}
+.spread{justify-content:space-between}
 
-.stat-value{font-size:28px;font-weight:900;}
-.stat-label{color:var(--muted);font-size:12px;}
+.stat-value{font-size:28px;font-weight:900}
+.stat-label{color:var(--muted);font-size:12px}
 
 .divider{
   border:none;
@@ -226,9 +219,10 @@ main{min-width:0;padding:18px;}
   font-size:11px;
 }
 
-.pill.green{border-color:#347950;background:#153b27;}
-.pill.gold{border-color:#806629;background:#3b3017;}
-.pill.blue{border-color:#2e6c8b;background:#12334a;}
+.pill.green{border-color:#347950;background:#153b27}
+.pill.gold{border-color:#806629;background:#3b3017}
+.pill.blue{border-color:#2e6c8b;background:#12334a}
+.pill.red{border-color:#793c42;background:#351a1e}
 
 .progress{
   height:9px;
@@ -243,7 +237,11 @@ main{min-width:0;padding:18px;}
   background:linear-gradient(90deg,#2d8e58,#65d48d);
 }
 
-table{width:100%;border-collapse:collapse;font-size:13px;}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
 
 th,td{
   padding:8px 7px;
@@ -258,19 +256,16 @@ th{
   letter-spacing:.45px;
 }
 
-tr.player-row{background:rgba(66,158,96,.1);}
-.rank-1{color:#ffd66f;font-weight:900;}
-.rank-2{color:#cbd4df;font-weight:900;}
-.rank-3{color:#d69264;font-weight:900;}
+tr.player-row{background:rgba(66,158,96,.1)}
 
-.species-tab{flex:1;min-width:100px;}
+.species-tab{flex:1;min-width:100px}
 
 .species-tab.active{
   background:#246344;
   border-color:#4fac72;
 }
 
-.form-group{margin-bottom:10px;}
+.form-group{margin-bottom:10px}
 
 .form-group label{
   display:block;
@@ -308,12 +303,6 @@ tr.player-row{background:rgba(66,158,96,.1);}
   color:var(--muted);
   display:block;
   margin-bottom:4px;
-}
-
-.condition strong{
-  display:block;
-  font-size:14px;
-  white-space:normal;
 }
 
 .fishing-layout{
@@ -400,21 +389,19 @@ tr.player-row{background:rgba(66,158,96,.1);}
   inset:0 auto 0 40%;
   width:20%;
   background:rgba(74,193,116,.27);
-  border-left:1px solid rgba(104,240,151,.5);
-  border-right:1px solid rgba(104,240,151,.5);
 }
 
 .meter-marker{
   position:absolute;
   top:2px;
-  width:5px;
   bottom:2px;
-  background:#f5f5f5;
+  width:5px;
+  background:white;
   box-shadow:0 0 8px white;
 }
 
-.fight-panel{margin-top:10px;display:none;}
-.fight-panel.active{display:block;}
+.fight-panel{margin-top:10px;display:none}
+.fight-panel.active{display:block}
 
 .tension-bar{
   height:18px;
@@ -431,42 +418,36 @@ tr.player-row{background:rgba(66,158,96,.1);}
   height:22px;
   width:4px;
   background:white;
-  box-shadow:0 0 6px white;
 }
 
-.livewell{display:grid;gap:6px;}
+.livewell{display:grid;gap:6px}
 
 .livewell-fish{
   display:flex;
   justify-content:space-between;
-  gap:10px;
   padding:7px;
   border-radius:6px;
   background:#0a171b;
   border:1px solid #24414a;
 }
 
-.tournament-card{border-left:4px solid #335967;}
-.tournament-card.local{border-left-color:#6b9b75;}
-.tournament-card.state{border-left-color:#4896c5;}
-.tournament-card.national{border-left-color:#9a6fd0;}
-.tournament-card.major{border-left-color:#d9ad4b;}
-.tournament-card.locked{opacity:.6;}
+.tournament-card{border-left:4px solid #335967}
+.tournament-card.local{border-left-color:#6b9b75}
+.tournament-card.state{border-left-color:#4896c5}
+.tournament-card.national{border-left-color:#9a6fd0}
+.tournament-card.major{border-left-color:#d9ad4b}
+.tournament-card.locked{opacity:.6}
 
-.gear-card{display:flex;flex-direction:column;height:100%;}
-.gear-card .gear-actions{margin-top:auto;padding-top:10px;}
-.gear-name{font-weight:800;font-size:15px;}
+.gear-card{display:flex;flex-direction:column;height:100%}
+.gear-card .gear-actions{margin-top:auto;padding-top:10px}
+.gear-name{font-weight:800;font-size:15px}
+.equipped{border-color:#4c986b}
 
-.equipped{
-  border-color:#4c986b;
-  box-shadow:0 0 0 1px rgba(76,152,107,.25),var(--shadow);
-}
-
-.rarity-common{color:#c5d0d0;}
-.rarity-uncommon{color:#6fd590;}
-.rarity-rare{color:#6cbff2;}
-.rarity-epic{color:#c092f0;}
-.rarity-legendary{color:#f2c25d;}
+.rarity-common{color:#c5d0d0}
+.rarity-uncommon{color:#6fd590}
+.rarity-rare{color:#6cbff2}
+.rarity-epic{color:#c092f0}
+.rarity-legendary{color:#f2c25d}
 
 .fish-trophy{
   padding:10px;
@@ -478,6 +459,46 @@ tr.player-row{background:rgba(66,158,96,.1);}
 .fish-trophy.legendary{
   border-color:#9c7a2e;
   background:linear-gradient(135deg,#2f2612,#10191a);
+}
+
+.spot-info-title{
+  font-size:17px;
+  font-weight:800;
+  margin-bottom:3px;
+}
+
+.spot-info-row{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:5px 0;
+  border-bottom:1px solid rgba(55,86,94,.32);
+  font-size:12px;
+}
+
+.spot-info-row:last-child{border-bottom:none}
+
+.spot-species-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:6px;
+  margin-top:8px;
+}
+
+.spot-species{
+  border:1px solid #294852;
+  border-radius:7px;
+  padding:7px;
+  text-align:center;
+  background:#09171b;
+}
+
+.knowledge-lock{
+  padding:9px;
+  background:#09171b;
+  border:1px dashed #31515a;
+  border-radius:7px;
+  margin-top:8px;
 }
 
 .notification-wrap{
@@ -495,12 +516,11 @@ tr.player-row{background:rgba(66,158,96,.1);}
   border:1px solid #3e6771;
   border-radius:9px;
   padding:11px 12px;
-  box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
 
-.toast.good{border-color:#4a9a67;}
-.toast.bad{border-color:#9b4d52;}
-.toast.gold{border-color:#98782d;}
+.toast.good{border-color:#4a9a67}
+.toast.bad{border-color:#9b4d52}
+.toast.gold{border-color:#98782d}
 
 .modal-backdrop{
   position:fixed;
@@ -513,7 +533,7 @@ tr.player-row{background:rgba(66,158,96,.1);}
   padding:20px;
 }
 
-.modal-backdrop.active{display:flex;}
+.modal-backdrop.active{display:flex}
 
 .modal{
   width:min(680px,100%);
@@ -523,7 +543,6 @@ tr.player-row{background:rgba(66,158,96,.1);}
   border:1px solid #365d67;
   border-radius:13px;
   padding:18px;
-  box-shadow:0 20px 50px rgba(0,0,0,.55);
 }
 
 .hero-card{
@@ -547,14 +566,8 @@ tr.player-row{background:rgba(66,158,96,.1);}
   background:#0a171b;
 }
 
-.path-level.unlocked{border-color:#4d9768;background:#123120;}
-
-.path-level.current{
-  border-color:#c49d46;
-  box-shadow:0 0 0 1px rgba(196,157,70,.3);
-}
-
-.ai-name{white-space:nowrap;}
+.path-level.unlocked{border-color:#4d9768;background:#123120}
+.path-level.current{border-color:#c49d46}
 
 .achievement{
   display:flex;
@@ -566,21 +579,17 @@ tr.player-row{background:rgba(66,158,96,.1);}
   background:#09171b;
 }
 
-.achievement.locked{opacity:.35;}
-.achievement-icon{font-size:24px;}
+.achievement.locked{opacity:.35}
+.achievement-icon{font-size:24px}
 
 .journal-entry{
   padding:10px;
   border-bottom:1px solid #28434b;
 }
 
-.journal-entry:last-child{border-bottom:none;}
-
-.sponsor-card{position:relative;overflow:hidden;}
-.sponsor-card.active-sponsor{border-color:#a67f38;}
-.sponsor-badge{position:absolute;right:10px;top:10px;}
-
-.btn-row{display:flex;gap:7px;flex-wrap:wrap;}
+.sponsor-card{position:relative}
+.sponsor-badge{position:absolute;right:10px;top:10px}
+.btn-row{display:flex;gap:7px;flex-wrap:wrap}
 
 .empty{
   color:var(--muted);
@@ -591,13 +600,13 @@ tr.player-row{background:rgba(66,158,96,.1);}
 }
 
 @media(max-width:1250px){
-  .fishing-layout{grid-template-columns:280px 1fr;}
-  .fishing-layout>.right-fishing{grid-column:1/-1;}
-  .grid-4{grid-template-columns:repeat(2,1fr);}
+  .fishing-layout{grid-template-columns:280px 1fr}
+  .fishing-layout>.right-fishing{grid-column:1/-1}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
 }
 
 @media(max-width:900px){
-  .app{display:block;}
+  .app{display:block}
 
   nav{
     border-right:none;
@@ -608,17 +617,12 @@ tr.player-row{background:rgba(66,158,96,.1);}
     padding:8px;
   }
 
-  .nav-btn{
-    min-width:max-content;
-    width:auto;
-    margin:0;
-  }
-
-  .fishing-layout,.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}
-  .condition-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-  .career-path{grid-template-columns:repeat(2,1fr);}
-  .topbar{align-items:flex-start;flex-direction:column;}
-  .top-stats{justify-content:flex-start;}
+  .nav-btn{min-width:max-content;width:auto;margin:0}
+  .fishing-layout,.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .condition-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .career-path{grid-template-columns:repeat(2,1fr)}
+  .topbar{align-items:flex-start;flex-direction:column}
+  .spot-species-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -673,7 +677,8 @@ tr.player-row{background:rgba(66,158,96,.1);}
       <div>
         <span class="pill green">Season <span id="heroSeason">1</span></span>
         <h2 style="font-size:28px;margin:12px 0 5px">Unknown Angler</h2>
-        <p class="muted" id="careerStatusText">Your tournament career starts at the local level.</p>
+        <p class="muted" id="careerStatusText"></p>
+
         <div class="btn-row">
           <button class="primary" onclick="showPage('fish')">Go Fishing</button>
           <button onclick="showPage('tournaments')">Find Tournament</button>
@@ -716,6 +721,7 @@ tr.player-row{background:rgba(66,158,96,.1);}
   <div id="activeTournamentBanner"></div>
 
   <div class="fishing-layout">
+
     <div>
       <div class="card">
         <h2>Fishing Plan</h2>
@@ -738,7 +744,17 @@ tr.player-row{background:rgba(66,158,96,.1);}
         </div>
 
         <div id="electronicsIntel" class="info-box small"></div>
-        <button class="primary" id="castBtn" onclick="castLine()" style="width:100%">CAST</button>
+
+        <button class="primary" id="castBtn" onclick="castLine()" style="width:100%">
+          CAST
+        </button>
+      </div>
+
+      <br>
+
+      <div class="card">
+        <h3>Spot Information</h3>
+        <div id="spotInformation"></div>
       </div>
 
       <br>
@@ -802,10 +818,12 @@ tr.player-row{background:rgba(66,158,96,.1);}
     <div class="right-fishing">
       <div class="card">
         <h2 id="livewellTitle">Today's Catch</h2>
+
         <div class="row spread">
           <span class="small muted">Total Weight</span>
           <strong id="livewellWeight">0.00 lb</strong>
         </div>
+
         <hr class="divider">
         <div class="livewell" id="livewellList"></div>
       </div>
@@ -824,6 +842,7 @@ tr.player-row{background:rgba(66,158,96,.1);}
         <div id="lakeKnowledge"></div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -833,6 +852,7 @@ tr.player-row{background:rgba(66,158,96,.1);}
       <h1>Tournament Schedule</h1>
       <p>Earn your way from open tournaments to the biggest championships in fishing.</p>
     </div>
+
     <button onclick="generateLocalOpen(true)">Generate Local Open</button>
   </div>
 
@@ -875,6 +895,7 @@ tr.player-row{background:rgba(66,158,96,.1);}
       <p>Better equipment unlocks tactics, information, mobility, and tournament-level capabilities.</p>
     </div>
   </div>
+
   <div class="row wrap" id="gearCategoryTabs" style="margin-bottom:14px"></div>
   <div class="grid grid-3" id="gearShop"></div>
 </section>
@@ -917,6 +938,7 @@ tr.player-row{background:rgba(66,158,96,.1);}
       <p>Perform on the water, meet sponsor objectives, and build a professional career.</p>
     </div>
   </div>
+
   <div class="grid grid-3" id="sponsorList"></div>
 </section>
 
@@ -968,6 +990,7 @@ tr.player-row{background:rgba(66,158,96,.1);}
 <div class="modal-backdrop" id="resultModal">
   <div class="modal">
     <div id="resultModalBody"></div>
+
     <div style="text-align:right;margin-top:15px">
       <button class="primary" onclick="closeModal()">Continue</button>
     </div>
@@ -1239,7 +1262,7 @@ const ACHIEVEMENTS=[
 ];
 
 const game={
-  version:4,
+  version:5,
   season:1,
   money:5000,
   reputation:0,
@@ -1311,15 +1334,15 @@ const runtime={
   currentPotentialFish:null
 };
 
-function money(n){return "$"+Math.round(n).toLocaleString();}
-function clamp(n,min,max){return Math.max(min,Math.min(max,n));}
-function random(min,max){return Math.random()*(max-min)+min;}
-function randomInt(min,max){return Math.floor(random(min,max+1));}
-function choice(arr){return arr[Math.floor(Math.random()*arr.length)];}
-function capitalize(str){return str.charAt(0).toUpperCase()+str.slice(1);}
-function getGear(id){return GEAR.find(g=>g.id===id);}
-function equipped(category){return getGear(game.equipped[category]);}
-function ownsGear(id){return game.ownedGear.includes(id);}
+function money(n){return "$"+Math.round(n).toLocaleString()}
+function clamp(n,min,max){return Math.max(min,Math.min(max,n))}
+function random(min,max){return Math.random()*(max-min)+min}
+function randomInt(min,max){return Math.floor(random(min,max+1))}
+function choice(arr){return arr[Math.floor(Math.random()*arr.length)]}
+function capitalize(str){return str.charAt(0).toUpperCase()+str.slice(1)}
+function getGear(id){return GEAR.find(g=>g.id===id)}
+function equipped(category){return getGear(game.equipped[category])}
+function ownsGear(id){return game.ownedGear.includes(id)}
 
 function weightedChoice(items){
   const total=items.reduce((s,x)=>s+x.weight,0);
@@ -1347,12 +1370,7 @@ function notify(text,type=""){
   toast.textContent=text;
   wrap.appendChild(toast);
 
-  setTimeout(()=>{
-    toast.style.opacity="0";
-    toast.style.transform="translateX(20px)";
-  },3200);
-
-  setTimeout(()=>toast.remove(),3700);
+  setTimeout(()=>toast.remove(),3500);
 }
 
 function showModal(html){
@@ -1437,17 +1455,17 @@ function shiftWeather(){
   w.pressure=Number(clamp(w.pressure+random(-.07,.07),28.95,30.55).toFixed(2));
 
   const times=["Early Morning","Morning","Midday","Afternoon","Evening"];
-  let timeIndex=times.indexOf(w.time);
+  let ti=times.indexOf(w.time);
 
-  if(Math.random()<.35)timeIndex=Math.min(timeIndex+1,times.length-1);
+  if(Math.random()<.35)ti=Math.min(ti+1,times.length-1);
 
-  w.time=times[timeIndex];
+  w.time=times[ti];
 }
 
 function weatherHTML(){
   const w=game.currentWeather;
 
-  return `
+  return`
     <div class="condition-grid">
       <div class="condition"><small>Air Temperature</small><strong>${w.air}°F</strong></div>
       <div class="condition"><small>Water Temperature</small><strong>${w.water}°F</strong></div>
@@ -1480,6 +1498,330 @@ function knowledgeLabel(value){
   return"Dialed In";
 }
 
+/* ---------- NEW SPOT INFORMATION SYSTEM ---------- */
+
+function habitatLabel(multiplier){
+  if(multiplier>=1.4)return{label:"Excellent",className:"good"};
+  if(multiplier>=1.2)return{label:"Strong",className:"good"};
+  if(multiplier>=1)return{label:"Good",className:""};
+  if(multiplier>=.8)return{label:"Fair",className:""};
+  return{label:"Weak",className:"bad"};
+}
+
+function spotTechniques(species,spotType){
+  return Object.entries(SPECIES[species].affinity)
+    .filter(([technique,types])=>types.includes(spotType))
+    .map(([technique])=>technique);
+}
+
+function mostCommonValue(items,key){
+  if(!items.length)return null;
+
+  const counts={};
+
+  items.forEach(item=>{
+    const value=item[key];
+    if(value===undefined||value===null)return;
+
+    counts[value]=(counts[value]||0)+1;
+  });
+
+  const entries=Object.entries(counts);
+
+  if(!entries.length)return null;
+
+  entries.sort((a,b)=>b[1]-a[1]);
+
+  return entries[0][0];
+}
+
+function getSpotConditionTip(setup){
+  const type=setup.spot.type;
+  const structure=setup.spot.structure;
+
+  if(setup.species==="Walleye"){
+    if(type==="Deep Channel"){
+      return "This area tends to become more useful during bright midday periods when walleye slide deeper.";
+    }
+
+    if(type==="Offshore Hump"){
+      return "Wind across the structure can concentrate bait. Jigging, bottom bouncing and trolling can all become useful.";
+    }
+
+    if(type==="Rocky Point"){
+      return "Wind pushing into the point can improve feeding activity, especially in low light.";
+    }
+
+    if(type==="Weed Line"){
+      return "Early morning and evening can bring walleye onto the outside weed edge.";
+    }
+
+    if(type==="Creek Mouth"){
+      return "Current and incoming bait can pull active walleye toward this area.";
+    }
+
+    return "Shallow walleye movement usually improves during low light, wind or cloud cover.";
+  }
+
+  if(setup.species==="Bass"){
+    if(["vegetation","wood","brush"].includes(structure)){
+      return "Accurate casts around cover are important here. Low light and warm water can increase shallow activity.";
+    }
+
+    if(type==="Offshore Hump"){
+      return "This becomes more important when bass leave shallow cover and move offshore.";
+    }
+
+    if(type==="Deep Channel"){
+      return "Deeper bass may use channel edges during bright conditions or temperature extremes.";
+    }
+
+    if(type==="Rocky Point"){
+      return "Wind can push baitfish onto the point and trigger more aggressive bass.";
+    }
+
+    if(type==="Creek Mouth"){
+      return "Moving water and baitfish movement can make this a transition zone for bass.";
+    }
+
+    return "Shallow bass can become aggressive during morning, evening or cloudy conditions.";
+  }
+
+  if(setup.species==="Trout"){
+    if(type==="River Section"){
+      return "Current seams and feeding lanes are the key here. Presentation and drift quality matter heavily.";
+    }
+
+    if(type==="Creek Mouth"){
+      return "Cool incoming water and drifting food can make this a high-value trout feeding area.";
+    }
+
+    if(type==="Deep Channel"){
+      return "Trout may use deeper water when sunlight increases or surface temperatures rise.";
+    }
+
+    if(type==="Rocky Point"){
+      return "Broken current and rocky structure can create holding water and ambush positions.";
+    }
+
+    return "Cool water, low light and active insect movement generally improve trout activity here.";
+  }
+
+  return "Conditions can change how fish use this area throughout the day.";
+}
+
+function renderSpotInformation(){
+  const box=document.getElementById("spotInformation");
+  if(!box)return;
+
+  const setup=getCurrentFishingSetup();
+
+  if(!setup.lake||!setup.spot){
+    box.innerHTML=`<div class="empty">Select a lake and fishing area.</div>`;
+    return;
+  }
+
+  const knowledge=getKnowledge(setup.lake,setup.spot.name,setup.species);
+
+  let html=`
+    <div class="spot-info-title">${setup.spot.name}</div>
+    <div class="small muted">${setup.lake}</div>
+
+    <hr class="divider">
+
+    <div class="spot-info-row">
+      <span class="muted">Area Type</span>
+      <strong>${setup.spot.type}</strong>
+    </div>
+
+    <div class="spot-info-row">
+      <span class="muted">Depth Range</span>
+      <strong>${setup.spot.depth[0]}-${setup.spot.depth[1]} ft</strong>
+    </div>
+
+    <div class="spot-info-row">
+      <span class="muted">Structure</span>
+      <strong>${capitalize(setup.spot.structure)}</strong>
+    </div>
+
+    <div class="spot-info-row">
+      <span class="muted">Knowledge</span>
+      <strong>${knowledgeLabel(knowledge)} • ${Math.round(knowledge)}%</strong>
+    </div>
+  `;
+
+  if(knowledge<10){
+    html+=`
+      <div class="knowledge-lock small muted">
+        Fish this area more to learn which species and techniques work best here.
+      </div>
+    `;
+
+    box.innerHTML=html;
+    return;
+  }
+
+  html+=`
+    <hr class="divider">
+    <strong class="small">Known Species Potential</strong>
+
+    <div class="spot-species-grid">
+      ${Object.keys(SPECIES).map(species=>{
+        const multiplier=setup.spot.species[species];
+
+        if(multiplier===undefined){
+          return`
+            <div class="spot-species">
+              <strong>${species}</strong>
+              <div class="tiny muted">Not normally present</div>
+            </div>
+          `;
+        }
+
+        const rating=habitatLabel(multiplier);
+
+        return`
+          <div class="spot-species">
+            <strong>${species}</strong>
+            <div class="tiny ${rating.className}">${rating.label}</div>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
+
+  if(knowledge<25){
+    html+=`
+      <div class="knowledge-lock small muted">
+        Reach 25% knowledge to begin identifying productive techniques.
+      </div>
+    `;
+
+    box.innerHTML=html;
+    return;
+  }
+
+  const techniques=spotTechniques(setup.species,setup.spot.type);
+
+  html+=`
+    <hr class="divider">
+
+    <div class="small">
+      <strong>Best Known Techniques</strong><br>
+      <span class="muted">
+        ${techniques.length?techniques.join(" • "):"No strong technique pattern identified yet."}
+      </span>
+    </div>
+  `;
+
+  if(knowledge<50){
+    html+=`
+      <div class="knowledge-lock small muted">
+        Reach 50% knowledge to unlock condition-specific spot guidance.
+      </div>
+    `;
+
+    box.innerHTML=html;
+    return;
+  }
+
+  html+=`
+    <hr class="divider">
+
+    <div class="small">
+      <strong>How Conditions Affect This Spot</strong>
+      <div class="muted" style="margin-top:4px">
+        ${getSpotConditionTip(setup)}
+      </div>
+    </div>
+  `;
+
+  if(knowledge<75){
+    html+=`
+      <div class="knowledge-lock small muted">
+        Reach 75% knowledge to unlock your detailed catch history for this spot.
+      </div>
+    `;
+
+    box.innerHTML=html;
+    return;
+  }
+
+  const history=game.journal.filter(entry=>
+    entry.lake===setup.lake&&
+    entry.spot===setup.spot.name&&
+    entry.species===setup.species
+  );
+
+  if(!history.length){
+    html+=`
+      <hr class="divider">
+
+      <div class="small muted">
+        You understand this area well, but you do not yet have landed-fish history for ${setup.species} here.
+      </div>
+    `;
+  }else{
+    const averageWeight=
+      history.reduce((sum,entry)=>sum+entry.weight,0)/history.length;
+
+    const averageDepth=
+      history.reduce((sum,entry)=>sum+Number(entry.depth||0),0)/history.length;
+
+    const bestFish=
+      history.reduce((best,entry)=>entry.weight>best.weight?entry:best,history[0]);
+
+    const bestLure=mostCommonValue(history,"lure");
+    const bestTechnique=mostCommonValue(history,"technique");
+    const bestWeather=mostCommonValue(history,"weather");
+
+    html+=`
+      <hr class="divider">
+
+      <strong class="small">Your Spot History</strong>
+
+      <div class="spot-info-row">
+        <span class="muted">Fish Landed</span>
+        <strong>${history.length}</strong>
+      </div>
+
+      <div class="spot-info-row">
+        <span class="muted">Average Weight</span>
+        <strong>${averageWeight.toFixed(2)} lb</strong>
+      </div>
+
+      <div class="spot-info-row">
+        <span class="muted">Largest Fish</span>
+        <strong>${bestFish.weight.toFixed(2)} lb</strong>
+      </div>
+
+      <div class="spot-info-row">
+        <span class="muted">Average Productive Depth</span>
+        <strong>${averageDepth.toFixed(1)} ft</strong>
+      </div>
+
+      <div class="spot-info-row">
+        <span class="muted">Most Productive Technique</span>
+        <strong>${bestTechnique||"Unknown"}</strong>
+      </div>
+
+      <div class="spot-info-row">
+        <span class="muted">Most Productive Lure</span>
+        <strong>${bestLure||"Unknown"}</strong>
+      </div>
+
+      <div class="spot-info-row">
+        <span class="muted">Common Productive Weather</span>
+        <strong>${bestWeather||"Unknown"}</strong>
+      </div>
+    `;
+  }
+
+  box.innerHTML=html;
+}
+
+/* ---------- END NEW SPOT INFORMATION SYSTEM ---------- */
+
 function tournamentLevelUnlocked(species,level){
   const s=game.standings[species];
 
@@ -1504,8 +1846,8 @@ function qualificationText(species,level){
 
 function eventName(species,level){
   const localNames={
-    Walleye:["Granite Lake Walleye Open","Prairie Gold Walleye Shootout","Timber Wolf Walleye Classic","Red Rock Walleye Open","Weekend Walleye Challenge"],
-    Bass:["Granite Bass Open","Cypress Lake Bass Shootout","Willow Bend Bass Classic","Blackwater Big Bass Open","Summer Bass Challenge"],
+    Walleye:["Granite Lake Walleye Open","Prairie Gold Walleye Shootout","Timber Wolf Walleye Classic","Red Rock Walleye Open"],
+    Bass:["Granite Bass Open","Cypress Lake Bass Shootout","Willow Bend Bass Classic","Blackwater Big Bass Open"],
     Trout:["Clear Fork Trout Open","Mountain Trout Challenge","Coldwater Classic","River Trout Invitational"]
   };
 
@@ -1623,11 +1965,11 @@ function initializeAIStandings(){
 let AI_STANDINGS=initializeAIStandings();
 
 function createTournamentAI(event){
-  const levelBonus={local:0,state:.12,national:.25,major:.38}[event.level];
+  const bonus={local:0,state:.12,national:.25,major:.38}[event.level];
 
   return AI_NAMES.slice().sort(()=>Math.random()-.5).map(name=>({
     name,
-    skill:.72+Math.random()*.42+levelBonus,
+    skill:.72+Math.random()*.42+bonus,
     fish:[],
     weight:0,
     bigFish:0
@@ -1662,7 +2004,8 @@ function renderDashboard(){
 
   document.getElementById("speciesCareerCards").innerHTML=
     ["Walleye","Bass","Trout"].map(species=>{
-      const standings=game.standings[species];
+      const s=game.standings[species];
+
       let current="Local";
 
       if(tournamentLevelUnlocked(species,"major"))current="Championship";
@@ -1675,27 +2018,30 @@ function renderDashboard(){
             <h2>${SPECIES[species].icon} ${species}</h2>
             <span class="pill">${current}</span>
           </div>
+
           <div class="small muted">${SPECIES[species].strategy}</div>
+
           <hr class="divider">
-          <div class="row spread small"><span>Local Points</span><strong>${standings.local}</strong></div>
-          <div class="row spread small"><span>State Points</span><strong>${standings.state}</strong></div>
-          <div class="row spread small"><span>National Points</span><strong>${standings.national}</strong></div>
+
+          <div class="row spread small"><span>Local Points</span><strong>${s.local}</strong></div>
+          <div class="row spread small"><span>State Points</span><strong>${s.state}</strong></div>
+          <div class="row spread small"><span>National Points</span><strong>${s.national}</strong></div>
           <div class="row spread small"><span>Wins</span><strong>${game.speciesWins[species]}</strong></div>
         </div>
       `;
     }).join("");
 
-  const upcoming=game.tournamentSchedule.filter(event=>!event.completed).slice(0,5);
+  const upcoming=game.tournamentSchedule.filter(e=>!e.completed).slice(0,5);
 
   document.getElementById("dashboardEvents").innerHTML=
     upcoming.length
-      ?upcoming.map(event=>`
+      ?upcoming.map(e=>`
         <div class="row spread" style="padding:7px 0;border-bottom:1px solid #29424a">
           <div>
-            <strong>${event.name}</strong>
-            <div class="small muted">${event.lake} • ${capitalize(event.level)} • ${event.format}</div>
+            <strong>${e.name}</strong>
+            <div class="small muted">${e.lake} • ${capitalize(e.level)} • ${e.format}</div>
           </div>
-          <span>${money(event.fee)}</span>
+          <span>${money(e.fee)}</span>
         </div>
       `).join("")
       :`<div class="empty">No events scheduled.</div>`;
@@ -1759,7 +2105,7 @@ function populateTechniqueSelector(){
   const select=document.getElementById("techniqueSelect");
   const old=select.value;
 
-  select.innerHTML=SPECIES[species].techniques.map(technique=>`<option>${technique}</option>`).join("");
+  select.innerHTML=SPECIES[species].techniques.map(x=>`<option>${x}</option>`).join("");
 
   if(SPECIES[species].techniques.includes(old))select.value=old;
 }
@@ -1769,7 +2115,7 @@ function populateLureSelector(){
   const select=document.getElementById("lureSelect");
   const old=select.value;
 
-  select.innerHTML=SPECIES[species].lures.map(lure=>`<option>${lure}</option>`).join("");
+  select.innerHTML=SPECIES[species].lures.map(x=>`<option>${x}</option>`).join("");
 
   if(SPECIES[species].lures.includes(old))select.value=old;
 }
@@ -1840,21 +2186,36 @@ function updateFishingIntel(){
       <span>${knowledgeLabel(knowledge)}</span>
       <strong>${Math.round(knowledge)}%</strong>
     </div>
-    <div class="progress" style="margin-top:6px"><div style="width:${knowledge}%"></div></div>
-    <p class="small muted">Fishing this area under different conditions improves your knowledge.</p>
+
+    <div class="progress" style="margin-top:6px">
+      <div style="width:${knowledge}%"></div>
+    </div>
+
+    <p class="small muted">
+      Fishing this area under different conditions improves your knowledge.
+    </p>
   `;
+
+  renderSpotInformation();
 }
 
 function renderFishingGearSummary(){
   document.getElementById("fishingGearSummary").innerHTML=
     ["Rod","Reel","Line","Boat","Trolling Motor","Electronics"].map(category=>{
       const gear=equipped(category);
-      return`<div class="row spread small" style="margin-bottom:5px"><span class="muted">${category}</span><strong>${gear.name}</strong></div>`;
+
+      return`
+        <div class="row spread small" style="margin-bottom:5px">
+          <span class="muted">${category}</span>
+          <strong>${gear.name}</strong>
+        </div>
+      `;
     }).join("");
 }
 
 function renderFishingPage(){
   updateHeader();
+
   document.getElementById("fishSpeciesSelect").disabled=false;
 
   populateFishingSelectors();
@@ -1875,22 +2236,27 @@ function renderActiveTournamentBanner(){
     box.innerHTML=`
       <div class="info-box">
         <strong>Practice Fishing</strong>
-        <div class="small muted">Fish freely, learn lakes, catch trophies and improve your journal.</div>
+        <div class="small muted">
+          Fish freely, learn lakes, catch trophies and improve your journal.
+        </div>
       </div>
     `;
     return;
   }
 
-  const tournament=game.activeTournament;
+  const t=game.activeTournament;
 
   box.innerHTML=`
-    <div class="card tournament-card ${tournament.level}" style="margin-bottom:14px">
+    <div class="card tournament-card ${t.level}" style="margin-bottom:14px">
       <div class="row spread wrap">
         <div>
-          <span class="pill gold">${capitalize(tournament.level)}</span>
-          <h2 style="margin:7px 0 3px">${tournament.name}</h2>
-          <div class="small muted">${tournament.lake} • ${tournament.format} • ${tournament.castsRemaining} casts remaining</div>
+          <span class="pill gold">${capitalize(t.level)}</span>
+          <h2 style="margin:7px 0 3px">${t.name}</h2>
+          <div class="small muted">
+            ${t.lake} • ${t.format} • ${t.castsRemaining} casts remaining
+          </div>
         </div>
+
         <button class="danger" onclick="withdrawTournament()">Withdraw</button>
       </div>
     </div>
@@ -1898,15 +2264,16 @@ function renderActiveTournamentBanner(){
 
   const speciesSelect=document.getElementById("fishSpeciesSelect");
 
-  speciesSelect.value=tournament.species;
+  speciesSelect.value=t.species;
 
-  if(tournament.format!=="Multi-Species")speciesSelect.disabled=true;
+  if(t.format!=="Multi-Species")speciesSelect.disabled=true;
 
   populateFishingSelectors();
 
   const lakeSelect=document.getElementById("lakeSelect");
-  lakeSelect.innerHTML=`<option>${tournament.lake}</option>`;
-  lakeSelect.value=tournament.lake;
+
+  lakeSelect.innerHTML=`<option>${t.lake}</option>`;
+  lakeSelect.value=t.lake;
 
   populateSpotSelector();
 }
@@ -1937,10 +2304,14 @@ function strategyScore(setup){
   score*=setup.spot.species[setup.species]||.3;
 
   const preferred=species.affinity[setup.technique]||[];
+
   score*=preferred.includes(setup.spot.type)?1.22:.88;
 
-  if(setup.depth>=setup.spot.depth[0]&&setup.depth<=setup.spot.depth[1])score*=1.14;
-  else score*=.72;
+  if(setup.depth>=setup.spot.depth[0]&&setup.depth<=setup.spot.depth[1]){
+    score*=1.14;
+  }else{
+    score*=.72;
+  }
 
   const[tempLow,tempHigh]=species.preferredTemps;
 
@@ -1987,9 +2358,12 @@ function potentialFish(setup,score){
 
   let weight=random(species.baseMin,species.baseMax)*random(.75,1.12);
 
-  if(Math.random()<.12*score)weight*=random(1.18,1.5);
+  if(Math.random()<.12*score){
+    weight*=random(1.18,1.5);
+  }
 
   const knowledge=getKnowledge(setup.lake,setup.spot.name,setup.species);
+
   weight*=1+knowledge/1000;
 
   let legendary=null;
@@ -2062,7 +2436,10 @@ function castLine(){
       return;
     }
 
-    if(game.activeTournament.format!=="Multi-Species"&&setup.species!==game.activeTournament.species){
+    if(
+      game.activeTournament.format!=="Multi-Species"&&
+      setup.species!==game.activeTournament.species
+    ){
       notify(`This tournament targets ${game.activeTournament.species}.`,"bad");
       return;
     }
@@ -2085,6 +2462,7 @@ function castLine(){
       beginBite();
     }else{
       document.getElementById("castMessage").textContent="No bite. That cast didn't produce.";
+
       completeCast();
 
       setTimeout(()=>{
@@ -2130,6 +2508,7 @@ function attemptHookSet(){
   if(runtime.castState!=="bite")return;
 
   cancelAnimationFrame(runtime.timingAnimation);
+
   document.getElementById("hookBtn").disabled=true;
 
   const distance=Math.abs(runtime.timingPosition-50);
@@ -2139,7 +2518,9 @@ function attemptHookSet(){
     beginFight(runtime.currentPotentialFish);
   }else{
     document.getElementById("castMessage").textContent=
-      distance>35?"Too early or late — the fish missed the hook.":"Almost! The fish came unbuttoned.";
+      distance>35
+        ?"Too early or late — the fish missed the hook."
+        :"Almost! The fish came unbuttoned.";
 
     completeCast();
 
@@ -2157,7 +2538,9 @@ function beginFight(fish){
   runtime.fightProgress=3;
   runtime.fishStamina=100;
 
-  document.getElementById("castMessage").textContent=`Fish on! ${fish.weight.toFixed(2)} lb class fish fighting hard.`;
+  document.getElementById("castMessage").textContent=
+    `Fish on! ${fish.weight.toFixed(2)} lb class fish fighting hard.`;
+
   document.getElementById("fightPanel").classList.add("active");
 
   updateFightUI();
@@ -2165,13 +2548,17 @@ function beginFight(fish){
   runtime.fightTimer=setInterval(()=>{
     if(runtime.castState!=="fight")return;
 
-    const fishPower=fish.weight/(fish.species==="Walleye"?7:fish.species==="Bass"?5:4);
+    const fishPower=
+      fish.weight/
+      (fish.species==="Walleye"?7:fish.species==="Bass"?5:4);
 
     runtime.tension+=random(-3,5)+fishPower*2.2;
     runtime.tension-=equipped("Reel").power*1.1;
     runtime.fishStamina-=random(.7,1.8);
 
-    if(runtime.fishStamina<45)runtime.tension-=1;
+    if(runtime.fishStamina<45){
+      runtime.tension-=1;
+    }
 
     checkFight();
     updateFightUI();
@@ -2217,7 +2604,8 @@ function updateFightUI(){
 }
 
 function checkFight(){
-  const breakThreshold=91+Math.min(7,(equipped("Line").strength-10)*.25);
+  const breakThreshold=
+    91+Math.min(7,(equipped("Line").strength-10)*.25);
 
   if(runtime.tension>=breakThreshold){
     loseFight("The line broke under too much tension.");
@@ -2229,7 +2617,9 @@ function checkFight(){
     return;
   }
 
-  if(runtime.fightProgress>=100)landFish(runtime.hookedFish);
+  if(runtime.fightProgress>=100){
+    landFish(runtime.hookedFish);
+  }
 }
 
 function loseFight(message){
@@ -2267,8 +2657,10 @@ function landFish(fish){
       <div class="gold-text" style="font-size:46px;text-align:center">👑</div>
       <h2 style="text-align:center">${fish.legendaryName}</h2>
       <p style="text-align:center">${fish.weight.toFixed(2)} lb ${fish.species}</p>
-      <div class="info-box">${LEGENDARY_FISH.find(item=>item.id===fish.legendaryId)?.description||""}</div>
-      <p class="muted small" style="text-align:center">Caught at ${fish.spot}, ${fish.lake} using ${fish.lure}.</p>
+
+      <div class="info-box">
+        ${LEGENDARY_FISH.find(x=>x.id===fish.legendaryId)?.description||""}
+      </div>
     `);
   }
 
@@ -2281,6 +2673,7 @@ function landFish(fish){
 function completeCast(){
   if(game.activeTournament){
     game.activeTournament.castsRemaining--;
+
     simulateAICast();
 
     if(game.activeTournament.castsRemaining<=0){
@@ -2288,16 +2681,14 @@ function completeCast(){
     }
   }
 
-  if(Math.random()<.22)shiftWeather();
+  if(Math.random()<.22){
+    shiftWeather();
+  }
 
   renderFishingPage();
   saveGame();
 }
 
-/* REPUTATION BALANCE:
-   Every landed fish = +0.10 reputation.
-   New personal best = additional +0.05 reputation.
-*/
 function recordFish(fish){
   game.fishLanded++;
   game.reputation+=.10;
@@ -2355,22 +2746,22 @@ function recordFish(fish){
 }
 
 function addTournamentFish(fish){
-  const tournament=game.activeTournament;
+  const t=game.activeTournament;
 
-  if(tournament.format==="Multi-Species"){
-    tournament.playerFish.push(fish);
-    tournament.playerFish.sort((a,b)=>b.weight-a.weight);
-    tournament.playerFish=tournament.playerFish.slice(0,5);
-  }else if(tournament.format==="Big Fish"){
-    if(!tournament.playerFish.length||fish.weight>tournament.playerFish[0].weight){
-      tournament.playerFish=[fish];
+  if(t.format==="Multi-Species"){
+    t.playerFish.push(fish);
+    t.playerFish.sort((a,b)=>b.weight-a.weight);
+    t.playerFish=t.playerFish.slice(0,5);
+  }else if(t.format==="Big Fish"){
+    if(!t.playerFish.length||fish.weight>t.playerFish[0].weight){
+      t.playerFish=[fish];
     }
   }else{
-    if(fish.species!==tournament.species)return;
+    if(fish.species!==t.species)return;
 
-    tournament.playerFish.push(fish);
-    tournament.playerFish.sort((a,b)=>b.weight-a.weight);
-    tournament.playerFish=tournament.playerFish.slice(0,5);
+    t.playerFish.push(fish);
+    t.playerFish.sort((a,b)=>b.weight-a.weight);
+    t.playerFish=t.playerFish.slice(0,5);
   }
 
   calculateTournamentWeights();
@@ -2380,72 +2771,73 @@ function calculateTournamentWeights(){
   if(!game.activeTournament)return;
 
   game.activeTournament.playerWeight=
-    game.activeTournament.playerFish.reduce((sum,fish)=>sum+fish.weight,0);
+    game.activeTournament.playerFish.reduce((s,f)=>s+f.weight,0);
 
   game.activeTournament.playerBigFish=
     game.activeTournament.playerFish.length
-      ?Math.max(...game.activeTournament.playerFish.map(fish=>fish.weight))
+      ?Math.max(...game.activeTournament.playerFish.map(f=>f.weight))
       :0;
 }
 
 function simulateAICast(){
-  const tournament=game.activeTournament;
-  if(!tournament)return;
+  const t=game.activeTournament;
 
-  const lake=LAKES[tournament.lake];
+  if(!t)return;
 
-  tournament.ai.forEach(competitor=>{
-    const catchChance=clamp(.38*competitor.skill,.18,.8);
+  const lake=LAKES[t.lake];
+
+  t.ai.forEach(ai=>{
+    const catchChance=clamp(.38*ai.skill,.18,.8);
 
     if(Math.random()<catchChance){
-      let species=tournament.species;
+      let species=t.species;
 
-      if(tournament.format==="Multi-Species"){
+      if(t.format==="Multi-Species"){
         species=choice(lake.species);
       }
 
-      const speciesData=SPECIES[species];
+      const sp=SPECIES[species];
 
-      let weight=random(speciesData.baseMin*.8,speciesData.baseMax*.92)*competitor.skill;
+      let wt=random(sp.baseMin*.8,sp.baseMax*.92)*ai.skill;
 
-      if(Math.random()<.07*competitor.skill){
-        weight*=random(1.1,1.35);
+      if(Math.random()<.07*ai.skill){
+        wt*=random(1.1,1.35);
       }
 
-      weight=Number(weight.toFixed(2));
+      wt=Number(wt.toFixed(2));
 
-      const fish={species,weight};
+      const fish={species,weight:wt};
 
-      if(tournament.format==="Big Fish"){
-        if(!competitor.fish.length||weight>competitor.fish[0].weight){
-          competitor.fish=[fish];
+      if(t.format==="Big Fish"){
+        if(!ai.fish.length||wt>ai.fish[0].weight){
+          ai.fish=[fish];
         }
       }else{
-        competitor.fish.push(fish);
-        competitor.fish.sort((a,b)=>b.weight-a.weight);
-        competitor.fish=competitor.fish.slice(0,5);
+        ai.fish.push(fish);
+        ai.fish.sort((a,b)=>b.weight-a.weight);
+        ai.fish=ai.fish.slice(0,5);
       }
 
-      competitor.weight=competitor.fish.reduce((sum,fish)=>sum+fish.weight,0);
-      competitor.bigFish=competitor.fish.length?Math.max(...competitor.fish.map(fish=>fish.weight)):0;
+      ai.weight=ai.fish.reduce((s,f)=>s+f.weight,0);
+      ai.bigFish=ai.fish.length?Math.max(...ai.fish.map(f=>f.weight)):0;
     }
   });
 }
 
 function tournamentLeaderboard(){
-  const tournament=game.activeTournament;
+  const t=game.activeTournament;
 
-  if(!tournament)return[];
+  if(!t)return[];
 
-  const rows=tournament.ai.map(competitor=>({
-    name:competitor.name,
-    weight:tournament.format==="Big Fish"?competitor.bigFish:competitor.weight,
+  const rows=t.ai.map(ai=>({
+    name:ai.name,
+    weight:t.format==="Big Fish"?ai.bigFish:ai.weight,
     player:false
   }));
 
   rows.push({
     name:"YOU",
-    weight:tournament.format==="Big Fish"?tournament.playerBigFish:tournament.playerWeight,
+    weight:t.format==="Big Fish"?t.playerBigFish:t.playerWeight,
     player:true
   });
 
@@ -2466,13 +2858,16 @@ function renderFishingLeaderboard(){
 
   box.innerHTML=`
     <table>
-      <thead><tr><th>#</th><th>Angler</th><th>Weight</th></tr></thead>
+      <thead>
+        <tr><th>#</th><th>Angler</th><th>Weight</th></tr>
+      </thead>
+
       <tbody>
-        ${rows.map((row,index)=>`
-          <tr class="${row.player?"player-row":""}">
-            <td>${index+1}</td>
-            <td>${row.name}</td>
-            <td>${row.weight.toFixed(2)} lb</td>
+        ${rows.map((r,i)=>`
+          <tr class="${r.player?"player-row":""}">
+            <td>${i+1}</td>
+            <td>${r.name}</td>
+            <td>${r.weight.toFixed(2)} lb</td>
           </tr>
         `).join("")}
       </tbody>
@@ -2481,21 +2876,24 @@ function renderFishingLeaderboard(){
 }
 
 function renderLivewell(){
-  const fish=game.activeTournament?game.activeTournament.playerFish:game.freeCatch;
+  const fish=
+    game.activeTournament
+      ?game.activeTournament.playerFish
+      :game.freeCatch;
 
   document.getElementById("livewellTitle").textContent=
     game.activeTournament?"Tournament Livewell":"Today's Catch";
 
-  const total=fish.reduce((sum,item)=>sum+item.weight,0);
+  const total=fish.reduce((s,f)=>s+f.weight,0);
 
   document.getElementById("livewellWeight").textContent=`${total.toFixed(2)} lb`;
 
   document.getElementById("livewellList").innerHTML=
     fish.length
-      ?fish.map(item=>`
+      ?fish.map(f=>`
         <div class="livewell-fish">
-          <span>${SPECIES[item.species]?.icon||"🐟"} ${item.species}</span>
-          <strong>${item.weight.toFixed(2)} lb</strong>
+          <span>${SPECIES[f.species]?.icon||"🐟"} ${f.species}</span>
+          <strong>${f.weight.toFixed(2)} lb</strong>
         </div>
       `).join("")
       :`<div class="empty">No fish yet.</div>`;
@@ -2507,7 +2905,7 @@ function startTournament(id){
     return;
   }
 
-  const event=game.tournamentSchedule.find(item=>item.id===id);
+  const event=game.tournamentSchedule.find(e=>e.id===id);
 
   if(!event||event.completed)return;
 
@@ -2534,6 +2932,7 @@ function startTournament(id){
   };
 
   addFeed(`Entered ${event.name} at ${event.lake}.`);
+
   notify(`Entered ${event.name}. Entry fee: ${money(event.fee)}.`,"good");
 
   saveGame();
@@ -2543,7 +2942,7 @@ function startTournament(id){
 function withdrawTournament(){
   if(!game.activeTournament)return;
 
-  const event=game.tournamentSchedule.find(item=>item.id===game.activeTournament.id);
+  const event=game.tournamentSchedule.find(e=>e.id===game.activeTournament.id);
 
   if(event)event.completed=true;
 
@@ -2559,100 +2958,111 @@ function withdrawTournament(){
 }
 
 function placementPoints(place){
-  if(place===1)return100;
-  if(place===2)return92;
-  if(place===3)return86;
-  if(place<=5)return78-(place-4)*5;
-  if(place<=10)return60-(place-6)*4;
+  if(place===1)return 100;
+  if(place===2)return 92;
+  if(place===3)return 86;
+  if(place<=5)return 78-(place-4)*5;
+  if(place<=10)return 60-(place-6)*4;
 
   return Math.max(5,45-Math.floor((place-11)*1.7));
 }
 
 function calculateTournamentReputation(level,place){
   if(level==="local"){
-    if(place===1)return2;
-    if(place<=3)return1;
-    if(place<=10)return.25;
+    if(place===1)return 2;
+    if(place<=3)return 1;
+    if(place<=10)return .25;
     return 0;
   }
 
   if(level==="state"){
-    if(place===1)return5;
-    if(place<=3)return3;
-    if(place<=10)return1;
-    return.25;
+    if(place===1)return 5;
+    if(place<=3)return 3;
+    if(place<=10)return 1;
+    return .25;
   }
 
   if(level==="national"){
-    if(place===1)return10;
-    if(place<=3)return6;
-    if(place<=10)return3;
-    return1;
+    if(place===1)return 10;
+    if(place<=3)return 6;
+    if(place<=10)return 3;
+    return 1;
   }
 
   if(level==="major"){
-    if(place===1)return20;
-    if(place<=3)return12;
-    if(place<=10)return6;
-    return2;
+    if(place===1)return 20;
+    if(place<=3)return 12;
+    if(place<=10)return 6;
+    return 2;
   }
 
   return 0;
 }
 
 function finishTournament(){
-  const tournament=game.activeTournament;
+  const t=game.activeTournament;
 
-  if(!tournament)return;
+  if(!t)return;
 
   calculateTournamentWeights();
 
   const rows=tournamentLeaderboard();
-  const place=rows.findIndex(row=>row.player)+1;
+  const place=rows.findIndex(r=>r.player)+1;
   const field=rows.length;
 
-  const event=game.tournamentSchedule.find(item=>item.id===tournament.id);
+  const event=game.tournamentSchedule.find(e=>e.id===t.id);
 
   if(event)event.completed=true;
 
   const points=placementPoints(place);
 
   const standingsKey=
-    tournament.level==="local"?"local":
-    tournament.level==="state"?"state":
+    t.level==="local"?"local":
+    t.level==="state"?"state":
     "national";
 
-  game.standings[tournament.species][standingsKey]+=points;
+  game.standings[t.species][standingsKey]+=points;
 
   const prizeScale={
-    1:1,2:.6,3:.4,4:.25,5:.18,
-    6:.12,7:.1,8:.08,9:.06,10:.05
+    1:1,
+    2:.6,
+    3:.4,
+    4:.25,
+    5:.18,
+    6:.12,
+    7:.1,
+    8:.08,
+    9:.06,
+    10:.05
   };
 
-  const winnings=Math.round(tournament.prize*(prizeScale[place]||0));
+  const winnings=Math.round(t.prize*(prizeScale[place]||0));
 
   game.money+=winnings;
   game.careerEarnings+=winnings;
 
-  const reputationGain=calculateTournamentReputation(tournament.level,place);
+  const reputationGain=calculateTournamentReputation(t.level,place);
+
   game.reputation+=reputationGain;
 
   if(place===1){
     game.wins++;
-    game.speciesWins[tournament.species]++;
+    game.speciesWins[t.species]++;
 
     unlockAchievement("first_win");
 
-    if(tournament.level==="local"){
+    if(t.level==="local"){
       game.localWins++;
 
-      if(game.localWins>=5)unlockAchievement("local_ace");
+      if(game.localWins>=5){
+        unlockAchievement("local_ace");
+      }
     }else{
       game.highWins++;
       updateSponsorProgress("highWins",1);
     }
 
-    if(tournament.level==="major"){
+    if(t.level==="major"){
       game.majorWins++;
       updateSponsorProgress("majorWin",1);
       unlockAchievement("champion");
@@ -2669,15 +3079,15 @@ function finishTournament(){
   checkMillionaire();
 
   addFeed(
-    `${place===1?"Won":"Finished #"+place+" in"} ${tournament.name}. `+
+    `${place===1?"Won":"Finished #"+place+" in"} ${t.name}. `+
     `${winnings?`Earned ${money(winnings)}. `:""}`+
-    `${points} season points. +${reputationGain.toFixed(2)} reputation.`
+    `${points} season points.`
   );
 
   const resultHTML=`
     <div style="text-align:center">
       <div style="font-size:44px">${place===1?"🏆":place<=3?"🥉":"🎣"}</div>
-      <h2>${tournament.name}</h2>
+      <h2>${t.name}</h2>
       <div class="stat-value">#${place}</div>
       <div class="stat-label">of ${field} anglers</div>
     </div>
@@ -2686,17 +3096,20 @@ function finishTournament(){
 
     <div class="grid grid-4">
       <div>
-        <div class="stat-value">${tournament.playerWeight.toFixed(2)}</div>
-        <div class="stat-label">${tournament.format==="Big Fish"?"Big Fish":"Total Weight"} lb</div>
+        <div class="stat-value">${t.playerWeight.toFixed(2)}</div>
+        <div class="stat-label">Weight lb</div>
       </div>
+
       <div>
         <div class="stat-value">${points}</div>
         <div class="stat-label">Season Points</div>
       </div>
+
       <div>
         <div class="stat-value">${money(winnings)}</div>
         <div class="stat-label">Prize Money</div>
       </div>
+
       <div>
         <div class="stat-value">+${reputationGain.toFixed(2)}</div>
         <div class="stat-label">Reputation</div>
@@ -2708,11 +3121,11 @@ function finishTournament(){
     <h3>Top Finishers</h3>
 
     <table>
-      ${rows.slice(0,8).map((row,index)=>`
-        <tr class="${row.player?"player-row":""}">
-          <td>#${index+1}</td>
-          <td>${row.name}</td>
-          <td>${row.weight.toFixed(2)} lb</td>
+      ${rows.slice(0,8).map((r,i)=>`
+        <tr class="${r.player?"player-row":""}">
+          <td>#${i+1}</td>
+          <td>${r.name}</td>
+          <td>${r.weight.toFixed(2)} lb</td>
         </tr>
       `).join("")}
     </table>
@@ -2749,13 +3162,15 @@ function checkTripleSpecies(){
 }
 
 function checkMillionaire(){
-  if(game.careerEarnings>=1000000)unlockAchievement("millionaire");
+  if(game.careerEarnings>=1000000){
+    unlockAchievement("millionaire");
+  }
 }
 
 function unlockAchievement(id){
   if(game.achievements.includes(id))return;
 
-  const achievement=ACHIEVEMENTS.find(item=>item.id===id);
+  const achievement=ACHIEVEMENTS.find(a=>a.id===id);
 
   if(!achievement)return;
 
@@ -2786,6 +3201,7 @@ function unlockAchievement(id){
           <h2>${species} Tournament Career</h2>
           <div class="small muted">${SPECIES[species].strategy}</div>
         </div>
+
         <span class="pill gold">${capitalize(highest)} Level</span>
       </div>
 
@@ -2798,7 +3214,10 @@ function unlockAchievement(id){
           return`
             <div class="path-level ${unlocked?"unlocked":""} ${highest===level.key?"current":""}">
               <strong>${unlocked?"✓ ":"🔒 "}${level.name}</strong>
-              <div class="tiny muted" style="margin-top:5px">${qualificationText(species,level.key)}</div>
+
+              <div class="tiny muted" style="margin-top:5px">
+                ${qualificationText(species,level.key)}
+              </div>
             </div>
           `;
         }).join("")}
@@ -2828,7 +3247,10 @@ function renderTournaments(){
   const events=game.tournamentSchedule
     .filter(event=>event.species===species)
     .sort((a,b)=>{
-      if(a.completed!==b.completed)return a.completed?1:-1;
+      if(a.completed!==b.completed){
+        return a.completed?1:-1;
+      }
+
       return levels[a.level]-levels[b.level];
     });
 
@@ -2891,11 +3313,12 @@ function renderTournaments(){
 
 function buildStandingsRows(species,level){
   const rows=[
-    ...AI_STANDINGS[species][level].map(competitor=>({
-      name:competitor.name,
-      points:competitor.points,
+    ...AI_STANDINGS[species][level].map(x=>({
+      name:x.name,
+      points:x.points,
       player:false
     })),
+
     {
       name:"YOU",
       points:game.standings[species][level],
@@ -2910,28 +3333,20 @@ function buildStandingsRows(species,level){
 
 function standingsTable(species,level){
   const rows=buildStandingsRows(species,level);
-  const playerIndex=rows.findIndex(row=>row.player);
-
-  game.speciesRank[species]=Math.min(game.speciesRank[species],playerIndex+1);
+  const playerIndex=rows.findIndex(r=>r.player);
 
   return`
     <table>
       <thead>
-        <tr>
-          <th>#</th>
-          <th>Angler</th>
-          <th>Points</th>
-        </tr>
+        <tr><th>#</th><th>Angler</th><th>Points</th></tr>
       </thead>
 
       <tbody>
-        ${rows.slice(0,12).map((row,index)=>`
-          <tr class="${row.player?"player-row":""}">
-            <td class="${index===0?"rank-1":index===1?"rank-2":index===2?"rank-3":""}">
-              ${index+1}
-            </td>
-            <td class="ai-name">${row.name}</td>
-            <td>${row.points}</td>
+        ${rows.slice(0,12).map((r,i)=>`
+          <tr class="${r.player?"player-row":""}">
+            <td>${i+1}</td>
+            <td>${r.name}</td>
+            <td>${r.points}</td>
           </tr>
         `).join("")}
 
@@ -2939,6 +3354,7 @@ function standingsTable(species,level){
           playerIndex>=12
             ?`
               <tr><td colspan="3" class="muted">•••</td></tr>
+
               <tr class="player-row">
                 <td>${playerIndex+1}</td>
                 <td>YOU</td>
@@ -2964,9 +3380,14 @@ function renderStandings(){
     };
   });
 
-  document.getElementById("localStandings").innerHTML=standingsTable(species,"local");
-  document.getElementById("stateStandings").innerHTML=standingsTable(species,"state");
-  document.getElementById("nationalStandings").innerHTML=standingsTable(species,"national");
+  document.getElementById("localStandings").innerHTML=
+    standingsTable(species,"local");
+
+  document.getElementById("stateStandings").innerHTML=
+    standingsTable(species,"state");
+
+  document.getElementById("nationalStandings").innerHTML=
+    standingsTable(species,"national");
 }
 
 function buyGear(id){
@@ -2988,6 +3409,7 @@ function buyGear(id){
   game.ownedGear.push(item.id);
 
   addFeed(`Purchased ${item.name} for ${money(item.price)}.`);
+
   notify(`${item.name} purchased.`,"good");
 
   saveGame();
@@ -3012,7 +3434,12 @@ function renderGear(){
   updateHeader();
 
   const categories=[
-    "Rod","Reel","Line","Boat","Trolling Motor","Electronics"
+    "Rod",
+    "Reel",
+    "Line",
+    "Boat",
+    "Trolling Motor",
+    "Electronics"
   ];
 
   document.getElementById("gearCategoryTabs").innerHTML=
@@ -3025,7 +3452,8 @@ function renderGear(){
       </button>
     `).join("");
 
-  const items=GEAR.filter(item=>item.category===game.settings.gearCategory);
+  const items=
+    GEAR.filter(item=>item.category===game.settings.gearCategory);
 
   document.getElementById("gearShop").innerHTML=
     items.map(item=>{
@@ -3040,7 +3468,9 @@ function renderGear(){
             ${equippedNow?`<span class="pill green">Equipped</span>`:""}
           </div>
 
-          <div class="gear-name" style="margin-top:10px">${item.name}</div>
+          <div class="gear-name" style="margin-top:10px">
+            ${item.name}
+          </div>
 
           <p class="small muted">${item.info}</p>
 
@@ -3078,21 +3508,30 @@ function renderJournal(){
   Object.entries(game.knowledge).forEach(([key,value])=>{
     const[lake,spot,species]=key.split("|");
 
-    if(!lakeKnowledge[lake])lakeKnowledge[lake]=[];
+    if(!lakeKnowledge[lake]){
+      lakeKnowledge[lake]=[];
+    }
 
-    lakeKnowledge[lake].push({spot,species,value});
+    lakeKnowledge[lake].push({
+      spot,
+      species,
+      value
+    });
   });
 
   document.getElementById("journalKnowledge").innerHTML=
     Object.keys(lakeKnowledge).length
       ?Object.entries(lakeKnowledge).map(([lake,records])=>{
-        const average=records.reduce((sum,record)=>sum+record.value,0)/records.length;
+        const average=
+          records.reduce((sum,r)=>sum+r.value,0)/records.length;
 
         return`
           <div style="margin-bottom:14px">
             <div class="row spread">
               <strong>${lake}</strong>
-              <span class="small">${knowledgeLabel(average)} • ${Math.round(average)}%</span>
+              <span class="small">
+                ${knowledgeLabel(average)} • ${Math.round(average)}%
+              </span>
             </div>
 
             <div class="progress" style="margin-top:5px">
@@ -3109,17 +3548,17 @@ function renderJournal(){
 
   document.getElementById("journalEntries").innerHTML=
     game.journal.length
-      ?game.journal.slice(0,25).map(entry=>`
+      ?game.journal.slice(0,25).map(j=>`
         <div class="journal-entry">
           <div class="row spread">
-            <strong>${entry.weight.toFixed(2)} lb ${entry.species}</strong>
-            <span class="tiny muted">${new Date(entry.time).toLocaleDateString()}</span>
+            <strong>${j.weight.toFixed(2)} lb ${j.species}</strong>
+            <span class="tiny muted">${new Date(j.time).toLocaleDateString()}</span>
           </div>
 
           <div class="small muted">
-            ${entry.lake} • ${entry.spot}<br>
-            ${entry.technique} • ${entry.lure} • ${entry.depth} ft<br>
-            Water ${entry.waterTemp}°F • ${entry.weather} • Wind ${entry.wind} mph
+            ${j.lake} • ${j.spot}<br>
+            ${j.technique} • ${j.lure} • ${j.depth} ft<br>
+            Water ${j.waterTemp}°F • ${j.weather} • Wind ${j.wind} mph
           </div>
         </div>
       `).join("")
@@ -3143,7 +3582,9 @@ function renderTrophies(){
               ?`
                 <div class="stat-value">${fish.weight.toFixed(2)} lb</div>
                 <div class="muted">${fish.length}" • ${fish.rarity}</div>
+
                 <hr class="divider">
+
                 <div class="small">
                   ${fish.lake}<br>
                   ${fish.spot}<br>
@@ -3158,45 +3599,49 @@ function renderTrophies(){
 
   document.getElementById("trophyFishList").innerHTML=
     game.trophies.length
-      ?game.trophies.slice(0,30).map(fish=>`
-        <div class="fish-trophy ${fish.legendaryName?"legendary":""}" style="margin-bottom:7px">
+      ?game.trophies.slice(0,30).map(f=>`
+        <div class="fish-trophy ${f.legendaryName?"legendary":""}" style="margin-bottom:7px">
           <div class="row spread">
-            <strong class="rarity-${fish.rarity.toLowerCase()}">
-              ${fish.legendaryName||`${fish.weight.toFixed(2)} lb ${fish.species}`}
+            <strong class="rarity-${f.rarity.toLowerCase()}">
+              ${f.legendaryName||`${f.weight.toFixed(2)} lb ${f.species}`}
             </strong>
-            <span>${fish.weight.toFixed(2)} lb</span>
+
+            <span>${f.weight.toFixed(2)} lb</span>
           </div>
 
           <div class="small muted">
-            ${fish.lake} • ${fish.spot} • ${fish.lure}
+            ${f.lake} • ${f.spot} • ${f.lure}
           </div>
         </div>
       `).join("")
       :`<div class="empty">Rare, epic and legendary catches will appear here.</div>`;
 
   document.getElementById("legendaryFishList").innerHTML=
-    LEGENDARY_FISH.map(legendary=>{
-      const caught=game.legendaryCaught.includes(legendary.id);
-      const fish=game.trophies.find(item=>item.legendaryId===legendary.id);
+    LEGENDARY_FISH.map(l=>{
+      const caught=game.legendaryCaught.includes(l.id);
+      const fish=game.trophies.find(f=>f.legendaryId===l.id);
 
       return`
         <div class="fish-trophy legendary" style="margin-bottom:8px;opacity:${caught?1:.45}">
           <div class="row spread">
             <strong class="gold-text">
-              ${caught?"👑":"?"} ${caught?legendary.name:"Unknown Legendary Fish"}
+              ${caught?"👑":"?"} ${caught?l.name:"Unknown Legendary Fish"}
             </strong>
-            <span class="pill gold">${caught?"Caught":"Uncaught"}</span>
+
+            <span class="pill gold">
+              ${caught?"Caught":"Uncaught"}
+            </span>
           </div>
 
           ${
             caught&&fish
               ?`
-                <div class="small">${fish.weight.toFixed(2)} lb ${legendary.species}</div>
-                <div class="small muted">${legendary.description}</div>
+                <div class="small">${fish.weight.toFixed(2)} lb ${l.species}</div>
+                <div class="small muted">${l.description}</div>
               `
               :`
                 <div class="small muted">
-                  Somewhere in ${legendary.species} water, a fish of legend is waiting.
+                  Somewhere in ${l.species} water, a fish of legend is waiting.
                 </div>
               `
           }
@@ -3206,7 +3651,7 @@ function renderTrophies(){
 }
 
 function signSponsor(id){
-  const sponsor=SPONSORS.find(item=>item.id===id);
+  const sponsor=SPONSORS.find(s=>s.id===id);
 
   if(!sponsor)return;
 
@@ -3226,7 +3671,10 @@ function signSponsor(id){
 
   addFeed(`Signed sponsorship contract with ${sponsor.name}.`);
 
-  notify(`${sponsor.name} signed you. Bonus: ${money(sponsor.signing)}.`,"gold");
+  notify(
+    `${sponsor.name} signed you. Bonus: ${money(sponsor.signing)}.`,
+    "gold"
+  );
 
   saveGame();
   renderSponsors();
@@ -3236,7 +3684,8 @@ function signSponsor(id){
 function updateSponsorProgress(type,amount){
   if(!game.sponsor)return;
 
-  const sponsor=SPONSORS.find(item=>item.id===game.sponsor);
+  const sponsor=
+    SPONSORS.find(s=>s.id===game.sponsor);
 
   if(!sponsor||sponsor.targetType!==type)return;
 
@@ -3250,9 +3699,14 @@ function updateSponsorProgress(type,amount){
       game.sponsorCompleted.push(sponsor.id);
     }
 
-    notify(`Sponsor objective complete! ${money(sponsor.bonus)} bonus.`,"gold");
+    notify(
+      `Sponsor objective complete! ${money(sponsor.bonus)} bonus.`,
+      "gold"
+    );
 
-    addFeed(`Completed ${sponsor.name} sponsor objective for ${money(sponsor.bonus)}.`);
+    addFeed(
+      `Completed ${sponsor.name} sponsor objective for ${money(sponsor.bonus)}.`
+    );
 
     game.sponsor=null;
     game.sponsorProgress=0;
@@ -3261,14 +3715,14 @@ function updateSponsorProgress(type,amount){
 
 function renderSponsors(){
   document.getElementById("sponsorList").innerHTML=
-    SPONSORS.map(sponsor=>{
-      const active=game.sponsor===sponsor.id;
-      const completed=game.sponsorCompleted.includes(sponsor.id);
-      const unlocked=game.reputation>=sponsor.rep;
+    SPONSORS.map(s=>{
+      const active=game.sponsor===s.id;
+      const completed=game.sponsorCompleted.includes(s.id);
+      const unlocked=game.reputation>=s.rep;
 
       const progress=
         active
-          ?clamp((game.sponsorProgress/sponsor.target)*100,0,100)
+          ?clamp((game.sponsorProgress/s.target)*100,0,100)
           :0;
 
       return`
@@ -3281,27 +3735,27 @@ function renderSponsors(){
                 :""
           }
 
-          <span class="pill">${sponsor.category}</span>
+          <span class="pill">${s.category}</span>
 
-          <h2 style="margin:10px 0 3px">${sponsor.name}</h2>
+          <h2 style="margin:10px 0 3px">${s.name}</h2>
 
-          <div class="small muted">${sponsor.objective}</div>
+          <div class="small muted">${s.objective}</div>
 
           <hr class="divider">
 
           <div class="row spread small">
             <span>Signing Bonus</span>
-            <strong>${money(sponsor.signing)}</strong>
+            <strong>${money(s.signing)}</strong>
           </div>
 
           <div class="row spread small">
             <span>Objective Bonus</span>
-            <strong>${money(sponsor.bonus)}</strong>
+            <strong>${money(s.bonus)}</strong>
           </div>
 
           <div class="row spread small">
             <span>Required Reputation</span>
-            <strong>${sponsor.rep}</strong>
+            <strong>${s.rep}</strong>
           </div>
 
           ${
@@ -3310,7 +3764,7 @@ function renderSponsors(){
                 <div style="margin-top:10px">
                   <div class="row spread small">
                     <span>Contract Progress</span>
-                    <strong>${game.sponsorProgress}/${sponsor.target}</strong>
+                    <strong>${game.sponsorProgress}/${s.target}</strong>
                   </div>
 
                   <div class="progress" style="margin-top:5px">
@@ -3331,7 +3785,7 @@ function renderSponsors(){
                     ?`<button disabled style="width:100%">Locked</button>`
                     :game.sponsor
                       ?`<button disabled style="width:100%">Another Contract Active</button>`
-                      :`<button class="primary" style="width:100%" onclick="signSponsor('${sponsor.id}')">Sign Contract</button>`
+                      :`<button class="primary" style="width:100%" onclick="signSponsor('${s.id}')">Sign Contract</button>`
             }
           </div>
         </div>
@@ -3340,22 +3794,33 @@ function renderSponsors(){
 }
 
 function renderCareer(){
-  document.getElementById("careerEarnings").textContent=money(game.careerEarnings);
-  document.getElementById("careerWins").textContent=game.wins;
-  document.getElementById("careerTop10").textContent=game.top10;
-  document.getElementById("careerFish").textContent=game.fishLanded;
+  document.getElementById("careerEarnings").textContent=
+    money(game.careerEarnings);
+
+  document.getElementById("careerWins").textContent=
+    game.wins;
+
+  document.getElementById("careerTop10").textContent=
+    game.top10;
+
+  document.getElementById("careerFish").textContent=
+    game.fishLanded;
 
   document.getElementById("achievementList").innerHTML=
-    ACHIEVEMENTS.map(achievement=>{
-      const unlocked=game.achievements.includes(achievement.id);
+    ACHIEVEMENTS.map(a=>{
+      const unlocked=game.achievements.includes(a.id);
 
       return`
         <div class="achievement ${unlocked?"":"locked"}">
-          <div class="achievement-icon">${achievement.icon}</div>
+          <div class="achievement-icon">${a.icon}</div>
 
           <div>
-            <strong>${achievement.name}</strong>
-            <div class="small muted">${achievement.text}</div>
+            <strong>${a.name}</strong>
+
+            <div class="small muted">
+              ${a.text}
+            </div>
+
             <div class="tiny ${unlocked?"good":"muted"}" style="margin-top:4px">
               ${unlocked?"UNLOCKED":"LOCKED"}
             </div>
@@ -3367,13 +3832,17 @@ function renderCareer(){
 
 function startNewSeason(){
   if(game.activeTournament){
-    notify("Finish your tournament before starting a new season.","bad");
+    notify(
+      "Finish your tournament before starting a new season.",
+      "bad"
+    );
     return;
   }
 
-  const proceed=confirm(
-    "Start a new season? Current season standings will reset, but career progress stays."
-  );
+  const proceed=
+    confirm(
+      "Start a new season? Current season standings will reset, but career progress stays."
+    );
 
   if(!proceed)return;
 
@@ -3397,13 +3866,17 @@ function startNewSeason(){
   saveGame();
   renderAll();
 
-  notify(`Season ${game.season} is underway.`,"good");
+  notify(
+    `Season ${game.season} is underway.`,
+    "good"
+  );
 }
 
 function resetGame(){
-  const proceed=confirm(
-    "Reset your entire Tournament Trail career? This cannot be undone."
-  );
+  const proceed=
+    confirm(
+      "Reset your entire Tournament Trail career? This cannot be undone."
+    );
 
   if(!proceed)return;
 
@@ -3413,7 +3886,10 @@ function resetGame(){
 
 function saveGame(showNotice=false){
   try{
-    localStorage.setItem("tournamentTrailSave",JSON.stringify(game));
+    localStorage.setItem(
+      "tournamentTrailSave",
+      JSON.stringify(game)
+    );
 
     if(showNotice){
       notify("Career saved.","good");
@@ -3428,7 +3904,10 @@ function saveGame(showNotice=false){
 }
 
 function loadGame(){
-  const raw=localStorage.getItem("tournamentTrailSave");
+  const raw=
+    localStorage.getItem(
+      "tournamentTrailSave"
+    );
 
   if(!raw)return false;
 
@@ -3447,8 +3926,6 @@ function loadGame(){
 }
 
 function ensureSaveCompatibility(){
-  const previousVersion=game.version||1;
-
   if(!game.standings){
     game.standings={
       Walleye:{local:0,state:0,national:0},
@@ -3459,16 +3936,28 @@ function ensureSaveCompatibility(){
 
   ["Walleye","Bass","Trout"].forEach(species=>{
     if(!game.standings[species]){
-      game.standings[species]={local:0,state:0,national:0};
+      game.standings[species]={
+        local:0,
+        state:0,
+        national:0
+      };
     }
   });
 
   if(!game.speciesWins){
-    game.speciesWins={Walleye:0,Bass:0,Trout:0};
+    game.speciesWins={
+      Walleye:0,
+      Bass:0,
+      Trout:0
+    };
   }
 
   if(!game.personalBests){
-    game.personalBests={Walleye:null,Bass:null,Trout:null};
+    game.personalBests={
+      Walleye:null,
+      Bass:null,
+      Trout:null
+    };
   }
 
   if(!game.knowledge)game.knowledge={};
@@ -3525,9 +4014,7 @@ function ensureSaveCompatibility(){
     buildSeasonSchedule();
   }
 
-  if(previousVersion<4){
-    game.version=4;
-  }
+  game.version=5;
 }
 
 function renderAll(){
@@ -3563,30 +4050,31 @@ function debugAdvanceCareer(){
 }
 
 function debugCatchLegendary(){
-  const legendary=LEGENDARY_FISH.find(
-    fish=>!game.legendaryCaught.includes(fish.id)
-  );
+  const legend=
+    LEGENDARY_FISH.find(
+      l=>!game.legendaryCaught.includes(l.id)
+    );
 
-  if(!legendary){
+  if(!legend){
     notify("All legendary fish already caught.");
     return;
   }
 
   const fish={
     id:`debug_${Date.now()}`,
-    species:legendary.species,
-    weight:Number(random(legendary.minWeight,legendary.maxWeight).toFixed(2)),
+    species:legend.species,
+    weight:Number(random(legend.minWeight,legend.maxWeight).toFixed(2)),
     length:32,
     condition:"Prime",
     rarity:"Legendary",
     lure:"Legendary Test Lure",
     technique:"Testing",
-    lake:legendary.lake,
-    spot:legendary.spot,
+    lake:legend.lake,
+    spot:legend.spot,
     spotType:"",
     depth:20,
-    legendaryId:legendary.id,
-    legendaryName:legendary.name
+    legendaryId:legend.id,
+    legendaryName:legend.name
   };
 
   recordFish(fish);
@@ -3596,11 +4084,15 @@ function debugCatchLegendary(){
 }
 
 function buildDeveloperTools(){
-  const careerPage=document.getElementById("page-career");
+  const careerPage=
+    document.getElementById("page-career");
 
-  if(document.getElementById("developerTools"))return;
+  if(document.getElementById("developerTools")){
+    return;
+  }
 
-  const dev=document.createElement("div");
+  const dev=
+    document.createElement("div");
 
   dev.className="card";
   dev.id="developerTools";
@@ -3610,7 +4102,9 @@ function buildDeveloperTools(){
     <div class="row spread wrap">
       <div>
         <h2 style="margin-bottom:3px">Developer Tools</h2>
-        <div class="small muted">Testing controls for Tournament Trail development.</div>
+        <div class="small muted">
+          Testing controls for Tournament Trail development.
+        </div>
       </div>
 
       <div class="btn-row">
@@ -3651,7 +4145,7 @@ function init(){
     buildSeasonSchedule();
   }
 
-  game.version=4;
+  game.version=5;
 
   populateFishingSelectors();
   buildDeveloperTools();
