@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Tournament Trail — Fish. Qualify. Climb the ranks.</title>
 
 <style>
@@ -18,6 +18,7 @@
   --gold:#e0b85b;
   --red:#df6666;
   --blue:#4aa6d8;
+  --purple:#ac83e6;
   --shadow:0 12px 30px rgba(0,0,0,.3);
 }
 
@@ -25,13 +26,13 @@
 
 body{
   margin:0;
+  min-height:100vh;
+  color:var(--text);
+  font-family:Inter,Segoe UI,Arial,sans-serif;
   background:
     radial-gradient(circle at top left,rgba(51,110,101,.15),transparent 30%),
     radial-gradient(circle at top right,rgba(27,83,113,.12),transparent 30%),
     var(--bg);
-  color:var(--text);
-  font-family:Inter,Segoe UI,Arial,sans-serif;
-  min-height:100vh;
 }
 
 button,select,input{font:inherit}
@@ -56,6 +57,7 @@ button:disabled{opacity:.4;cursor:not-allowed}
 button.primary{background:linear-gradient(135deg,#2c8e57,#3fac68);border-color:#56c97d}
 button.danger{background:#632e34;border-color:#94464e}
 button.blue{background:#174e69;border-color:#2e779a}
+button.gold{background:#70571c;border-color:#9b7d31}
 
 select,input{
   width:100%;
@@ -117,8 +119,8 @@ header{
 }
 
 .top-stat small{
-  color:var(--muted);
   display:block;
+  color:var(--muted);
   font-size:10px;
   text-transform:uppercase;
   letter-spacing:.7px;
@@ -133,16 +135,15 @@ header{
 }
 
 nav{
+  padding:15px;
   border-right:1px solid var(--line);
   background:rgba(9,23,27,.72);
-  padding:15px;
 }
 
 .nav-btn{
   width:100%;
   display:flex;
   justify-content:flex-start;
-  align-items:center;
   gap:10px;
   margin-bottom:7px;
   background:transparent;
@@ -157,6 +158,7 @@ nav{
 }
 
 main{min-width:0;padding:18px}
+
 .page{display:none}
 .page.active{display:block}
 
@@ -223,6 +225,7 @@ main{min-width:0;padding:18px}
 .pill.gold{border-color:#806629;background:#3b3017}
 .pill.blue{border-color:#2e6c8b;background:#12334a}
 .pill.red{border-color:#793c42;background:#351a1e}
+.pill.purple{border-color:#745696;background:#2a2038}
 
 .progress{
   height:9px;
@@ -288,7 +291,6 @@ tr.player-row{background:rgba(66,158,96,.1)}
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:8px;
-  width:100%;
 }
 
 .condition{
@@ -307,7 +309,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
 
 .fishing-layout{
   display:grid;
-  grid-template-columns:320px minmax(0,1fr) 330px;
+  grid-template-columns:330px minmax(0,1fr) 340px;
   gap:14px;
 }
 
@@ -443,31 +445,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
 .gear-name{font-weight:800;font-size:15px}
 .equipped{border-color:#4c986b}
 
-.rarity-common{color:#c5d0d0}
-.rarity-uncommon{color:#6fd590}
-.rarity-rare{color:#6cbff2}
-.rarity-epic{color:#c092f0}
-.rarity-legendary{color:#f2c25d}
-
-.fish-trophy{
-  padding:10px;
-  background:#0a171b;
-  border:1px solid #2a4850;
-  border-radius:8px;
-}
-
-.fish-trophy.legendary{
-  border-color:#9c7a2e;
-  background:linear-gradient(135deg,#2f2612,#10191a);
-}
-
-.spot-info-title{
-  font-size:17px;
-  font-weight:800;
-  margin-bottom:3px;
-}
-
-.spot-info-row{
+.spot-info-row,.status-row{
   display:flex;
   justify-content:space-between;
   gap:12px;
@@ -475,8 +453,6 @@ tr.player-row{background:rgba(66,158,96,.1)}
   border-bottom:1px solid rgba(55,86,94,.32);
   font-size:12px;
 }
-
-.spot-info-row:last-child{border-bottom:none}
 
 .spot-species-grid{
   display:grid;
@@ -499,6 +475,75 @@ tr.player-row{background:rgba(66,158,96,.1)}
   border:1px dashed #31515a;
   border-radius:7px;
   margin-top:8px;
+}
+
+.mechanic-box{
+  border:1px solid #2d505a;
+  background:#0a1c21;
+  border-radius:9px;
+  padding:10px;
+  margin-bottom:10px;
+}
+
+.clock{
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:.4px;
+}
+
+.day-badge{
+  font-size:18px;
+  font-weight:900;
+}
+
+.cut-line{
+  border-top:2px dashed #916e32;
+}
+
+.fish-trophy{
+  padding:10px;
+  background:#0a171b;
+  border:1px solid #2a4850;
+  border-radius:8px;
+}
+
+.fish-trophy.legendary{
+  border-color:#9c7a2e;
+  background:linear-gradient(135deg,#2f2612,#10191a);
+}
+
+.achievement{
+  display:flex;
+  gap:10px;
+  border:1px solid #29464e;
+  padding:9px;
+  border-radius:8px;
+  background:#09171b;
+}
+
+.achievement.locked{opacity:.35}
+.achievement-icon{font-size:24px}
+
+.journal-entry{
+  padding:10px;
+  border-bottom:1px solid #28434b;
+}
+
+.sponsor-card{position:relative}
+.sponsor-badge{position:absolute;right:10px;top:10px}
+
+.btn-row{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+}
+
+.empty{
+  color:var(--muted);
+  padding:20px;
+  text-align:center;
+  border:1px dashed #314d55;
+  border-radius:8px;
 }
 
 .notification-wrap{
@@ -536,7 +581,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
 .modal-backdrop.active{display:flex}
 
 .modal{
-  width:min(680px,100%);
+  width:min(760px,100%);
   max-height:88vh;
   overflow:auto;
   background:#0c1d22;
@@ -569,39 +614,9 @@ tr.player-row{background:rgba(66,158,96,.1)}
 .path-level.unlocked{border-color:#4d9768;background:#123120}
 .path-level.current{border-color:#c49d46}
 
-.achievement{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  border:1px solid #29464e;
-  padding:9px;
-  border-radius:8px;
-  background:#09171b;
-}
-
-.achievement.locked{opacity:.35}
-.achievement-icon{font-size:24px}
-
-.journal-entry{
-  padding:10px;
-  border-bottom:1px solid #28434b;
-}
-
-.sponsor-card{position:relative}
-.sponsor-badge{position:absolute;right:10px;top:10px}
-.btn-row{display:flex;gap:7px;flex-wrap:wrap}
-
-.empty{
-  color:var(--muted);
-  padding:20px;
-  text-align:center;
-  border:1px dashed #314d55;
-  border-radius:8px;
-}
-
 @media(max-width:1250px){
-  .fishing-layout{grid-template-columns:280px 1fr}
-  .fishing-layout>.right-fishing{grid-column:1/-1}
+  .fishing-layout{grid-template-columns:290px 1fr}
+  .right-fishing{grid-column:1/-1}
   .grid-4{grid-template-columns:repeat(2,1fr)}
 }
 
@@ -619,7 +634,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
 
   .nav-btn{min-width:max-content;width:auto;margin:0}
   .fishing-layout,.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
-  .condition-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .condition-grid{grid-template-columns:repeat(2,1fr)}
   .career-path{grid-template-columns:repeat(2,1fr)}
   .topbar{align-items:flex-start;flex-direction:column}
   .spot-species-grid{grid-template-columns:1fr}
@@ -668,7 +683,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
   <div class="page-title">
     <div>
       <h1>Tournament Trail Headquarters</h1>
-      <p>Build knowledge, qualify for bigger tours, upgrade your equipment, and become a fishing legend.</p>
+      <p>Build knowledge, qualify for bigger tours, and work your way toward the national stage.</p>
     </div>
   </div>
 
@@ -714,7 +729,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
   <div class="page-title">
     <div>
       <h1>Go Fishing</h1>
-      <p>Read the conditions, choose your water, build a pattern, and execute.</p>
+      <p>Read the lake, adjust to moving fish, and manage your tournament day.</p>
     </div>
   </div>
 
@@ -728,7 +743,16 @@ tr.player-row{background:rgba(66,158,96,.1)}
 
         <div class="form-group"><label>Target Species</label><select id="fishSpeciesSelect"></select></div>
         <div class="form-group"><label>Lake</label><select id="lakeSelect"></select></div>
-        <div class="form-group"><label>Area / Spot</label><select id="spotSelect"></select></div>
+
+        <div class="form-group">
+          <label>Area / Spot</label>
+          <select id="spotSelect"></select>
+        </div>
+
+        <button id="moveBtn" onclick="moveToSelectedSpot()" style="width:100%;margin-bottom:10px">
+          Move to Selected Spot
+        </button>
+
         <div class="form-group"><label>Technique</label><select id="techniqueSelect"></select></div>
         <div class="form-group"><label>Lure / Bait</label><select id="lureSelect"></select></div>
 
@@ -742,6 +766,8 @@ tr.player-row{background:rgba(66,158,96,.1)}
             <option value="48">Very Deep — 40+ ft</option>
           </select>
         </div>
+
+        <div id="speciesMechanics"></div>
 
         <div id="electronicsIntel" class="info-box small"></div>
 
@@ -813,6 +839,13 @@ tr.player-row{background:rgba(66,158,96,.1)}
         <h3>Today's Conditions</h3>
         <div id="fishingConditions"></div>
       </div>
+
+      <br>
+
+      <div class="card">
+        <h3>Current Fish Movement</h3>
+        <div id="movementIntel"></div>
+      </div>
     </div>
 
     <div class="right-fishing">
@@ -820,7 +853,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
         <h2 id="livewellTitle">Today's Catch</h2>
 
         <div class="row spread">
-          <span class="small muted">Total Weight</span>
+          <span class="small muted">Current Day Weight</span>
           <strong id="livewellWeight">0.00 lb</strong>
         </div>
 
@@ -850,7 +883,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
   <div class="page-title">
     <div>
       <h1>Tournament Schedule</h1>
-      <p>Earn your way from open tournaments to the biggest championships in fishing.</p>
+      <p>Practice before the event, qualify through points, survive the cuts, and make the final weigh-in.</p>
     </div>
 
     <button onclick="generateLocalOpen(true)">Generate Local Open</button>
@@ -871,14 +904,14 @@ tr.player-row{background:rgba(66,158,96,.1)}
   <div class="page-title">
     <div>
       <h1>Season Standings</h1>
-      <p>Every species has its own ranking ladder and qualification path.</p>
+      <p>Each species has an independent tournament ladder.</p>
     </div>
   </div>
 
   <div class="row wrap" style="margin-bottom:14px">
-    <button class="species-tab standings-tab active" data-standing-species="Walleye">Walleye</button>
-    <button class="species-tab standings-tab" data-standing-species="Bass">Bass</button>
-    <button class="species-tab standings-tab" data-standing-species="Trout">Trout</button>
+    <button class="species-tab active" data-standing-species="Walleye">Walleye</button>
+    <button class="species-tab" data-standing-species="Bass">Bass</button>
+    <button class="species-tab" data-standing-species="Trout">Trout</button>
   </div>
 
   <div class="grid grid-3">
@@ -892,7 +925,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
   <div class="page-title">
     <div>
       <h1>Gear & Equipment</h1>
-      <p>Better equipment unlocks tactics, information, mobility, and tournament-level capabilities.</p>
+      <p>Boats now affect travel time while rods, reels and electronics influence fishing performance.</p>
     </div>
   </div>
 
@@ -904,7 +937,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
   <div class="page-title">
     <div>
       <h1>Fishing Journal</h1>
-      <p>Your observations turn unknown water into familiar water.</p>
+      <p>Practice and tournament fishing both build lake knowledge and pattern history.</p>
     </div>
   </div>
 
@@ -918,7 +951,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
   <div class="page-title">
     <div>
       <h1>Trophy Room</h1>
-      <p>Personal bests, rare catches, legendary fish, and career records.</p>
+      <p>Personal bests, rare catches and legendary fish.</p>
     </div>
   </div>
 
@@ -935,7 +968,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
   <div class="page-title">
     <div>
       <h1>Sponsorships</h1>
-      <p>Perform on the water, meet sponsor objectives, and build a professional career.</p>
+      <p>Build your reputation and earn professional contracts.</p>
     </div>
   </div>
 
@@ -946,7 +979,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
   <div class="page-title">
     <div>
       <h1>Career & Hall of Fame</h1>
-      <p>Track your rise from unknown angler to tournament legend.</p>
+      <p>Track your rise from local opens to championship fishing.</p>
     </div>
   </div>
 
@@ -990,8 +1023,7 @@ tr.player-row{background:rgba(66,158,96,.1)}
 <div class="modal-backdrop" id="resultModal">
   <div class="modal">
     <div id="resultModalBody"></div>
-
-    <div style="text-align:right;margin-top:15px">
+    <div id="modalButtons" style="text-align:right;margin-top:15px">
       <button class="primary" onclick="closeModal()">Continue</button>
     </div>
   </div>
@@ -1006,7 +1038,7 @@ const SPECIES={
     trophy:10,
     legendaryThreshold:13,
     preferredTemps:[48,68],
-    strategy:"Depth, bottom structure, trolling speed, jigging, live bait, crankbaits and electronics.",
+    strategy:"Depth, bottom contact, trolling speed, structure and electronics.",
     techniques:["Jigging","Bottom Bouncer","Trolling","Slip Bobber","Casting Crankbaits"],
     lures:["Jig + Minnow","Jig + Plastic","Crawler Harness","Shad Crankbait","Blade Bait","Live Leech"],
     affinity:{
@@ -1025,7 +1057,7 @@ const SPECIES={
     trophy:7,
     legendaryThreshold:10,
     preferredTemps:[58,78],
-    strategy:"Cover, casting accuracy, presentation, shallow/deep movement and changing weather.",
+    strategy:"Cover, casting target, lure pace, depth changes and weather.",
     techniques:["Power Casting","Pitching Cover","Finesse","Topwater","Deep Cranking"],
     lures:["Spinnerbait","Jig","Worm","Frog","Crankbait","Drop Shot","Swimbait"],
     affinity:{
@@ -1044,7 +1076,7 @@ const SPECIES={
     trophy:6,
     legendaryThreshold:9,
     preferredTemps:[42,63],
-    strategy:"Water temperature, current, light, insect activity, fly or lure selection.",
+    strategy:"Current seams, drift style, presentation, water temperature and light.",
     techniques:["Drift Fishing","Dry Fly","Nymphing","Streamer","Casting Spoon"],
     lures:["Stonefly Nymph","Mayfly Dry","Woolly Bugger","Small Spoon","Rooster Tail","Egg Pattern"],
     affinity:{
@@ -1213,9 +1245,9 @@ const GEAR=[
   {id:"line_braid",category:"Line",name:"20 lb Braid",price:400,rep:15,strength:20,info:"Sensitivity and strength around cover."},
   {id:"line_tourney",category:"Line",name:"Tournament Hybrid",price:900,rep:40,strength:25,info:"High-end tournament line."},
 
-  {id:"boat_john",category:"Boat",name:"14' Utility Boat",price:0,rep:0,mobility:1,info:"Starter fishing boat."},
-  {id:"boat_17",category:"Boat",name:"17' Fishing Rig",price:6500,rep:20,mobility:1.1,info:"Better rough-water mobility."},
-  {id:"boat_pro",category:"Boat",name:"20' Tournament Pro",price:22000,rep:65,mobility:1.22,info:"High-speed tournament boat."},
+  {id:"boat_john",category:"Boat",name:"14' Utility Boat",price:0,rep:0,mobility:1,info:"Starter fishing boat. Slowest travel between areas."},
+  {id:"boat_17",category:"Boat",name:"17' Fishing Rig",price:6500,rep:20,mobility:1.35,info:"Faster travel and better rough-water mobility."},
+  {id:"boat_pro",category:"Boat",name:"20' Tournament Pro",price:22000,rep:65,mobility:1.8,info:"Cuts tournament travel time significantly."},
 
   {id:"motor_basic",category:"Trolling Motor",name:"Cable Steer 55",price:0,rep:0,control:1,info:"Basic boat positioning."},
   {id:"motor_spotlock",category:"Trolling Motor",name:"GPS Spot-Lock 80",price:2800,rep:25,control:1.15,info:"Precision offshore boat control."},
@@ -1256,13 +1288,13 @@ const ACHIEVEMENTS=[
   {id:"national_qualified",icon:"⭐",name:"Going National",text:"Qualify for a National Tour."},
   {id:"major_qualified",icon:"🏅",name:"The Big Stage",text:"Qualify for a major championship."},
   {id:"legendary",icon:"👑",name:"Living Legend",text:"Catch a named legendary fish."},
-  {id:"triple_species",icon:"🎯",name:"Versatile Angler",text:"Win a tournament in Walleye, Bass and Trout."},
+  {id:"triple_species",icon:"🎯",name:"Versatile Angler",text:"Win a tournament in all three species."},
   {id:"champion",icon:"🥇",name:"National Champion",text:"Win a major championship."},
   {id:"millionaire",icon:"💰",name:"Fishing Fortune",text:"Earn $1,000,000."}
 ];
 
 const game={
-  version:5,
+  version:6,
   season:1,
   money:5000,
   reputation:0,
@@ -1282,7 +1314,6 @@ const game={
     Trout:{local:0,state:0,national:0}
   },
 
-  speciesRank:{Walleye:999,Bass:999,Trout:999},
   knowledge:{},
 
   equipped:{
@@ -1311,6 +1342,8 @@ const game={
   currentWeather:null,
   tournamentSchedule:[],
   activeTournament:null,
+  practiceSession:null,
+  practiceCompleted:{},
   freeCatch:[],
 
   settings:{
@@ -1331,10 +1364,11 @@ const runtime={
   fightProgress:0,
   fishStamina:100,
   fightTimer:null,
-  currentPotentialFish:null
+  currentPotentialFish:null,
+  freeSpot:null
 };
 
-function money(n){return "$"+Math.round(n).toLocaleString()}
+function money(n){return"$"+Math.round(n).toLocaleString()}
 function clamp(n,min,max){return Math.max(min,Math.min(max,n))}
 function random(min,max){return Math.random()*(max-min)+min}
 function randomInt(min,max){return Math.floor(random(min,max+1))}
@@ -1373,13 +1407,53 @@ function notify(text,type=""){
   setTimeout(()=>toast.remove(),3500);
 }
 
-function showModal(html){
+function showModal(html,buttons=null){
   document.getElementById("resultModalBody").innerHTML=html;
+
+  document.getElementById("modalButtons").innerHTML=
+    buttons||`<button class="primary" onclick="closeModal()">Continue</button>`;
+
   document.getElementById("resultModal").classList.add("active");
 }
 
 function closeModal(){
   document.getElementById("resultModal").classList.remove("active");
+}
+
+function formatClock(totalMinutes){
+  totalMinutes=Math.round(totalMinutes);
+
+  const hour24=Math.floor(totalMinutes/60)%24;
+  const minute=totalMinutes%60;
+  const suffix=hour24>=12?"PM":"AM";
+  const hour12=hour24%12||12;
+
+  return`${hour12}:${String(minute).padStart(2,"0")} ${suffix}`;
+}
+
+function eventDays(level){
+  return{
+    local:1,
+    state:2,
+    national:3,
+    major:3
+  }[level]||1;
+}
+
+function cutSize(level,completedDay){
+  if(level==="state"&&completedDay===1)return 15;
+
+  if(level==="national"){
+    if(completedDay===1)return 18;
+    if(completedDay===2)return 10;
+  }
+
+  if(level==="major"){
+    if(completedDay===1)return 12;
+    if(completedDay===2)return 6;
+  }
+
+  return null;
 }
 
 function updateHeader(){
@@ -1395,8 +1469,8 @@ function showPage(page){
 
   document.getElementById("page-"+page)?.classList.add("active");
 
-  const navButton=[...document.querySelectorAll(".nav-btn")].find(b=>b.dataset.page===page);
-  navButton?.classList.add("active");
+  const button=[...document.querySelectorAll(".nav-btn")].find(b=>b.dataset.page===page);
+  button?.classList.add("active");
 
   if(page==="dashboard")renderDashboard();
   if(page==="fish")renderFishingPage();
@@ -1437,8 +1511,18 @@ function generateWeather(){
     air,
     water,
     pressure:Number(pressure.toFixed(2)),
-    time:choice(["Early Morning","Morning","Midday","Afternoon","Evening"])
+    time:"Early Morning"
   };
+}
+
+function updateWeatherTimeFromClock(){
+  const minutes=getCurrentMinutes();
+
+  if(minutes<540)game.currentWeather.time="Early Morning";
+  else if(minutes<660)game.currentWeather.time="Morning";
+  else if(minutes<810)game.currentWeather.time="Midday";
+  else if(minutes<960)game.currentWeather.time="Afternoon";
+  else game.currentWeather.time="Evening";
 }
 
 function shiftWeather(){
@@ -1453,13 +1537,6 @@ function shiftWeather(){
   w.air=clamp(w.air+randomInt(-3,3),38,95);
   w.water=clamp(w.water+randomInt(-1,1),40,82);
   w.pressure=Number(clamp(w.pressure+random(-.07,.07),28.95,30.55).toFixed(2));
-
-  const times=["Early Morning","Morning","Midday","Afternoon","Evening"];
-  let ti=times.indexOf(w.time);
-
-  if(Math.random()<.35)ti=Math.min(ti+1,times.length-1);
-
-  w.time=times[ti];
 }
 
 function weatherHTML(){
@@ -1471,14 +1548,14 @@ function weatherHTML(){
       <div class="condition"><small>Water Temperature</small><strong>${w.water}°F</strong></div>
       <div class="condition"><small>Wind</small><strong>${w.wind} mph</strong></div>
       <div class="condition"><small>Cloud Cover</small><strong>${w.clouds}</strong></div>
-      <div class="condition"><small>Barometric Pressure</small><strong>${w.pressure} inHg</strong></div>
-      <div class="condition"><small>Time of Day</small><strong>${w.time}</strong></div>
+      <div class="condition"><small>Pressure</small><strong>${w.pressure} inHg</strong></div>
+      <div class="condition"><small>Time</small><strong>${w.time}</strong></div>
     </div>
   `;
 }
 
 function getKnowledgeKey(lake,spot,species){
-  return `${lake}|${spot}|${species}`;
+  return`${lake}|${spot}|${species}`;
 }
 
 function getKnowledge(lake,spot,species){
@@ -1487,7 +1564,12 @@ function getKnowledge(lake,spot,species){
 
 function addKnowledge(lake,spot,species,amount){
   const key=getKnowledgeKey(lake,spot,species);
-  game.knowledge[key]=clamp((game.knowledge[key]||0)+amount,0,100);
+
+  game.knowledge[key]=clamp(
+    (game.knowledge[key]||0)+amount,
+    0,
+    100
+  );
 }
 
 function knowledgeLabel(value){
@@ -1498,20 +1580,291 @@ function knowledgeLabel(value){
   return"Dialed In";
 }
 
-/* ---------- NEW SPOT INFORMATION SYSTEM ---------- */
+function getCurrentMinutes(){
+  if(game.activeTournament)return game.activeTournament.currentMinutes;
+  if(game.practiceSession)return game.practiceSession.currentMinutes;
+
+  return{
+    "Early Morning":450,
+    "Morning":600,
+    "Midday":750,
+    "Afternoon":870,
+    "Evening":1020
+  }[game.currentWeather.time]||600;
+}
+
+function currentSessionSpot(){
+  if(game.activeTournament)return game.activeTournament.currentSpot;
+  if(game.practiceSession)return game.practiceSession.currentSpot;
+  return runtime.freeSpot;
+}
+
+/* ---------------- SPECIES-SPECIFIC CONTROLS ---------------- */
+
+function renderSpeciesMechanics(){
+  const box=document.getElementById("speciesMechanics");
+  if(!box)return;
+
+  const species=document.getElementById("fishSpeciesSelect").value;
+
+  if(species==="Walleye"){
+    box.innerHTML=`
+      <div class="mechanic-box">
+        <strong>Walleye Presentation</strong>
+
+        <div class="form-group" style="margin-top:8px">
+          <label>Trolling / Retrieve Speed</label>
+          <select id="walleyeSpeed" onchange="updateFishingIntel()">
+            <option value=".8">0.8 mph — Very Slow</option>
+            <option value="1.2" selected>1.2 mph — Slow</option>
+            <option value="1.7">1.7 mph — Moderate</option>
+            <option value="2.3">2.3 mph — Fast</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Bottom Contact</label>
+          <select id="walleyeContact" onchange="updateFishingIntel()">
+            <option value="low">Light Contact</option>
+            <option value="medium" selected>Consistent Contact</option>
+            <option value="high">Heavy Contact</option>
+          </select>
+        </div>
+      </div>
+    `;
+  }
+
+  if(species==="Bass"){
+    box.innerHTML=`
+      <div class="mechanic-box">
+        <strong>Bass Presentation</strong>
+
+        <div class="form-group" style="margin-top:8px">
+          <label>Casting Target</label>
+          <select id="bassTarget" onchange="updateFishingIntel()">
+            <option value="open">Open Water</option>
+            <option value="edge" selected>Cover Edge</option>
+            <option value="tight">Tight to Cover</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Presentation Pace</label>
+          <select id="bassPace" onchange="updateFishingIntel()">
+            <option value="slow">Slow</option>
+            <option value="medium" selected>Medium</option>
+            <option value="fast">Fast / Reaction</option>
+          </select>
+        </div>
+      </div>
+    `;
+  }
+
+  if(species==="Trout"){
+    box.innerHTML=`
+      <div class="mechanic-box">
+        <strong>Trout Presentation</strong>
+
+        <div class="form-group" style="margin-top:8px">
+          <label>Target Water</label>
+          <select id="troutLane" onchange="updateFishingIntel()">
+            <option value="seam" selected>Current Seam</option>
+            <option value="center">Main Current</option>
+            <option value="tailout">Tailout / Soft Water</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Presentation</label>
+          <select id="troutPresentation" onchange="updateFishingIntel()">
+            <option value="dead" selected>Dead Drift</option>
+            <option value="swing">Swing</option>
+            <option value="strip">Strip / Retrieve</option>
+          </select>
+        </div>
+      </div>
+    `;
+  }
+}
+
+function getSpeciesControls(){
+  const species=document.getElementById("fishSpeciesSelect").value;
+
+  if(species==="Walleye"){
+    return{
+      speed:Number(document.getElementById("walleyeSpeed")?.value||1.2),
+      contact:document.getElementById("walleyeContact")?.value||"medium"
+    };
+  }
+
+  if(species==="Bass"){
+    return{
+      target:document.getElementById("bassTarget")?.value||"edge",
+      pace:document.getElementById("bassPace")?.value||"medium"
+    };
+  }
+
+  return{
+    lane:document.getElementById("troutLane")?.value||"seam",
+    presentation:document.getElementById("troutPresentation")?.value||"dead"
+  };
+}
+
+function speciesMechanicFactor(setup){
+  const c=getSpeciesControls();
+  let factor=1;
+  let note="";
+
+  if(setup.species==="Walleye"){
+    if(setup.technique==="Trolling"){
+      if(c.speed>=1.1&&c.speed<=1.8){
+        factor*=1.18;
+        note="Your trolling speed is in a strong walleye range.";
+      }else{
+        factor*=.86;
+        note="Your trolling speed may be too slow or too fast for the current presentation.";
+      }
+    }else if(["Jigging","Bottom Bouncer"].includes(setup.technique)){
+      if(c.contact==="medium"){
+        factor*=1.15;
+        note="Consistent bottom contact is helping you stay in the strike zone.";
+      }else if(c.contact==="high"&&setup.spot.structure==="rock"){
+        factor*=1.08;
+        note="Heavy bottom contact is useful here, but snag risk is higher.";
+      }else{
+        factor*=.92;
+        note="Your bottom contact could be better matched to this technique.";
+      }
+    }else{
+      note="Speed and bottom contact matter less with this presentation.";
+    }
+  }
+
+  if(setup.species==="Bass"){
+    const heavyCover=["vegetation","wood","brush"].includes(setup.spot.structure);
+
+    if(c.target==="tight"&&heavyCover){
+      factor*=1.22;
+      note="Accurate casts tight to cover are putting your bait in high-percentage water.";
+    }else if(c.target==="tight"&&!heavyCover){
+      factor*=.9;
+      note="There is not enough heavy cover here to fully benefit from tight casting.";
+    }else if(c.target==="edge"&&["Weed Line","Rocky Point","Offshore Hump"].includes(setup.spot.type)){
+      factor*=1.14;
+      note="Working the edge matches this area well.";
+    }
+
+    if(c.pace==="fast"&&["Overcast","Storm Building"].includes(game.currentWeather.clouds)){
+      factor*=1.1;
+      note+=" Fast reaction presentations fit the conditions.";
+    }
+
+    if(c.pace==="slow"&&game.currentWeather.clouds==="Clear"){
+      factor*=1.08;
+      note+=" Slower presentation helps under brighter conditions.";
+    }
+  }
+
+  if(setup.species==="Trout"){
+    if(c.lane==="seam"&&["River Section","Creek Mouth"].includes(setup.spot.type)){
+      factor*=1.2;
+      note="The current seam is a prime feeding lane.";
+    }else if(c.lane==="center"&&setup.spot.type==="River Section"){
+      factor*=1.05;
+      note="Main current can produce, but presentation control is harder.";
+    }
+
+    if(["Drift Fishing","Dry Fly","Nymphing"].includes(setup.technique)&&c.presentation==="dead"){
+      factor*=1.15;
+      note+=" A natural dead drift matches this technique.";
+    }
+
+    if(setup.technique==="Streamer"&&["swing","strip"].includes(c.presentation)){
+      factor*=1.18;
+      note+=" The active streamer presentation is a good match.";
+    }
+  }
+
+  return{factor,note:note.trim()};
+}
+
+/* ---------------- FISH MOVEMENT ---------------- */
+
+function fishMovement(setup){
+  const minutes=getCurrentMinutes();
+  const early=minutes<600;
+  const midday=minutes>=660&&minutes<840;
+  const late=minutes>=900;
+
+  let factor=1;
+  let text="Fish are holding in a neutral pattern.";
+
+  if(setup.species==="Walleye"){
+    if((early||late)&&["Shallow Bay","Weed Line","Rocky Point","Creek Mouth"].includes(setup.spot.type)){
+      factor*=1.25;
+      text="Low light has walleye sliding toward shallower structure and feeding edges.";
+    }
+
+    if(midday&&["Deep Channel","Offshore Hump"].includes(setup.spot.type)){
+      factor*=1.28;
+      text="Midday light is pushing walleye toward deeper structure.";
+    }
+
+    if(["Overcast","Storm Building","Rain"].includes(game.currentWeather.clouds)&&["Rocky Point","Shallow Bay","Weed Line"].includes(setup.spot.type)){
+      factor*=1.13;
+      text="Cloud cover is keeping walleye active shallower than normal.";
+    }
+  }
+
+  if(setup.species==="Bass"){
+    if((early||late)&&["Shallow Bay","Weed Line","Creek Mouth"].includes(setup.spot.type)){
+      factor*=1.22;
+      text="Bass are using shallow cover during the lower-light period.";
+    }
+
+    if(midday&&["Offshore Hump","Deep Channel","Rocky Point"].includes(setup.spot.type)){
+      factor*=1.18;
+      text="Some bass are sliding deeper as the day brightens.";
+    }
+
+    if(["Overcast","Storm Building"].includes(game.currentWeather.clouds)&&["Shallow Bay","Weed Line"].includes(setup.spot.type)){
+      factor*=1.15;
+      text="Cloud cover is extending the shallow bass bite.";
+    }
+  }
+
+  if(setup.species==="Trout"){
+    if((early||late)&&["River Section","Creek Mouth","Shallow Bay"].includes(setup.spot.type)){
+      factor*=1.22;
+      text="Cooler low-light conditions are increasing shallow trout activity.";
+    }
+
+    if(midday&&game.currentWeather.water>60&&["Deep Channel","Rocky Point"].includes(setup.spot.type)){
+      factor*=1.2;
+      text="Warmer midday conditions are moving trout toward cooler, deeper holding water.";
+    }
+
+    if(["River Section","Creek Mouth"].includes(setup.spot.type)){
+      factor*=1.1;
+      text+=" Current continues to concentrate food and feeding lanes.";
+    }
+  }
+
+  return{factor,text};
+}
 
 function habitatLabel(multiplier){
-  if(multiplier>=1.4)return{label:"Excellent",className:"good"};
-  if(multiplier>=1.2)return{label:"Strong",className:"good"};
-  if(multiplier>=1)return{label:"Good",className:""};
-  if(multiplier>=.8)return{label:"Fair",className:""};
-  return{label:"Weak",className:"bad"};
+  if(multiplier>=1.4)return["Excellent","good"];
+  if(multiplier>=1.2)return["Strong","good"];
+  if(multiplier>=1)return["Good",""];
+  if(multiplier>=.8)return["Fair",""];
+  return["Weak","bad"];
 }
 
 function spotTechniques(species,spotType){
   return Object.entries(SPECIES[species].affinity)
-    .filter(([technique,types])=>types.includes(spotType))
-    .map(([technique])=>technique);
+    .filter(([name,types])=>types.includes(spotType))
+    .map(([name])=>name);
 }
 
 function mostCommonValue(items,key){
@@ -1521,93 +1874,12 @@ function mostCommonValue(items,key){
 
   items.forEach(item=>{
     const value=item[key];
-    if(value===undefined||value===null)return;
-
-    counts[value]=(counts[value]||0)+1;
+    if(value!==undefined&&value!==null){
+      counts[value]=(counts[value]||0)+1;
+    }
   });
 
-  const entries=Object.entries(counts);
-
-  if(!entries.length)return null;
-
-  entries.sort((a,b)=>b[1]-a[1]);
-
-  return entries[0][0];
-}
-
-function getSpotConditionTip(setup){
-  const type=setup.spot.type;
-  const structure=setup.spot.structure;
-
-  if(setup.species==="Walleye"){
-    if(type==="Deep Channel"){
-      return "This area tends to become more useful during bright midday periods when walleye slide deeper.";
-    }
-
-    if(type==="Offshore Hump"){
-      return "Wind across the structure can concentrate bait. Jigging, bottom bouncing and trolling can all become useful.";
-    }
-
-    if(type==="Rocky Point"){
-      return "Wind pushing into the point can improve feeding activity, especially in low light.";
-    }
-
-    if(type==="Weed Line"){
-      return "Early morning and evening can bring walleye onto the outside weed edge.";
-    }
-
-    if(type==="Creek Mouth"){
-      return "Current and incoming bait can pull active walleye toward this area.";
-    }
-
-    return "Shallow walleye movement usually improves during low light, wind or cloud cover.";
-  }
-
-  if(setup.species==="Bass"){
-    if(["vegetation","wood","brush"].includes(structure)){
-      return "Accurate casts around cover are important here. Low light and warm water can increase shallow activity.";
-    }
-
-    if(type==="Offshore Hump"){
-      return "This becomes more important when bass leave shallow cover and move offshore.";
-    }
-
-    if(type==="Deep Channel"){
-      return "Deeper bass may use channel edges during bright conditions or temperature extremes.";
-    }
-
-    if(type==="Rocky Point"){
-      return "Wind can push baitfish onto the point and trigger more aggressive bass.";
-    }
-
-    if(type==="Creek Mouth"){
-      return "Moving water and baitfish movement can make this a transition zone for bass.";
-    }
-
-    return "Shallow bass can become aggressive during morning, evening or cloudy conditions.";
-  }
-
-  if(setup.species==="Trout"){
-    if(type==="River Section"){
-      return "Current seams and feeding lanes are the key here. Presentation and drift quality matter heavily.";
-    }
-
-    if(type==="Creek Mouth"){
-      return "Cool incoming water and drifting food can make this a high-value trout feeding area.";
-    }
-
-    if(type==="Deep Channel"){
-      return "Trout may use deeper water when sunlight increases or surface temperatures rise.";
-    }
-
-    if(type==="Rocky Point"){
-      return "Broken current and rocky structure can create holding water and ambush positions.";
-    }
-
-    return "Cool water, low light and active insect movement generally improve trout activity here.";
-  }
-
-  return "Conditions can change how fish use this area throughout the day.";
+  return Object.entries(counts).sort((a,b)=>b[1]-a[1])[0]?.[0]||null;
 }
 
 function renderSpotInformation(){
@@ -1616,44 +1888,28 @@ function renderSpotInformation(){
 
   const setup=getCurrentFishingSetup();
 
-  if(!setup.lake||!setup.spot){
-    box.innerHTML=`<div class="empty">Select a lake and fishing area.</div>`;
+  if(!setup.spot){
+    box.innerHTML=`<div class="empty">Select a fishing area.</div>`;
     return;
   }
 
   const knowledge=getKnowledge(setup.lake,setup.spot.name,setup.species);
 
   let html=`
-    <div class="spot-info-title">${setup.spot.name}</div>
-    <div class="small muted">${setup.lake}</div>
+    <strong>${setup.spot.name}</strong>
+    <div class="small muted">${setup.spot.type}</div>
 
     <hr class="divider">
 
-    <div class="spot-info-row">
-      <span class="muted">Area Type</span>
-      <strong>${setup.spot.type}</strong>
-    </div>
-
-    <div class="spot-info-row">
-      <span class="muted">Depth Range</span>
-      <strong>${setup.spot.depth[0]}-${setup.spot.depth[1]} ft</strong>
-    </div>
-
-    <div class="spot-info-row">
-      <span class="muted">Structure</span>
-      <strong>${capitalize(setup.spot.structure)}</strong>
-    </div>
-
-    <div class="spot-info-row">
-      <span class="muted">Knowledge</span>
-      <strong>${knowledgeLabel(knowledge)} • ${Math.round(knowledge)}%</strong>
-    </div>
+    <div class="spot-info-row"><span>Depth</span><strong>${setup.spot.depth[0]}-${setup.spot.depth[1]} ft</strong></div>
+    <div class="spot-info-row"><span>Structure</span><strong>${capitalize(setup.spot.structure)}</strong></div>
+    <div class="spot-info-row"><span>Knowledge</span><strong>${knowledgeLabel(knowledge)} • ${Math.round(knowledge)}%</strong></div>
   `;
 
   if(knowledge<10){
     html+=`
       <div class="knowledge-lock small muted">
-        Fish this area more to learn which species and techniques work best here.
+        Fish this area more to identify its strengths.
       </div>
     `;
 
@@ -1663,7 +1919,8 @@ function renderSpotInformation(){
 
   html+=`
     <hr class="divider">
-    <strong class="small">Known Species Potential</strong>
+
+    <strong class="small">Species Potential</strong>
 
     <div class="spot-species-grid">
       ${Object.keys(SPECIES).map(species=>{
@@ -1673,154 +1930,80 @@ function renderSpotInformation(){
           return`
             <div class="spot-species">
               <strong>${species}</strong>
-              <div class="tiny muted">Not normally present</div>
+              <div class="tiny muted">Not Present</div>
             </div>
           `;
         }
 
-        const rating=habitatLabel(multiplier);
+        const[label,className]=habitatLabel(multiplier);
 
         return`
           <div class="spot-species">
             <strong>${species}</strong>
-            <div class="tiny ${rating.className}">${rating.label}</div>
+            <div class="tiny ${className}">${label}</div>
           </div>
         `;
       }).join("")}
     </div>
   `;
 
-  if(knowledge<25){
-    html+=`
-      <div class="knowledge-lock small muted">
-        Reach 25% knowledge to begin identifying productive techniques.
-      </div>
-    `;
-
-    box.innerHTML=html;
-    return;
-  }
-
-  const techniques=spotTechniques(setup.species,setup.spot.type);
-
-  html+=`
-    <hr class="divider">
-
-    <div class="small">
-      <strong>Best Known Techniques</strong><br>
-      <span class="muted">
-        ${techniques.length?techniques.join(" • "):"No strong technique pattern identified yet."}
-      </span>
-    </div>
-  `;
-
-  if(knowledge<50){
-    html+=`
-      <div class="knowledge-lock small muted">
-        Reach 50% knowledge to unlock condition-specific spot guidance.
-      </div>
-    `;
-
-    box.innerHTML=html;
-    return;
-  }
-
-  html+=`
-    <hr class="divider">
-
-    <div class="small">
-      <strong>How Conditions Affect This Spot</strong>
-      <div class="muted" style="margin-top:4px">
-        ${getSpotConditionTip(setup)}
-      </div>
-    </div>
-  `;
-
-  if(knowledge<75){
-    html+=`
-      <div class="knowledge-lock small muted">
-        Reach 75% knowledge to unlock your detailed catch history for this spot.
-      </div>
-    `;
-
-    box.innerHTML=html;
-    return;
-  }
-
-  const history=game.journal.filter(entry=>
-    entry.lake===setup.lake&&
-    entry.spot===setup.spot.name&&
-    entry.species===setup.species
-  );
-
-  if(!history.length){
-    html+=`
-      <hr class="divider">
-
-      <div class="small muted">
-        You understand this area well, but you do not yet have landed-fish history for ${setup.species} here.
-      </div>
-    `;
-  }else{
-    const averageWeight=
-      history.reduce((sum,entry)=>sum+entry.weight,0)/history.length;
-
-    const averageDepth=
-      history.reduce((sum,entry)=>sum+Number(entry.depth||0),0)/history.length;
-
-    const bestFish=
-      history.reduce((best,entry)=>entry.weight>best.weight?entry:best,history[0]);
-
-    const bestLure=mostCommonValue(history,"lure");
-    const bestTechnique=mostCommonValue(history,"technique");
-    const bestWeather=mostCommonValue(history,"weather");
+  if(knowledge>=25){
+    const techniques=spotTechniques(setup.species,setup.spot.type);
 
     html+=`
       <hr class="divider">
 
-      <strong class="small">Your Spot History</strong>
-
-      <div class="spot-info-row">
-        <span class="muted">Fish Landed</span>
-        <strong>${history.length}</strong>
-      </div>
-
-      <div class="spot-info-row">
-        <span class="muted">Average Weight</span>
-        <strong>${averageWeight.toFixed(2)} lb</strong>
-      </div>
-
-      <div class="spot-info-row">
-        <span class="muted">Largest Fish</span>
-        <strong>${bestFish.weight.toFixed(2)} lb</strong>
-      </div>
-
-      <div class="spot-info-row">
-        <span class="muted">Average Productive Depth</span>
-        <strong>${averageDepth.toFixed(1)} ft</strong>
-      </div>
-
-      <div class="spot-info-row">
-        <span class="muted">Most Productive Technique</span>
-        <strong>${bestTechnique||"Unknown"}</strong>
-      </div>
-
-      <div class="spot-info-row">
-        <span class="muted">Most Productive Lure</span>
-        <strong>${bestLure||"Unknown"}</strong>
-      </div>
-
-      <div class="spot-info-row">
-        <span class="muted">Common Productive Weather</span>
-        <strong>${bestWeather||"Unknown"}</strong>
+      <div class="small">
+        <strong>Best Known Techniques</strong><br>
+        <span class="muted">${techniques.length?techniques.join(" • "):"No strong technique pattern yet."}</span>
       </div>
     `;
+  }
+
+  if(knowledge>=50){
+    const movement=fishMovement(setup);
+
+    html+=`
+      <hr class="divider">
+
+      <div class="small">
+        <strong>Current Movement Read</strong>
+        <div class="muted" style="margin-top:4px">${movement.text}</div>
+      </div>
+    `;
+  }
+
+  if(knowledge>=75){
+    const history=game.journal.filter(entry=>
+      entry.lake===setup.lake&&
+      entry.spot===setup.spot.name&&
+      entry.species===setup.species
+    );
+
+    if(history.length){
+      const avg=history.reduce((s,x)=>s+x.weight,0)/history.length;
+      const best=history.reduce((a,b)=>a.weight>b.weight?a:b);
+      const lure=mostCommonValue(history,"lure");
+      const technique=mostCommonValue(history,"technique");
+
+      html+=`
+        <hr class="divider">
+
+        <strong class="small">Your History</strong>
+
+        <div class="spot-info-row"><span>Fish Landed</span><strong>${history.length}</strong></div>
+        <div class="spot-info-row"><span>Average Weight</span><strong>${avg.toFixed(2)} lb</strong></div>
+        <div class="spot-info-row"><span>Best Fish</span><strong>${best.weight.toFixed(2)} lb</strong></div>
+        <div class="spot-info-row"><span>Top Technique</span><strong>${technique||"Unknown"}</strong></div>
+        <div class="spot-info-row"><span>Top Lure</span><strong>${lure||"Unknown"}</strong></div>
+      `;
+    }
   }
 
   box.innerHTML=html;
 }
 
-/* ---------- END NEW SPOT INFORMATION SYSTEM ---------- */
+/* ---------------- TOURNAMENT SYSTEM ---------------- */
 
 function tournamentLevelUnlocked(species,level){
   const s=game.standings[species];
@@ -1845,13 +2028,13 @@ function qualificationText(species,level){
 }
 
 function eventName(species,level){
-  const localNames={
+  const locals={
     Walleye:["Granite Lake Walleye Open","Prairie Gold Walleye Shootout","Timber Wolf Walleye Classic","Red Rock Walleye Open"],
     Bass:["Granite Bass Open","Cypress Lake Bass Shootout","Willow Bend Bass Classic","Blackwater Big Bass Open"],
     Trout:["Clear Fork Trout Open","Mountain Trout Challenge","Coldwater Classic","River Trout Invitational"]
   };
 
-  if(level==="local")return choice(localNames[species]);
+  if(level==="local")return choice(locals[species]);
 
   if(level==="state"){
     if(species==="Walleye")return"Walleye State Tour";
@@ -1882,30 +2065,28 @@ function tournamentFee(level){
   }[level];
 }
 
-function tournamentCasts(level){
-  return{local:10,state:14,national:18,major:24}[level];
-}
-
 function chooseTournamentLake(species,level){
   if(level==="major")return"Championship Waters";
 
-  const lakes=Object.entries(LAKES)
+  const available=Object.entries(LAKES)
     .filter(([name,lake])=>lake.species.includes(species))
     .filter(([name,lake])=>game.reputation>=lake.unlockRep)
     .filter(([name])=>name!=="Championship Waters")
     .map(([name])=>name);
 
-  return choice(lakes);
+  return choice(available);
 }
 
 function createTournament(species,level){
+  const lake=chooseTournamentLake(species,level);
+
   let format="Five Fish";
 
   if(level==="local"){
     format=weightedChoice([
-      {value:"Five Fish",weight:60},
+      {value:"Five Fish",weight:65},
       {value:"Big Fish",weight:25},
-      {value:"Multi-Species",weight:15}
+      {value:"Multi-Species",weight:10}
     ]);
   }
 
@@ -1914,11 +2095,11 @@ function createTournament(species,level){
     species,
     level,
     name:eventName(species,level),
-    lake:chooseTournamentLake(species,level),
+    lake,
     format,
     fee:tournamentFee(level),
     prize:tournamentPrize(level),
-    casts:tournamentCasts(level),
+    days:eventDays(level),
     completed:false,
     season:game.season
   };
@@ -1970,11 +2151,122 @@ function createTournamentAI(event){
   return AI_NAMES.slice().sort(()=>Math.random()-.5).map(name=>({
     name,
     skill:.72+Math.random()*.42+bonus,
-    fish:[],
-    weight:0,
+    eliminated:false,
+    totalWeight:0,
+    dayWeight:0,
+    dayWeights:[],
+    dayFish:[],
     bigFish:0
   }));
 }
+
+/* ---------------- PRACTICE ---------------- */
+
+function startPractice(id){
+  if(game.activeTournament||game.practiceSession){
+    notify("Finish your current fishing session first.","bad");
+    return;
+  }
+
+  const event=game.tournamentSchedule.find(e=>e.id===id);
+
+  if(!event||event.completed)return;
+
+  if(!tournamentLevelUnlocked(event.species,event.level)){
+    notify("You must qualify for the event before official practice.","bad");
+    return;
+  }
+
+  if(game.practiceCompleted[event.id]){
+    notify("You already completed your official practice for this event.","bad");
+    return;
+  }
+
+  const firstSpot=LAKES[event.lake].spots[0].name;
+
+  game.practiceSession={
+    eventId:event.id,
+    name:event.name,
+    species:event.species,
+    lake:event.lake,
+    currentMinutes:360,
+    endMinutes:720,
+    castsRemaining:8,
+    currentSpot:firstSpot,
+    catches:[],
+    visited:{[firstSpot]:1}
+  };
+
+  generateWeather();
+  updateWeatherTimeFromClock();
+
+  addFeed(`Started practice for ${event.name}.`);
+
+  saveGame();
+  showPage("fish");
+}
+
+function endPractice(manual=false){
+  const p=game.practiceSession;
+  if(!p)return;
+
+  game.practiceCompleted[p.eventId]=true;
+
+  const catches=p.catches||[];
+
+  let summary=`
+    <div style="text-align:center">
+      <div style="font-size:42px">📝</div>
+      <h2>Practice Complete</h2>
+      <p>${p.name}</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="grid grid-3">
+      <div>
+        <div class="stat-value">${catches.length}</div>
+        <div class="stat-label">Fish Landed</div>
+      </div>
+
+      <div>
+        <div class="stat-value">${Object.keys(p.visited||{}).length}</div>
+        <div class="stat-label">Areas Visited</div>
+      </div>
+
+      <div>
+        <div class="stat-value">${formatClock(p.currentMinutes)}</div>
+        <div class="stat-label">Practice Ended</div>
+      </div>
+    </div>
+  `;
+
+  if(catches.length){
+    const best=catches.reduce((a,b)=>a.weight>b.weight?a:b);
+
+    summary+=`
+      <hr class="divider">
+
+      <div class="info-box">
+        <strong>Best Practice Fish:</strong>
+        ${best.weight.toFixed(2)} lb ${best.species}<br>
+        ${best.spot} • ${best.lure}
+      </div>
+    `;
+  }
+
+  addFeed(`Completed practice for ${p.name}.`);
+
+  game.practiceSession=null;
+
+  resetFishingControl();
+  saveGame();
+  renderFishingPage();
+
+  showModal(summary);
+}
+
+/* ---------------- DASHBOARD ---------------- */
 
 function getCareerTitle(){
   if(game.majorWins>=3)return"Tournament Legend";
@@ -1995,7 +2287,7 @@ function renderDashboard(){
   document.getElementById("careerStatusText").textContent=
     game.majorWins>0
       ?"You have reached the biggest stage in tournament fishing."
-      :"Build points in each species to unlock State, National and Championship competition.";
+      :"Build points, learn lakes, practice before events and work your way through the tournament ladder.";
 
   document.getElementById("heroSeason").textContent=game.season;
   document.getElementById("dashEarnings").textContent=money(game.careerEarnings);
@@ -2023,10 +2315,10 @@ function renderDashboard(){
 
           <hr class="divider">
 
-          <div class="row spread small"><span>Local Points</span><strong>${s.local}</strong></div>
-          <div class="row spread small"><span>State Points</span><strong>${s.state}</strong></div>
-          <div class="row spread small"><span>National Points</span><strong>${s.national}</strong></div>
-          <div class="row spread small"><span>Wins</span><strong>${game.speciesWins[species]}</strong></div>
+          <div class="status-row"><span>Local Points</span><strong>${s.local}</strong></div>
+          <div class="status-row"><span>State Points</span><strong>${s.state}</strong></div>
+          <div class="status-row"><span>National Points</span><strong>${s.national}</strong></div>
+          <div class="status-row"><span>Wins</span><strong>${game.speciesWins[species]}</strong></div>
         </div>
       `;
     }).join("");
@@ -2039,8 +2331,11 @@ function renderDashboard(){
         <div class="row spread" style="padding:7px 0;border-bottom:1px solid #29424a">
           <div>
             <strong>${e.name}</strong>
-            <div class="small muted">${e.lake} • ${capitalize(e.level)} • ${e.format}</div>
+            <div class="small muted">
+              ${e.lake} • ${capitalize(e.level)} • ${e.days||eventDays(e.level)} Day${(e.days||eventDays(e.level))>1?"s":""}
+            </div>
           </div>
+
           <span>${money(e.fee)}</span>
         </div>
       `).join("")
@@ -2048,7 +2343,7 @@ function renderDashboard(){
 
   document.getElementById("careerFeed").innerHTML=
     game.feed.length
-      ?game.feed.slice(0,8).map(entry=>`<div class="journal-entry small">${entry}</div>`).join("")
+      ?game.feed.slice(0,8).map(x=>`<div class="journal-entry small">${x}</div>`).join("")
       :`<div class="empty">Your career story starts here.</div>`;
 
   document.getElementById("dashboardWeather").innerHTML=weatherHTML();
@@ -2056,34 +2351,63 @@ function renderDashboard(){
   document.getElementById("dashboardGear").innerHTML=
     ["Rod","Reel","Line","Boat","Trolling Motor","Electronics"].map(category=>{
       const gear=equipped(category);
-      return`<div class="row spread small" style="padding:5px 0"><span>${category}</span><strong>${gear.name}</strong></div>`;
+
+      return`
+        <div class="row spread small" style="padding:5px 0">
+          <span>${category}</span>
+          <strong>${gear.name}</strong>
+        </div>
+      `;
     }).join("");
 }
+
+/* ---------------- FISHING SELECTION ---------------- */
 
 function populateFishingSelectors(){
   const speciesSelect=document.getElementById("fishSpeciesSelect");
 
   if(!speciesSelect.options.length){
-    speciesSelect.innerHTML=["Walleye","Bass","Trout"].map(species=>`<option>${species}</option>`).join("");
+    speciesSelect.innerHTML=["Walleye","Bass","Trout"].map(s=>`<option>${s}</option>`).join("");
   }
 
-  const selectedSpecies=speciesSelect.value||"Walleye";
+  if(game.activeTournament){
+    speciesSelect.value=game.activeTournament.species;
+  }
+
+  if(game.practiceSession){
+    speciesSelect.value=game.practiceSession.species;
+  }
+
+  const species=speciesSelect.value||"Walleye";
   const lakeSelect=document.getElementById("lakeSelect");
 
-  const validLakes=Object.entries(LAKES)
-    .filter(([name,lake])=>lake.species.includes(selectedSpecies))
-    .filter(([name,lake])=>game.reputation>=lake.unlockRep)
-    .map(([name])=>name);
+  if(game.activeTournament){
+    lakeSelect.innerHTML=`<option>${game.activeTournament.lake}</option>`;
+    lakeSelect.value=game.activeTournament.lake;
+  }else if(game.practiceSession){
+    lakeSelect.innerHTML=`<option>${game.practiceSession.lake}</option>`;
+    lakeSelect.value=game.practiceSession.lake;
+  }else{
+    const valid=Object.entries(LAKES)
+      .filter(([name,lake])=>lake.species.includes(species))
+      .filter(([name,lake])=>game.reputation>=lake.unlockRep)
+      .map(([name])=>name);
 
-  const oldLake=lakeSelect.value;
+    const old=lakeSelect.value;
 
-  lakeSelect.innerHTML=validLakes.map(name=>`<option>${name}</option>`).join("");
+    lakeSelect.innerHTML=valid.map(name=>`<option>${name}</option>`).join("");
 
-  if(validLakes.includes(oldLake))lakeSelect.value=oldLake;
+    if(valid.includes(old))lakeSelect.value=old;
+  }
 
   populateSpotSelector();
   populateTechniqueSelector();
   populateLureSelector();
+  renderSpeciesMechanics();
+
+  if(!runtime.freeSpot&&!game.activeTournament&&!game.practiceSession){
+    runtime.freeSpot=document.getElementById("spotSelect").value;
+  }
 }
 
 function populateSpotSelector(){
@@ -2093,11 +2417,18 @@ function populateSpotSelector(){
   if(!lake)return;
 
   const select=document.getElementById("spotSelect");
-  const old=select.value;
 
-  select.innerHTML=lake.spots.map(spot=>`<option>${spot.name}</option>`).join("");
+  const desired=
+    game.activeTournament?.currentSpot||
+    game.practiceSession?.currentSpot||
+    runtime.freeSpot||
+    select.value;
 
-  if(lake.spots.some(spot=>spot.name===old))select.value=old;
+  select.innerHTML=lake.spots.map(s=>`<option>${s.name}</option>`).join("");
+
+  if(lake.spots.some(s=>s.name===desired)){
+    select.value=desired;
+  }
 }
 
 function populateTechniqueSelector(){
@@ -2105,9 +2436,11 @@ function populateTechniqueSelector(){
   const select=document.getElementById("techniqueSelect");
   const old=select.value;
 
-  select.innerHTML=SPECIES[species].techniques.map(x=>`<option>${x}</option>`).join("");
+  select.innerHTML=SPECIES[species].techniques.map(t=>`<option>${t}</option>`).join("");
 
-  if(SPECIES[species].techniques.includes(old))select.value=old;
+  if(SPECIES[species].techniques.includes(old)){
+    select.value=old;
+  }
 }
 
 function populateLureSelector(){
@@ -2115,9 +2448,11 @@ function populateLureSelector(){
   const select=document.getElementById("lureSelect");
   const old=select.value;
 
-  select.innerHTML=SPECIES[species].lures.map(x=>`<option>${x}</option>`).join("");
+  select.innerHTML=SPECIES[species].lures.map(l=>`<option>${l}</option>`).join("");
 
-  if(SPECIES[species].lures.includes(old))select.value=old;
+  if(SPECIES[species].lures.includes(old)){
+    select.value=old;
+  }
 }
 
 document.getElementById("fishSpeciesSelect").addEventListener("change",()=>{
@@ -2126,6 +2461,7 @@ document.getElementById("fishSpeciesSelect").addEventListener("change",()=>{
 });
 
 document.getElementById("lakeSelect").addEventListener("change",()=>{
+  runtime.freeSpot=null;
   populateSpotSelector();
   updateFishingIntel();
 });
@@ -2141,10 +2477,136 @@ function getCurrentFishingSetup(){
   const technique=document.getElementById("techniqueSelect").value;
   const lure=document.getElementById("lureSelect").value;
   const depth=Number(document.getElementById("depthSelect").value);
-  const spot=LAKES[lake]?.spots.find(spot=>spot.name===spotName);
+
+  const spot=LAKES[lake]?.spots.find(s=>s.name===spotName);
 
   return{species,lake,spot,technique,lure,depth};
 }
+
+/* ---------------- TRAVEL ---------------- */
+
+function travelMinutes(lakeName,fromSpot,toSpot){
+  if(!fromSpot||fromSpot===toSpot)return 0;
+
+  const spots=LAKES[lakeName].spots;
+
+  const fromIndex=Math.max(0,spots.findIndex(s=>s.name===fromSpot));
+  const toIndex=Math.max(0,spots.findIndex(s=>s.name===toSpot));
+
+  const distance=Math.abs(fromIndex-toIndex)+1;
+  const base=8+distance*6;
+  const mobility=equipped("Boat").mobility||1;
+
+  return Math.max(4,Math.round(base/mobility));
+}
+
+function advanceSessionTime(minutes){
+  if(game.activeTournament){
+    game.activeTournament.currentMinutes+=minutes;
+
+    updateWeatherTimeFromClock();
+
+    if(Math.random()<minutes/80){
+      shiftWeather();
+    }
+
+    if(game.activeTournament.currentMinutes>=game.activeTournament.endMinutes){
+      game.activeTournament.currentMinutes=game.activeTournament.endMinutes;
+
+      setTimeout(()=>finishTournamentDay(),150);
+    }
+
+    return;
+  }
+
+  if(game.practiceSession){
+    game.practiceSession.currentMinutes+=minutes;
+
+    updateWeatherTimeFromClock();
+
+    if(Math.random()<minutes/80){
+      shiftWeather();
+    }
+
+    if(game.practiceSession.currentMinutes>=game.practiceSession.endMinutes){
+      game.practiceSession.currentMinutes=game.practiceSession.endMinutes;
+
+      setTimeout(()=>endPractice(),150);
+    }
+
+    return;
+  }
+
+  if(Math.random()<.25){
+    shiftWeather();
+  }
+}
+
+function moveToSelectedSpot(){
+  if(runtime.castState!=="idle"){
+    notify("Finish the current cast before moving.","bad");
+    return;
+  }
+
+  const setup=getCurrentFishingSetup();
+  if(!setup.spot)return;
+
+  const desired=setup.spot.name;
+
+  if(game.activeTournament){
+    const current=game.activeTournament.currentSpot;
+
+    if(current===desired){
+      notify("You are already fishing this area.");
+      return;
+    }
+
+    const minutes=travelMinutes(setup.lake,current,desired);
+
+    game.activeTournament.currentSpot=desired;
+
+    advanceSessionTime(minutes);
+
+    document.getElementById("castMessage").textContent=
+      `Ran to ${desired}. Travel took ${minutes} minutes.`;
+
+    renderFishingPage();
+    saveGame();
+    return;
+  }
+
+  if(game.practiceSession){
+    const current=game.practiceSession.currentSpot;
+
+    if(current===desired){
+      notify("You are already fishing this area.");
+      return;
+    }
+
+    const minutes=travelMinutes(setup.lake,current,desired);
+
+    game.practiceSession.currentSpot=desired;
+    game.practiceSession.visited[desired]=(game.practiceSession.visited[desired]||0)+1;
+
+    advanceSessionTime(minutes);
+
+    document.getElementById("castMessage").textContent=
+      `Practice move to ${desired}. Travel took ${minutes} minutes.`;
+
+    renderFishingPage();
+    saveGame();
+    return;
+  }
+
+  runtime.freeSpot=desired;
+
+  document.getElementById("castMessage").textContent=
+    `Moved to ${desired}.`;
+
+  renderFishingPage();
+}
+
+/* ---------------- FISHING INTEL ---------------- */
 
 function updateFishingIntel(){
   const setup=getCurrentFishingSetup();
@@ -2172,12 +2634,12 @@ function updateFishingIntel(){
   if(electronics.level>=4){
     const signal=Math.random();
 
-    if(signal>.66)intel+=`<span class="good">Forward sonar: multiple active fish detected.</span><br>`;
-    else if(signal>.32)intel+=`Forward sonar: scattered targets detected.<br>`;
-    else intel+=`<span class="bad">Forward sonar: very few active targets visible.</span><br>`;
+    if(signal>.66)intel+=`<span class="good">Forward sonar: multiple active targets.</span><br>`;
+    else if(signal>.32)intel+=`Forward sonar: scattered targets.<br>`;
+    else intel+=`<span class="bad">Forward sonar: few active targets.</span><br>`;
   }
 
-  intel+=`Lake knowledge: ${knowledgeLabel(knowledge)} (${Math.round(knowledge)}%).`;
+  intel+=`Knowledge: ${knowledgeLabel(knowledge)} (${Math.round(knowledge)}%).`;
 
   document.getElementById("electronicsIntel").innerHTML=intel;
 
@@ -2192,11 +2654,53 @@ function updateFishingIntel(){
     </div>
 
     <p class="small muted">
-      Fishing this area under different conditions improves your knowledge.
+      Practice, tournament fishing and changing conditions all improve lake knowledge.
     </p>
   `;
 
+  const movement=fishMovement(setup);
+  const speciesRead=speciesMechanicFactor(setup);
+
+  document.getElementById("movementIntel").innerHTML=`
+    <div class="info-box">
+      <strong>${setup.species} Movement</strong><br>
+      <span class="small muted">${movement.text}</span>
+    </div>
+
+    <div class="small">
+      <strong>Presentation Read:</strong><br>
+      <span class="muted">${speciesRead.note||"Your presentation is neutral for the current pattern."}</span>
+    </div>
+  `;
+
   renderSpotInformation();
+  updateMoveButton();
+}
+
+function updateMoveButton(){
+  const setup=getCurrentFishingSetup();
+  const button=document.getElementById("moveBtn");
+
+  if(!setup.spot||!button)return;
+
+  const current=currentSessionSpot();
+
+  if(!current||current===setup.spot.name){
+    button.disabled=true;
+    button.textContent="Currently Fishing This Spot";
+  }else{
+    button.disabled=false;
+
+    const minutes=
+      game.activeTournament||game.practiceSession
+        ?travelMinutes(setup.lake,current,setup.spot.name)
+        :0;
+
+    button.textContent=
+      minutes
+        ?`Move to Spot — ${minutes} min`
+        :"Move to Selected Spot";
+  }
 }
 
 function renderFishingGearSummary(){
@@ -2216,9 +2720,18 @@ function renderFishingGearSummary(){
 function renderFishingPage(){
   updateHeader();
 
-  document.getElementById("fishSpeciesSelect").disabled=false;
+  const speciesSelect=document.getElementById("fishSpeciesSelect");
+
+  speciesSelect.disabled=!!(
+    game.practiceSession||
+    (
+      game.activeTournament&&
+      game.activeTournament.format!=="Multi-Species"
+    )
+  );
 
   populateFishingSelectors();
+
   renderActiveTournamentBanner();
 
   document.getElementById("fishingConditions").innerHTML=weatherHTML();
@@ -2229,71 +2742,95 @@ function renderFishingPage(){
   updateFishingIntel();
 }
 
+/* ---------------- TOURNAMENT/PRACTICE BANNER ---------------- */
+
 function renderActiveTournamentBanner(){
   const box=document.getElementById("activeTournamentBanner");
 
-  if(!game.activeTournament){
+  if(game.practiceSession){
+    const p=game.practiceSession;
+
     box.innerHTML=`
-      <div class="info-box">
-        <strong>Practice Fishing</strong>
-        <div class="small muted">
-          Fish freely, learn lakes, catch trophies and improve your journal.
-        </div>
-      </div>
-    `;
-    return;
-  }
+      <div class="card tournament-card state" style="margin-bottom:14px">
+        <div class="grid grid-4">
+          <div>
+            <span class="pill blue">OFFICIAL PRACTICE</span>
+            <h2 style="margin:8px 0 3px">${p.name}</h2>
+            <div class="small muted">${p.lake}</div>
+          </div>
 
-  const t=game.activeTournament;
+          <div>
+            <div class="clock">${formatClock(p.currentMinutes)}</div>
+            <div class="stat-label">Practice Clock</div>
+          </div>
 
-  box.innerHTML=`
-    <div class="card tournament-card ${t.level}" style="margin-bottom:14px">
-      <div class="row spread wrap">
-        <div>
-          <span class="pill gold">${capitalize(t.level)}</span>
-          <h2 style="margin:7px 0 3px">${t.name}</h2>
-          <div class="small muted">
-            ${t.lake} • ${t.format} • ${t.castsRemaining} casts remaining
+          <div>
+            <div class="stat-value">${p.castsRemaining}</div>
+            <div class="stat-label">Practice Casts Left</div>
+          </div>
+
+          <div>
+            <button class="danger" onclick="endPractice(true)">End Practice</button>
           </div>
         </div>
 
-        <button class="danger" onclick="withdrawTournament()">Withdraw</button>
+        <hr class="divider">
+
+        <div class="small muted">
+          Practice fish build knowledge and records, but earn no reputation and do not count toward tournament standings.
+        </div>
+      </div>
+    `;
+
+    return;
+  }
+
+  if(game.activeTournament){
+    const t=game.activeTournament;
+    const nextCut=cutSize(t.level,t.day);
+
+    box.innerHTML=`
+      <div class="card tournament-card ${t.level}" style="margin-bottom:14px">
+        <div class="grid grid-4">
+          <div>
+            <span class="pill gold">${capitalize(t.level)}</span>
+            <h2 style="margin:8px 0 3px">${t.name}</h2>
+            <div class="small muted">${t.lake} • ${t.format}</div>
+          </div>
+
+          <div>
+            <div class="day-badge">Day ${t.day} of ${t.daysTotal}</div>
+            <div class="stat-label">${nextCut?`Cut to Top ${nextCut} after today`:"Final Day / No Cut"}</div>
+          </div>
+
+          <div>
+            <div class="clock">${formatClock(t.currentMinutes)}</div>
+            <div class="stat-label">Fishing ends ${formatClock(t.endMinutes)}</div>
+          </div>
+
+          <div class="btn-row">
+            <button class="gold" onclick="finishTournamentDay()">Weigh In Early</button>
+            <button class="danger" onclick="withdrawTournament()">Withdraw</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    return;
+  }
+
+  box.innerHTML=`
+    <div class="info-box">
+      <strong>Practice Fishing</strong>
+
+      <div class="small muted">
+        Fish freely, learn lakes and experiment without a tournament clock.
       </div>
     </div>
   `;
-
-  const speciesSelect=document.getElementById("fishSpeciesSelect");
-
-  speciesSelect.value=t.species;
-
-  if(t.format!=="Multi-Species")speciesSelect.disabled=true;
-
-  populateFishingSelectors();
-
-  const lakeSelect=document.getElementById("lakeSelect");
-
-  lakeSelect.innerHTML=`<option>${t.lake}</option>`;
-  lakeSelect.value=t.lake;
-
-  populateSpotSelector();
 }
 
-function resetFishingControl(){
-  runtime.castState="idle";
-  runtime.hookedFish=null;
-  runtime.currentPotentialFish=null;
-  runtime.tension=45;
-  runtime.fightProgress=0;
-
-  clearTimeout(runtime.biteTimer);
-  cancelAnimationFrame(runtime.timingAnimation);
-  clearInterval(runtime.fightTimer);
-
-  document.getElementById("hookBtn").disabled=true;
-  document.getElementById("fightPanel").classList.remove("active");
-  document.getElementById("timingMarker").style.left="0%";
-  document.getElementById("castBtn").disabled=false;
-}
+/* ---------------- FISHING CALCULATIONS ---------------- */
 
 function strategyScore(setup){
   const species=SPECIES[setup.species];
@@ -2317,38 +2854,14 @@ function strategyScore(setup){
 
   score*=weather.water>=tempLow&&weather.water<=tempHigh?1.14:.88;
 
-  if(setup.species==="Walleye"){
-    if(["Overcast","Storm Building","Rain"].includes(weather.clouds))score*=1.14;
-    if(["Early Morning","Evening"].includes(weather.time))score*=1.1;
-    if(setup.technique==="Trolling"&&weather.wind>=8)score*=1.12;
-  }
-
-  if(setup.species==="Bass"){
-    if(weather.water>=62)score*=1.08;
-
-    if(setup.technique==="Topwater"&&["Early Morning","Evening"].includes(weather.time)){
-      score*=1.28;
-    }
-
-    if(setup.technique==="Pitching Cover"&&["vegetation","wood","brush"].includes(setup.spot.structure)){
-      score*=1.22;
-    }
-  }
-
-  if(setup.species==="Trout"){
-    if(weather.water<=60)score*=1.15;
-    if(setup.spot.structure==="current")score*=1.18;
-
-    if(setup.technique==="Dry Fly"&&["Morning","Evening"].includes(weather.time)){
-      score*=1.2;
-    }
-  }
-
   const knowledge=getKnowledge(setup.lake,setup.spot.name,setup.species);
 
   score*=1+knowledge/500;
   score*=equipped("Electronics").intel;
   score*=equipped("Trolling Motor").control;
+
+  score*=speciesMechanicFactor(setup).factor;
+  score*=fishMovement(setup).factor;
 
   return score;
 }
@@ -2415,6 +2928,8 @@ function potentialFish(setup,score){
   };
 }
 
+/* ---------------- CAST / HOOK / FIGHT ---------------- */
+
 function castLine(){
   if(runtime.castState!=="idle")return;
 
@@ -2426,21 +2941,25 @@ function castLine(){
   }
 
   if(game.activeTournament){
-    if(game.activeTournament.castsRemaining<=0){
-      finishTournament();
+    if(game.activeTournament.currentMinutes>=game.activeTournament.endMinutes){
+      finishTournamentDay();
       return;
     }
 
-    if(setup.lake!==game.activeTournament.lake){
-      notify("Tournament competitors must fish the event lake.","bad");
+    if(setup.spot.name!==game.activeTournament.currentSpot){
+      notify("Move to the selected spot before casting.","bad");
+      return;
+    }
+  }
+
+  if(game.practiceSession){
+    if(game.practiceSession.castsRemaining<=0){
+      endPractice();
       return;
     }
 
-    if(
-      game.activeTournament.format!=="Multi-Species"&&
-      setup.species!==game.activeTournament.species
-    ){
-      notify(`This tournament targets ${game.activeTournament.species}.`,"bad");
+    if(setup.spot.name!==game.practiceSession.currentSpot){
+      notify("Move to the selected practice spot before casting.","bad");
       return;
     }
   }
@@ -2453,7 +2972,7 @@ function castLine(){
   addKnowledge(setup.lake,setup.spot.name,setup.species,random(.6,1.5));
 
   const score=strategyScore(setup);
-  const biteChance=clamp(.43*score,.12,.82);
+  const biteChance=clamp(.40*score,.08,.88);
 
   runtime.currentPotentialFish=potentialFish(setup,score);
 
@@ -2461,13 +2980,13 @@ function castLine(){
     if(Math.random()<biteChance){
       beginBite();
     }else{
-      document.getElementById("castMessage").textContent="No bite. That cast didn't produce.";
+      document.getElementById("castMessage").textContent="No bite. That presentation didn't produce.";
 
       completeCast();
 
       setTimeout(()=>{
         resetFishingControl();
-        document.getElementById("castMessage").textContent="Adjust or make another cast.";
+        document.getElementById("castMessage").textContent="Change the pattern or make another cast.";
       },800);
     }
   },randomInt(700,1900));
@@ -2527,7 +3046,7 @@ function attemptHookSet(){
     setTimeout(()=>{
       resetFishingControl();
       document.getElementById("castMessage").textContent="Make another cast.";
-    },1000);
+    },900);
   }
 }
 
@@ -2604,8 +3123,7 @@ function updateFightUI(){
 }
 
 function checkFight(){
-  const breakThreshold=
-    91+Math.min(7,(equipped("Line").strength-10)*.25);
+  const breakThreshold=91+Math.min(7,(equipped("Line").strength-10)*.25);
 
   if(runtime.tension>=breakThreshold){
     loseFight("The line broke under too much tension.");
@@ -2633,8 +3151,8 @@ function loseFight(message){
 
   setTimeout(()=>{
     resetFishingControl();
-    document.getElementById("castMessage").textContent="That one got away. Make another cast.";
-  },1100);
+    document.getElementById("castMessage").textContent="That one got away.";
+  },900);
 }
 
 function landFish(fish){
@@ -2647,7 +3165,7 @@ function landFish(fish){
   document.getElementById("castMessage").textContent=
     fish.legendaryName
       ?`LEGENDARY FISH! ${fish.legendaryName} — ${fish.weight.toFixed(2)} lb!`
-      :`Landed! ${fish.species} — ${fish.weight.toFixed(2)} lb, ${fish.length}"`;
+      :`Landed! ${fish.species} — ${fish.weight.toFixed(2)} lb`;
 
   recordFish(fish);
   completeCast();
@@ -2666,32 +3184,58 @@ function landFish(fish){
 
   setTimeout(()=>{
     resetFishingControl();
-    document.getElementById("castMessage").textContent="Fish recorded. Make another cast.";
-  },fish.legendaryName?1600:900);
+    document.getElementById("castMessage").textContent="Fish recorded. Keep working the pattern.";
+  },900);
 }
 
 function completeCast(){
   if(game.activeTournament){
-    game.activeTournament.castsRemaining--;
-
     simulateAICast();
 
-    if(game.activeTournament.castsRemaining<=0){
-      setTimeout(()=>finishTournament(),900);
-    }
-  }
+    advanceSessionTime(randomInt(17,25));
+  }else if(game.practiceSession){
+    game.practiceSession.castsRemaining--;
 
-  if(Math.random()<.22){
-    shiftWeather();
+    advanceSessionTime(randomInt(15,23));
+
+    if(game.practiceSession&&game.practiceSession.castsRemaining<=0){
+      setTimeout(()=>endPractice(),400);
+    }
+  }else{
+    if(Math.random()<.22)shiftWeather();
   }
 
   renderFishingPage();
   saveGame();
 }
 
+function resetFishingControl(){
+  runtime.castState="idle";
+  runtime.hookedFish=null;
+  runtime.currentPotentialFish=null;
+  runtime.tension=45;
+  runtime.fightProgress=0;
+
+  clearTimeout(runtime.biteTimer);
+  cancelAnimationFrame(runtime.timingAnimation);
+  clearInterval(runtime.fightTimer);
+
+  document.getElementById("hookBtn").disabled=true;
+  document.getElementById("fightPanel").classList.remove("active");
+  document.getElementById("timingMarker").style.left="0%";
+  document.getElementById("castBtn").disabled=false;
+}
+
+/* ---------------- FISH RECORDING ---------------- */
+
 function recordFish(fish){
+  const isPractice=!!game.practiceSession;
+
   game.fishLanded++;
-  game.reputation+=.10;
+
+  if(!isPractice){
+    game.reputation+=.10;
+  }
 
   unlockAchievement("first_fish");
 
@@ -2699,7 +3243,10 @@ function recordFish(fish){
 
   if(!currentPB||fish.weight>currentPB.weight){
     game.personalBests[fish.species]=fish;
-    game.reputation+=.05;
+
+    if(!isPractice){
+      game.reputation+=.05;
+    }
 
     notify(`New personal best ${fish.species}: ${fish.weight.toFixed(2)} lb!`,"gold");
   }
@@ -2712,7 +3259,10 @@ function recordFish(fish){
     game.legendaryCaught.push(fish.legendaryId);
 
     unlockAchievement("legendary");
-    updateSponsorProgress("legendary",1);
+
+    if(!isPractice){
+      updateSponsorProgress("legendary",1);
+    }
 
     notify(`Legendary fish caught: ${fish.legendaryName}!`,"gold");
   }
@@ -2728,34 +3278,39 @@ function recordFish(fish){
     weight:fish.weight,
     waterTemp:game.currentWeather.water,
     weather:game.currentWeather.clouds,
-    wind:game.currentWeather.wind
+    wind:game.currentWeather.wind,
+    session:isPractice?"Practice":game.activeTournament?"Tournament":"Free Fishing"
   });
 
-  game.journal=game.journal.slice(0,100);
+  game.journal=game.journal.slice(0,150);
 
   addKnowledge(fish.lake,fish.spot,fish.species,random(2,4));
 
   if(game.activeTournament){
     addTournamentFish(fish);
+  }else if(game.practiceSession){
+    game.practiceSession.catches.push(fish);
   }else{
     game.freeCatch.unshift(fish);
     game.freeCatch=game.freeCatch.slice(0,12);
   }
 
-  updateSponsorProgress("fish",1);
+  if(!isPractice){
+    updateSponsorProgress("fish",1);
+  }
 }
 
 function addTournamentFish(fish){
   const t=game.activeTournament;
 
-  if(t.format==="Multi-Species"){
-    t.playerFish.push(fish);
-    t.playerFish.sort((a,b)=>b.weight-a.weight);
-    t.playerFish=t.playerFish.slice(0,5);
-  }else if(t.format==="Big Fish"){
+  if(t.format==="Big Fish"){
     if(!t.playerFish.length||fish.weight>t.playerFish[0].weight){
       t.playerFish=[fish];
     }
+  }else if(t.format==="Multi-Species"){
+    t.playerFish.push(fish);
+    t.playerFish.sort((a,b)=>b.weight-a.weight);
+    t.playerFish=t.playerFish.slice(0,5);
   }else{
     if(fish.species!==t.species)return;
 
@@ -2770,24 +3325,29 @@ function addTournamentFish(fish){
 function calculateTournamentWeights(){
   if(!game.activeTournament)return;
 
-  game.activeTournament.playerWeight=
-    game.activeTournament.playerFish.reduce((s,f)=>s+f.weight,0);
+  const t=game.activeTournament;
 
-  game.activeTournament.playerBigFish=
-    game.activeTournament.playerFish.length
-      ?Math.max(...game.activeTournament.playerFish.map(f=>f.weight))
+  t.playerDailyWeight=
+    t.playerFish.reduce((sum,fish)=>sum+fish.weight,0);
+
+  t.playerBigFish=
+    t.playerFish.length
+      ?Math.max(...t.playerFish.map(f=>f.weight))
       :0;
 }
 
+/* ---------------- AI TOURNAMENT FISHING ---------------- */
+
 function simulateAICast(){
   const t=game.activeTournament;
-
   if(!t)return;
 
   const lake=LAKES[t.lake];
 
   t.ai.forEach(ai=>{
-    const catchChance=clamp(.38*ai.skill,.18,.8);
+    if(ai.eliminated)return;
+
+    const catchChance=clamp(.35*ai.skill,.16,.78);
 
     if(Math.random()<catchChance){
       let species=t.species;
@@ -2798,46 +3358,49 @@ function simulateAICast(){
 
       const sp=SPECIES[species];
 
-      let wt=random(sp.baseMin*.8,sp.baseMax*.92)*ai.skill;
+      let weight=random(sp.baseMin*.8,sp.baseMax*.92)*ai.skill;
 
       if(Math.random()<.07*ai.skill){
-        wt*=random(1.1,1.35);
+        weight*=random(1.1,1.35);
       }
 
-      wt=Number(wt.toFixed(2));
+      weight=Number(weight.toFixed(2));
 
-      const fish={species,weight:wt};
+      const fish={species,weight};
 
       if(t.format==="Big Fish"){
-        if(!ai.fish.length||wt>ai.fish[0].weight){
-          ai.fish=[fish];
+        if(!ai.dayFish.length||weight>ai.dayFish[0].weight){
+          ai.dayFish=[fish];
         }
       }else{
-        ai.fish.push(fish);
-        ai.fish.sort((a,b)=>b.weight-a.weight);
-        ai.fish=ai.fish.slice(0,5);
+        ai.dayFish.push(fish);
+        ai.dayFish.sort((a,b)=>b.weight-a.weight);
+        ai.dayFish=ai.dayFish.slice(0,5);
       }
 
-      ai.weight=ai.fish.reduce((s,f)=>s+f.weight,0);
-      ai.bigFish=ai.fish.length?Math.max(...ai.fish.map(f=>f.weight)):0;
+      ai.dayWeight=ai.dayFish.reduce((s,f)=>s+f.weight,0);
+      ai.bigFish=ai.dayFish.length?Math.max(...ai.dayFish.map(f=>f.weight)):0;
     }
   });
 }
 
-function tournamentLeaderboard(){
+function liveTournamentLeaderboard(){
   const t=game.activeTournament;
-
   if(!t)return[];
 
-  const rows=t.ai.map(ai=>({
-    name:ai.name,
-    weight:t.format==="Big Fish"?ai.bigFish:ai.weight,
-    player:false
-  }));
+  const priorPlayer=t.playerDayWeights.reduce((s,w)=>s+w,0);
+
+  const rows=t.ai
+    .filter(ai=>!ai.eliminated)
+    .map(ai=>({
+      name:ai.name,
+      weight:ai.totalWeight+ai.dayWeight,
+      player:false
+    }));
 
   rows.push({
     name:"YOU",
-    weight:t.format==="Big Fish"?t.playerBigFish:t.playerWeight,
+    weight:priorPlayer+t.playerDailyWeight,
     player:true
   });
 
@@ -2854,17 +3417,18 @@ function renderFishingLeaderboard(){
     return;
   }
 
-  const rows=tournamentLeaderboard().slice(0,10);
+  const rows=liveTournamentLeaderboard();
+  const cutoff=cutSize(game.activeTournament.level,game.activeTournament.day);
 
   box.innerHTML=`
     <table>
       <thead>
-        <tr><th>#</th><th>Angler</th><th>Weight</th></tr>
+        <tr><th>#</th><th>Angler</th><th>Cumulative</th></tr>
       </thead>
 
       <tbody>
-        ${rows.map((r,i)=>`
-          <tr class="${r.player?"player-row":""}">
+        ${rows.slice(0,20).map((r,i)=>`
+          <tr class="${r.player?"player-row":""} ${cutoff&&i+1===cutoff?"cut-line":""}">
             <td>${i+1}</td>
             <td>${r.name}</td>
             <td>${r.weight.toFixed(2)} lb</td>
@@ -2872,6 +3436,12 @@ function renderFishingLeaderboard(){
         `).join("")}
       </tbody>
     </table>
+
+    ${
+      cutoff
+        ?`<div class="tiny gold-text" style="margin-top:6px">Cut after Day ${game.activeTournament.day}: Top ${cutoff}</div>`
+        :""
+    }
   `;
 }
 
@@ -2882,9 +3452,16 @@ function renderLivewell(){
       :game.freeCatch;
 
   document.getElementById("livewellTitle").textContent=
-    game.activeTournament?"Tournament Livewell":"Today's Catch";
+    game.activeTournament
+      ?`Day ${game.activeTournament.day} Livewell`
+      :game.practiceSession
+        ?"Practice — Fish Observed"
+        :"Today's Catch";
 
-  const total=fish.reduce((s,f)=>s+f.weight,0);
+  const total=
+    game.activeTournament
+      ?game.activeTournament.playerDailyWeight
+      :fish.reduce((s,f)=>s+f.weight,0);
 
   document.getElementById("livewellWeight").textContent=`${total.toFixed(2)} lb`;
 
@@ -2899,9 +3476,11 @@ function renderLivewell(){
       :`<div class="empty">No fish yet.</div>`;
 }
 
+/* ---------------- TOURNAMENT START ---------------- */
+
 function startTournament(id){
-  if(game.activeTournament){
-    notify("Finish or withdraw from your current tournament first.","bad");
+  if(game.activeTournament||game.practiceSession){
+    notify("Finish your current fishing session first.","bad");
     return;
   }
 
@@ -2921,15 +3500,24 @@ function startTournament(id){
 
   game.money-=event.fee;
 
+  const firstSpot=LAKES[event.lake].spots[0].name;
+
   game.activeTournament={
     ...JSON.parse(JSON.stringify(event)),
-    castsRemaining:event.casts,
+    daysTotal:event.days||eventDays(event.level),
+    day:1,
+    currentMinutes:420,
+    endMinutes:900,
+    currentSpot:firstSpot,
     playerFish:[],
-    playerWeight:0,
+    playerDailyWeight:0,
     playerBigFish:0,
-    ai:createTournamentAI(event),
-    startWeather:{...game.currentWeather}
+    playerDayWeights:[],
+    ai:createTournamentAI(event)
   };
+
+  generateWeather();
+  updateWeatherTimeFromClock();
 
   addFeed(`Entered ${event.name} at ${event.lake}.`);
 
@@ -2944,18 +3532,220 @@ function withdrawTournament(){
 
   const event=game.tournamentSchedule.find(e=>e.id===game.activeTournament.id);
 
-  if(event)event.completed=true;
+  if(event){
+    event.completed=true;
+  }
 
   addFeed(`Withdrew from ${game.activeTournament.name}.`);
 
   game.activeTournament=null;
 
-  document.getElementById("fishSpeciesSelect").disabled=false;
-
   resetFishingControl();
   saveGame();
   renderFishingPage();
 }
+
+/* ---------------- DAILY WEIGH-IN / CUTS ---------------- */
+
+function finishTournamentDay(){
+  const t=game.activeTournament;
+
+  if(!t)return;
+
+  if(runtime.castState!=="idle"&&runtime.castState!=="landed"&&runtime.castState!=="lost"){
+    notify("Finish the current fish before weighing in.","bad");
+    return;
+  }
+
+  calculateTournamentWeights();
+
+  t.playerDayWeights.push(t.playerDailyWeight);
+
+  t.ai.forEach(ai=>{
+    if(ai.eliminated)return;
+
+    ai.dayWeights.push(ai.dayWeight);
+    ai.totalWeight+=ai.dayWeight;
+  });
+
+  const playerTotal=t.playerDayWeights.reduce((s,w)=>s+w,0);
+
+  const rows=[
+    ...t.ai
+      .filter(ai=>!ai.eliminated)
+      .map(ai=>({
+        name:ai.name,
+        weight:ai.totalWeight,
+        player:false,
+        ai
+      })),
+    {
+      name:"YOU",
+      weight:playerTotal,
+      player:true
+    }
+  ].sort((a,b)=>b.weight-a.weight);
+
+  const place=rows.findIndex(r=>r.player)+1;
+
+  const completedDay=t.day;
+  const dailyWeight=t.playerDailyWeight;
+
+  if(completedDay<t.daysTotal){
+    const cutoff=cutSize(t.level,completedDay);
+
+    if(cutoff){
+      rows.forEach((row,index)=>{
+        if(!row.player&&index+1>cutoff&&row.ai){
+          row.ai.eliminated=true;
+        }
+      });
+
+      if(place>cutoff){
+        const html=buildWeighInHTML(
+          t,
+          completedDay,
+          dailyWeight,
+          playerTotal,
+          place,
+          rows,
+          `Cut Missed — Top ${cutoff} Advanced`
+        );
+
+        finalizeTournament(place,rows,html,true);
+        return;
+      }
+
+      const html=buildWeighInHTML(
+        t,
+        completedDay,
+        dailyWeight,
+        playerTotal,
+        place,
+        rows,
+        `You Made the Cut — Top ${cutoff} Advanced`
+      );
+
+      prepareNextTournamentDay();
+
+      showModal(
+        html,
+        `<button class="primary" onclick="closeModal();showPage('fish')">Start Day ${completedDay+1}</button>`
+      );
+
+      saveGame();
+      return;
+    }
+
+    const html=buildWeighInHTML(
+      t,
+      completedDay,
+      dailyWeight,
+      playerTotal,
+      place,
+      rows,
+      "Day Complete"
+    );
+
+    prepareNextTournamentDay();
+
+    showModal(
+      html,
+      `<button class="primary" onclick="closeModal();showPage('fish')">Start Day ${completedDay+1}</button>`
+    );
+
+    saveGame();
+    return;
+  }
+
+  const html=buildWeighInHTML(
+    t,
+    completedDay,
+    dailyWeight,
+    playerTotal,
+    place,
+    rows,
+    "Final Weigh-In"
+  );
+
+  finalizeTournament(place,rows,html,false);
+}
+
+function buildWeighInHTML(t,day,dailyWeight,totalWeight,place,rows,status){
+  return`
+    <div style="text-align:center">
+      <div style="font-size:42px">⚖️</div>
+      <h2>${t.name}</h2>
+      <span class="pill gold">${status}</span>
+    </div>
+
+    <hr class="divider">
+
+    <div class="grid grid-4">
+      <div>
+        <div class="stat-value">${day}</div>
+        <div class="stat-label">Day</div>
+      </div>
+
+      <div>
+        <div class="stat-value">${dailyWeight.toFixed(2)}</div>
+        <div class="stat-label">Day Weight</div>
+      </div>
+
+      <div>
+        <div class="stat-value">${totalWeight.toFixed(2)}</div>
+        <div class="stat-label">Cumulative Weight</div>
+      </div>
+
+      <div>
+        <div class="stat-value">#${place}</div>
+        <div class="stat-label">Current Place</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <h3>Weigh-In Standings</h3>
+
+    <table>
+      ${rows.slice(0,18).map((r,i)=>`
+        <tr class="${r.player?"player-row":""}">
+          <td>#${i+1}</td>
+          <td>${r.name}</td>
+          <td>${r.weight.toFixed(2)} lb</td>
+        </tr>
+      `).join("")}
+    </table>
+  `;
+}
+
+function prepareNextTournamentDay(){
+  const t=game.activeTournament;
+
+  t.day++;
+  t.currentMinutes=420;
+  t.playerFish=[];
+  t.playerDailyWeight=0;
+  t.playerBigFish=0;
+
+  const remainingAI=t.ai.filter(ai=>!ai.eliminated);
+
+  remainingAI.forEach(ai=>{
+    ai.dayFish=[];
+    ai.dayWeight=0;
+    ai.bigFish=0;
+  });
+
+  t.currentSpot=LAKES[t.lake].spots[0].name;
+
+  generateWeather();
+  updateWeatherTimeFromClock();
+
+  resetFishingControl();
+  renderFishingPage();
+}
+
+/* ---------------- FINAL RESULTS ---------------- */
 
 function placementPoints(place){
   if(place===1)return 100;
@@ -2999,20 +3789,14 @@ function calculateTournamentReputation(level,place){
   return 0;
 }
 
-function finishTournament(){
+function finalizeTournament(place,rows,weighInHTML,cutEarly=false){
   const t=game.activeTournament;
-
-  if(!t)return;
-
-  calculateTournamentWeights();
-
-  const rows=tournamentLeaderboard();
-  const place=rows.findIndex(r=>r.player)+1;
-  const field=rows.length;
 
   const event=game.tournamentSchedule.find(e=>e.id===t.id);
 
-  if(event)event.completed=true;
+  if(event){
+    event.completed=true;
+  }
 
   const points=placementPoints(place);
 
@@ -3079,27 +3863,19 @@ function finishTournament(){
   checkMillionaire();
 
   addFeed(
-    `${place===1?"Won":"Finished #"+place+" in"} ${t.name}. `+
+    `${cutEarly?"Finished":"Completed"} ${t.name} in #${place}. `+
     `${winnings?`Earned ${money(winnings)}. `:""}`+
-    `${points} season points.`
+    `${points} points.`
   );
 
-  const resultHTML=`
-    <div style="text-align:center">
-      <div style="font-size:44px">${place===1?"🏆":place<=3?"🥉":"🎣"}</div>
-      <h2>${t.name}</h2>
-      <div class="stat-value">#${place}</div>
-      <div class="stat-label">of ${field} anglers</div>
-    </div>
+  const finalHTML=`
+    ${weighInHTML}
 
     <hr class="divider">
 
-    <div class="grid grid-4">
-      <div>
-        <div class="stat-value">${t.playerWeight.toFixed(2)}</div>
-        <div class="stat-label">Weight lb</div>
-      </div>
+    <h3>Event Result</h3>
 
+    <div class="grid grid-3">
       <div>
         <div class="stat-value">${points}</div>
         <div class="stat-label">Season Points</div>
@@ -3115,32 +3891,19 @@ function finishTournament(){
         <div class="stat-label">Reputation</div>
       </div>
     </div>
-
-    <hr class="divider">
-
-    <h3>Top Finishers</h3>
-
-    <table>
-      ${rows.slice(0,8).map((r,i)=>`
-        <tr class="${r.player?"player-row":""}">
-          <td>#${i+1}</td>
-          <td>${r.name}</td>
-          <td>${r.weight.toFixed(2)} lb</td>
-        </tr>
-      `).join("")}
-    </table>
   `;
 
   game.activeTournament=null;
-
-  document.getElementById("fishSpeciesSelect").disabled=false;
 
   generateLocalOpen(false);
 
   saveGame();
   renderAll();
 
-  showModal(resultHTML);
+  showModal(
+    finalHTML,
+    `<button class="primary" onclick="closeModal();showPage('tournaments')">Return to Tournament Trail</button>`
+  );
 }
 
 function checkQualificationAchievements(){
@@ -3226,6 +3989,22 @@ function unlockAchievement(id){
   `;
 }
 
+function tournamentCutDescription(event){
+  if(event.level==="local"){
+    return"1-day event • No cut";
+  }
+
+  if(event.level==="state"){
+    return"2-day event • Top 15 advance after Day 1";
+  }
+
+  if(event.level==="national"){
+    return"3-day event • Top 18 after Day 1 • Top 10 after Day 2";
+  }
+
+  return"3-day championship • Top 12 after Day 1 • Top 6 after Day 2";
+}
+
 function renderTournaments(){
   updateHeader();
 
@@ -3245,7 +4024,7 @@ function renderTournaments(){
   const levels={local:0,state:1,national:2,major:3};
 
   const events=game.tournamentSchedule
-    .filter(event=>event.species===species)
+    .filter(e=>e.species===species)
     .sort((a,b)=>{
       if(a.completed!==b.completed){
         return a.completed?1:-1;
@@ -3257,14 +4036,21 @@ function renderTournaments(){
   document.getElementById("tournamentList").innerHTML=
     events.map(event=>{
       const unlocked=tournamentLevelUnlocked(event.species,event.level);
+      const practiced=!!game.practiceCompleted[event.id];
 
       return`
         <div class="card tournament-card ${event.level} ${!unlocked?"locked":""}">
           <div class="row spread wrap">
             <div>
-              <span class="pill ${event.level==="major"?"gold":event.level==="national"?"blue":""}">
+              <span class="pill ${event.level==="major"?"gold":event.level==="national"?"purple":event.level==="state"?"blue":""}">
                 ${capitalize(event.level)}
               </span>
+
+              ${
+                practiced
+                  ?`<span class="pill green">Practice Complete</span>`
+                  :""
+              }
 
               <h2 style="margin:8px 0 3px">${event.name}</h2>
 
@@ -3277,7 +4063,20 @@ function renderTournaments(){
               event.completed
                 ?`<span class="pill">Completed</span>`
                 :unlocked
-                  ?`<button class="primary" onclick="startTournament('${event.id}')">Enter Event</button>`
+                  ?`
+                    <div class="btn-row">
+                      <button
+                        ${practiced?"disabled":""}
+                        onclick="startPractice('${event.id}')"
+                      >
+                        ${practiced?"Practice Complete":"Pre-Fish / Practice"}
+                      </button>
+
+                      <button class="primary" onclick="startTournament('${event.id}')">
+                        Enter Event
+                      </button>
+                    </div>
+                  `
                   :`<button disabled>Locked</button>`
             }
           </div>
@@ -3296,20 +4095,30 @@ function renderTournaments(){
             </div>
 
             <div>
-              <strong>${event.casts}</strong>
-              <div class="tiny muted">Tournament Casts</div>
+              <strong>${event.days||eventDays(event.level)} Day${(event.days||eventDays(event.level))>1?"s":""}</strong>
+              <div class="tiny muted">Tournament Length</div>
             </div>
+          </div>
+
+          <div class="info-box small" style="margin-top:12px">
+            ${tournamentCutDescription(event)}
           </div>
 
           ${
             !unlocked
-              ?`<div class="info-box small" style="margin-top:12px">${qualificationText(event.species,event.level)}</div>`
+              ?`
+                <div class="small muted">
+                  ${qualificationText(event.species,event.level)}
+                </div>
+              `
               :""
           }
         </div>
       `;
     }).join("");
 }
+
+/* ---------------- STANDINGS ---------------- */
 
 function buildStandingsRows(species,level){
   const rows=[
@@ -3338,7 +4147,11 @@ function standingsTable(species,level){
   return`
     <table>
       <thead>
-        <tr><th>#</th><th>Angler</th><th>Points</th></tr>
+        <tr>
+          <th>#</th>
+          <th>Angler</th>
+          <th>Points</th>
+        </tr>
       </thead>
 
       <tbody>
@@ -3353,7 +4166,9 @@ function standingsTable(species,level){
         ${
           playerIndex>=12
             ?`
-              <tr><td colspan="3" class="muted">•••</td></tr>
+              <tr>
+                <td colspan="3" class="muted">•••</td>
+              </tr>
 
               <tr class="player-row">
                 <td>${playerIndex+1}</td>
@@ -3389,6 +4204,8 @@ function renderStandings(){
   document.getElementById("nationalStandings").innerHTML=
     standingsTable(species,"national");
 }
+
+/* ---------------- GEAR ---------------- */
 
 function buyGear(id){
   const item=getGear(id);
@@ -3428,6 +4245,10 @@ function equipGear(id){
 
   saveGame();
   renderGear();
+
+  if(document.getElementById("page-fish").classList.contains("active")){
+    renderFishingPage();
+  }
 }
 
 function renderGear(){
@@ -3452,8 +4273,7 @@ function renderGear(){
       </button>
     `).join("");
 
-  const items=
-    GEAR.filter(item=>item.category===game.settings.gearCategory);
+  const items=GEAR.filter(item=>item.category===game.settings.gearCategory);
 
   document.getElementById("gearShop").innerHTML=
     items.map(item=>{
@@ -3465,7 +4285,12 @@ function renderGear(){
         <div class="card gear-card ${equippedNow?"equipped":""}">
           <div class="row spread">
             <span class="pill">${item.category}</span>
-            ${equippedNow?`<span class="pill green">Equipped</span>`:""}
+
+            ${
+              equippedNow
+                ?`<span class="pill green">Equipped</span>`
+                :""
+            }
           </div>
 
           <div class="gear-name" style="margin-top:10px">
@@ -3476,12 +4301,12 @@ function renderGear(){
 
           <hr class="divider">
 
-          <div class="row spread small">
+          <div class="status-row">
             <span>Price</span>
             <strong>${item.price===0?"Starter":money(item.price)}</strong>
           </div>
 
-          <div class="row spread small">
+          <div class="status-row">
             <span>Required Reputation</span>
             <strong>${item.rep}</strong>
           </div>
@@ -3501,6 +4326,8 @@ function renderGear(){
       `;
     }).join("");
 }
+
+/* ---------------- JOURNAL ---------------- */
 
 function renderJournal(){
   const lakeKnowledge={};
@@ -3529,6 +4356,7 @@ function renderJournal(){
           <div style="margin-bottom:14px">
             <div class="row spread">
               <strong>${lake}</strong>
+
               <span class="small">
                 ${knowledgeLabel(average)} • ${Math.round(average)}%
               </span>
@@ -3548,11 +4376,11 @@ function renderJournal(){
 
   document.getElementById("journalEntries").innerHTML=
     game.journal.length
-      ?game.journal.slice(0,25).map(j=>`
+      ?game.journal.slice(0,30).map(j=>`
         <div class="journal-entry">
           <div class="row spread">
             <strong>${j.weight.toFixed(2)} lb ${j.species}</strong>
-            <span class="tiny muted">${new Date(j.time).toLocaleDateString()}</span>
+            <span class="pill">${j.session||"Fishing"}</span>
           </div>
 
           <div class="small muted">
@@ -3564,6 +4392,8 @@ function renderJournal(){
       `).join("")
       :`<div class="empty">Your fishing journal is empty.</div>`;
 }
+
+/* ---------------- TROPHIES ---------------- */
 
 function renderTrophies(){
   document.getElementById("personalBestCards").innerHTML=
@@ -3602,7 +4432,7 @@ function renderTrophies(){
       ?game.trophies.slice(0,30).map(f=>`
         <div class="fish-trophy ${f.legendaryName?"legendary":""}" style="margin-bottom:7px">
           <div class="row spread">
-            <strong class="rarity-${f.rarity.toLowerCase()}">
+            <strong>
               ${f.legendaryName||`${f.weight.toFixed(2)} lb ${f.species}`}
             </strong>
 
@@ -3625,7 +4455,8 @@ function renderTrophies(){
         <div class="fish-trophy legendary" style="margin-bottom:8px;opacity:${caught?1:.45}">
           <div class="row spread">
             <strong class="gold-text">
-              ${caught?"👑":"?"} ${caught?l.name:"Unknown Legendary Fish"}
+              ${caught?"👑":"?"}
+              ${caught?l.name:"Unknown Legendary Fish"}
             </strong>
 
             <span class="pill gold">
@@ -3649,6 +4480,8 @@ function renderTrophies(){
       `;
     }).join("");
 }
+
+/* ---------------- SPONSORS ---------------- */
 
 function signSponsor(id){
   const sponsor=SPONSORS.find(s=>s.id===id);
@@ -3684,8 +4517,7 @@ function signSponsor(id){
 function updateSponsorProgress(type,amount){
   if(!game.sponsor)return;
 
-  const sponsor=
-    SPONSORS.find(s=>s.id===game.sponsor);
+  const sponsor=SPONSORS.find(s=>s.id===game.sponsor);
 
   if(!sponsor||sponsor.targetType!==type)return;
 
@@ -3726,7 +4558,7 @@ function renderSponsors(){
           :0;
 
       return`
-        <div class="card sponsor-card ${active?"active-sponsor":""}">
+        <div class="card sponsor-card">
           ${
             active
               ?`<span class="pill gold sponsor-badge">ACTIVE</span>`
@@ -3743,17 +4575,17 @@ function renderSponsors(){
 
           <hr class="divider">
 
-          <div class="row spread small">
+          <div class="status-row">
             <span>Signing Bonus</span>
             <strong>${money(s.signing)}</strong>
           </div>
 
-          <div class="row spread small">
+          <div class="status-row">
             <span>Objective Bonus</span>
             <strong>${money(s.bonus)}</strong>
           </div>
 
-          <div class="row spread small">
+          <div class="status-row">
             <span>Required Reputation</span>
             <strong>${s.rep}</strong>
           </div>
@@ -3793,6 +4625,8 @@ function renderSponsors(){
     }).join("");
 }
 
+/* ---------------- CAREER ---------------- */
+
 function renderCareer(){
   document.getElementById("careerEarnings").textContent=
     money(game.careerEarnings);
@@ -3816,10 +4650,7 @@ function renderCareer(){
 
           <div>
             <strong>${a.name}</strong>
-
-            <div class="small muted">
-              ${a.text}
-            </div>
+            <div class="small muted">${a.text}</div>
 
             <div class="tiny ${unlocked?"good":"muted"}" style="margin-top:4px">
               ${unlocked?"UNLOCKED":"LOCKED"}
@@ -3831,18 +4662,14 @@ function renderCareer(){
 }
 
 function startNewSeason(){
-  if(game.activeTournament){
-    notify(
-      "Finish your tournament before starting a new season.",
-      "bad"
-    );
+  if(game.activeTournament||game.practiceSession){
+    notify("Finish your current fishing session first.","bad");
     return;
   }
 
-  const proceed=
-    confirm(
-      "Start a new season? Current season standings will reset, but career progress stays."
-    );
+  const proceed=confirm(
+    "Start a new season? Current season standings will reset, but career progress stays."
+  );
 
   if(!proceed)return;
 
@@ -3858,6 +4685,8 @@ function startNewSeason(){
 
   AI_STANDINGS=initializeAIStandings();
 
+  game.practiceCompleted={};
+
   buildSeasonSchedule();
   generateWeather();
 
@@ -3866,23 +4695,21 @@ function startNewSeason(){
   saveGame();
   renderAll();
 
-  notify(
-    `Season ${game.season} is underway.`,
-    "good"
-  );
+  notify(`Season ${game.season} is underway.`,"good");
 }
 
 function resetGame(){
-  const proceed=
-    confirm(
-      "Reset your entire Tournament Trail career? This cannot be undone."
-    );
+  const proceed=confirm(
+    "Reset your entire Tournament Trail career? This cannot be undone."
+  );
 
   if(!proceed)return;
 
   localStorage.removeItem("tournamentTrailSave");
   location.reload();
 }
+
+/* ---------------- SAVE ---------------- */
 
 function saveGame(showNotice=false){
   try{
@@ -3904,10 +4731,7 @@ function saveGame(showNotice=false){
 }
 
 function loadGame(){
-  const raw=
-    localStorage.getItem(
-      "tournamentTrailSave"
-    );
+  const raw=localStorage.getItem("tournamentTrailSave");
 
   if(!raw)return false;
 
@@ -3969,6 +4793,11 @@ function ensureSaveCompatibility(){
   if(!game.freeCatch)game.freeCatch=[];
   if(!game.ownedGear)game.ownedGear=[];
   if(!game.sponsorCompleted)game.sponsorCompleted=[];
+  if(!game.practiceCompleted)game.practiceCompleted={};
+
+  if(game.practiceSession===undefined){
+    game.practiceSession=null;
+  }
 
   if(typeof game.sponsorProgress!=="number"){
     game.sponsorProgress=0;
@@ -4014,8 +4843,35 @@ function ensureSaveCompatibility(){
     buildSeasonSchedule();
   }
 
-  game.version=5;
+  game.tournamentSchedule.forEach(event=>{
+    if(!event.days){
+      event.days=eventDays(event.level);
+    }
+  });
+
+  /*
+    Old active tournaments did not contain the tournament clock,
+    day weights, cuts or current spot fields. Start them fresh
+    instead of allowing an incompatible session to break the game.
+  */
+  if(
+    game.activeTournament&&
+    (
+      game.activeTournament.currentMinutes===undefined||
+      game.activeTournament.day===undefined
+    )
+  ){
+    game.activeTournament=null;
+  }
+
+  if(game.practiceSession&&game.practiceSession.currentMinutes===undefined){
+    game.practiceSession=null;
+  }
+
+  game.version=6;
 }
+
+/* ---------------- RENDER ALL ---------------- */
 
 function renderAll(){
   updateHeader();
@@ -4032,6 +4888,8 @@ function renderAll(){
     renderFishingPage();
   }
 }
+
+/* ---------------- DEVELOPER TOOLS ---------------- */
 
 function debugAdvanceCareer(){
   game.money+=100000;
@@ -4083,16 +4941,36 @@ function debugCatchLegendary(){
   saveGame();
 }
 
+function debugKnowledge(){
+  const setup=getCurrentFishingSetup();
+
+  if(!setup.spot){
+    notify("Open the fishing page first.","bad");
+    return;
+  }
+
+  const key=getKnowledgeKey(
+    setup.lake,
+    setup.spot.name,
+    setup.species
+  );
+
+  game.knowledge[key]=100;
+
+  renderFishingPage();
+  saveGame();
+
+  notify("Current spot knowledge set to 100%.","good");
+}
+
 function buildDeveloperTools(){
-  const careerPage=
-    document.getElementById("page-career");
+  const careerPage=document.getElementById("page-career");
 
   if(document.getElementById("developerTools")){
     return;
   }
 
-  const dev=
-    document.createElement("div");
+  const dev=document.createElement("div");
 
   dev.className="card";
   dev.id="developerTools";
@@ -4102,9 +4980,7 @@ function buildDeveloperTools(){
     <div class="row spread wrap">
       <div>
         <h2 style="margin-bottom:3px">Developer Tools</h2>
-        <div class="small muted">
-          Testing controls for Tournament Trail development.
-        </div>
+        <div class="small muted">Testing controls for Tournament Trail development.</div>
       </div>
 
       <div class="btn-row">
@@ -4128,12 +5004,18 @@ function buildDeveloperTools(){
         ">
           +25 Reputation
         </button>
+
+        <button onclick="showPage('fish');setTimeout(debugKnowledge,100)">
+          Max Current Spot Knowledge
+        </button>
       </div>
     </div>
   `;
 
   careerPage.appendChild(dev);
 }
+
+/* ---------------- INIT ---------------- */
 
 function init(){
   const loaded=loadGame();
@@ -4145,9 +5027,14 @@ function init(){
     buildSeasonSchedule();
   }
 
-  game.version=5;
+  game.version=6;
 
   populateFishingSelectors();
+
+  if(!runtime.freeSpot){
+    runtime.freeSpot=document.getElementById("spotSelect").value;
+  }
+
   buildDeveloperTools();
   renderAll();
   saveGame();
